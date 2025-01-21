@@ -2,7 +2,7 @@
 <html lang="en" data-bs-theme="light">
   <head>
 
-    <script src="assets/js/color-modes.js"></script>
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -118,7 +118,7 @@
     </div>
 
     
-    <header data-bs-theme="dark">
+    <header data-bs-theme="light">
   <nav class="navbar navbar-expand-md fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">RedDoorz</a>
@@ -149,9 +149,9 @@
       <style>
         /* Header dengan gradasi transparan */
 .navbar {
-    background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.29)); /* Gradasi dari hitam pekat ke transparan */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.18)); /* Gradasi dari hitam pekat ke transparan */
     backdrop-filter: blur(100px); /* Blur latar belakang */
-    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0); Bayangan lembut */
+    /* box-shadow: 0px 4px 6px rgba(250, 250, 250, 0.35);  */
     /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); Garis bawah tipis */
     transition: all 0.3s ease-in-out; /* Transisi halus */
   }
