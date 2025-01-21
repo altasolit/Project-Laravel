@@ -118,10 +118,10 @@
     </div>
 
     
-    <header data-bs-theme="light">
+    <header data-bs-theme="dark">
   <nav class="navbar navbar-expand-md fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Luxury Hotel</a>
+      <a class="navbar-brand" href="#">erere</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -150,7 +150,7 @@
         /* Header dengan gradasi transparan */
 .navbar {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.18)); /* Gradasi dari hitam pekat ke transparan */
-    backdrop-filter: blur(100px); /* Blur latar belakang */
+    backdrop-filter: blur(300px); /* Blur latar belakang */
     /* box-shadow: 0px 4px 6px rgba(250, 250, 250, 0.35);  */
     /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); Garis bawah tipis */
     transition: all 0.3s ease-in-out; /* Transisi halus */
@@ -359,13 +359,17 @@
   });
 </script>
 
+<div class="container marketing">
+   
+
+   <div class="row">
+    <div class="col-12 d-flex justify-content-between align-items-center">
+      <h1>test</h1>
+    </div>
+    </div>
+</div>
 
     <hr class="featurette-divider">
-
-    <!-- /END THE FEATURETTES -->
-
-  </div><!-- /.container -->
-
 
   <!-- FOOTER -->
   <footer class="container">
