@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="en" data-bs-theme="light">
   <head>
-
-    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -121,7 +119,7 @@
     <header data-bs-theme="dark">
   <nav class="navbar navbar-expand-md fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">erere</a>
+      <a class="navbar-brand" href="#"></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -136,7 +134,9 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/home"></a>
+            <div class="nav-logo">
+              <img src="img/logo.png" alt="Logo">
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"></a>
@@ -190,7 +190,7 @@
  <!-- Bagian Tujuan Populer -->
  
  <div class="container marketing">
-   <h1>test</h1>
+  <h2>Luxury Hotel</h2>
    <div class="row">
     <div class="col-12 d-flex justify-content-between align-items-center">
 
@@ -361,13 +361,39 @@
 
 <div class="container marketing">
    
-
-   <div class="row">
-    <div class="col-12 d-flex justify-content-between align-items-center">
-      <h1>test</h1>
+<!-- bagian promo, mungkin? -->
+<div class="redclub-container">
+  <h2>Luxury Hotel</h2>
+  <div class="redclub-card">
+    <div class="redclub-content">
+      <img src="redclub-logo.png" alt="Logo Hotel" class="redclub-logo">
+      <p>Makin banyak menginap, makin hemat dengan Luxury Club terbaru</p>
     </div>
+    <div class="redclub-benefits">
+      <div class="benefit-item">
+        <img src="icon-discount.png" alt="Diskon" class="benefit-icon">
+        <p>Diskon Ekstra 12%</p>
+      </div>
+      <div class="benefit-item">
+        <img src="icon-points.png" alt="Poin" class="benefit-icon">
+        <p>Dapatkan poin 3x lipat</p>
+      </div>
+      <div class="benefit-item">
+        <img src="icon-redeem.png" alt="Tukar Poin" class="benefit-icon">
+        <p>Bisa tukar poin dengan diskon</p>
+      </div>
+      <div class="benefit-item">
+        <img src="icon-support.png" alt="Bantuan" class="benefit-icon">
+        <p>Layanan bantuan prioritas</p>
+      </div>
+      <div class="benefit-item">
+        <img src="icon-price.png" alt="Harga Terbaik" class="benefit-icon">
+        <p>Jaminan Harga Terbaik</p>
+      </div>
     </div>
+  </div>
 </div>
+
 
     <hr class="featurette-divider">
 
