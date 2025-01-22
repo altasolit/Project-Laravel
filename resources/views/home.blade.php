@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="en" data-bs-theme="light">
   <head>
-
-    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -118,10 +116,10 @@
     </div>
 
     
-    <header data-bs-theme="light">
+    <header data-bs-theme="dark">
   <nav class="navbar navbar-expand-md fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Luxury Hotel</a>
+      <a class="navbar-brand" href="#"></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -136,7 +134,9 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/home"></a>
+            <div class="nav-logo">
+              <img src="img/logo.png" alt="Logo">
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"></a>
@@ -150,7 +150,7 @@
         /* Header dengan gradasi transparan */
 .navbar {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.18)); /* Gradasi dari hitam pekat ke transparan */
-    backdrop-filter: blur(100px); /* Blur latar belakang */
+    backdrop-filter: blur(300px); /* Blur latar belakang */
     /* box-shadow: 0px 4px 6px rgba(250, 250, 250, 0.35);  */
     /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); Garis bawah tipis */
     transition: all 0.3s ease-in-out; /* Transisi halus */
@@ -190,7 +190,7 @@
  <!-- Bagian Tujuan Populer -->
  
  <div class="container marketing">
-   <h1>test</h1>
+  <h2>Luxury Hotel</h2>
    <div class="row">
     <div class="col-12 d-flex justify-content-between align-items-center">
 
@@ -359,13 +359,43 @@
   });
 </script>
 
+<div class="container marketing">
+   
+<!-- bagian promo, mungkin? -->
+<div class="redclub-container">
+  <h2>Luxury Hotel</h2>
+  <div class="redclub-card">
+    <div class="redclub-content">
+      <img src="redclub-logo.png" alt="Logo Hotel" class="redclub-logo">
+      <p>Makin banyak menginap, makin hemat dengan Luxury Club terbaru</p>
+    </div>
+    <div class="redclub-benefits">
+      <div class="benefit-item">
+        <img src="icon-discount.png" alt="Diskon" class="benefit-icon">
+        <p>Diskon Ekstra 12%</p>
+      </div>
+      <div class="benefit-item">
+        <img src="icon-points.png" alt="Poin" class="benefit-icon">
+        <p>Dapatkan poin 3x lipat</p>
+      </div>
+      <div class="benefit-item">
+        <img src="icon-redeem.png" alt="Tukar Poin" class="benefit-icon">
+        <p>Bisa tukar poin dengan diskon</p>
+      </div>
+      <div class="benefit-item">
+        <img src="icon-support.png" alt="Bantuan" class="benefit-icon">
+        <p>Layanan bantuan prioritas</p>
+      </div>
+      <div class="benefit-item">
+        <img src="icon-price.png" alt="Harga Terbaik" class="benefit-icon">
+        <p>Jaminan Harga Terbaik</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <hr class="featurette-divider">
-
-    <!-- /END THE FEATURETTES -->
-
-  </div><!-- /.container -->
-
 
   <!-- FOOTER -->
   <footer class="container">
