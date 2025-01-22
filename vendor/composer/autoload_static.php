@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit60441de4f9c3e86f5c6b0b7bde18f2f2
+class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -336,8 +336,8 @@ class ComposerStaticInit60441de4f9c3e86f5c6b0b7bde18f2f2
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -377,8 +377,8 @@ class ComposerStaticInit60441de4f9c3e86f5c6b0b7bde18f2f2
         ),
         'League\\Uri\\' => 
         array (
-            0 => __DIR__ . '/..' . '/league/uri-interfaces',
-            1 => __DIR__ . '/..' . '/league/uri',
+            0 => __DIR__ . '/..' . '/league/uri',
+            1 => __DIR__ . '/..' . '/league/uri-interfaces',
         ),
         'League\\MimeTypeDetection\\' => 
         array (
@@ -6587,11 +6587,11 @@ class ComposerStaticInit60441de4f9c3e86f5c6b0b7bde18f2f2
 
     public static function getInitializer(ClassLoader $loader)
     {
-        return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit60441de4f9c3e86f5c6b0b7bde18f2f2::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit60441de4f9c3e86f5c6b0b7bde18f2f2::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit60441de4f9c3e86f5c6b0b7bde18f2f2::$classMap;
+        return \Closure::bind(function () use ($loader){
+            $loader->prefixLengthsPsr4 = ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad::$classMap;
 
-        }, null, ClassLoader::class);
+        },null,ClassLoader::class);
     }
 }
