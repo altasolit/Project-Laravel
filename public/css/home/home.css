@@ -43,6 +43,10 @@ body {
   }
   /* rtl:end:ignore */
   
+  /* bagian logo */
+  .nav-logo > img {
+    width: 50px;
+}
   
   /* Featurettes
   ------------------------- */
@@ -157,4 +161,4 @@ body {
   .bd-mode-toggle .dropdown-menu .active .bi {
     display: block !important;
   }
-  
+ 
