@@ -10,87 +10,8 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
-
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
-
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
-
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important;
-      }
-    </style>
-
-    <link href="css/home.css" rel="stylesheet">
+    <link href="css/home/bawaan.css" rel="stylesheet">
+    <link href="css/home/home.css" rel="stylesheet">
   </head>
 
   <body>
@@ -146,32 +67,7 @@
           </li>
         </ul>
       </div>
-      <style>
-        /* Header dengan gradasi transparan */
-.navbar {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.18)); /* Gradasi dari hitam pekat ke transparan */
-    backdrop-filter: blur(300px); /* Blur latar belakang */
-    /* box-shadow: 0px 4px 6px rgba(250, 250, 250, 0.35);  */
-    /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); Garis bawah tipis */
-    transition: all 0.3s ease-in-out; /* Transisi halus */
-  }
-  
-  /* Warna teks untuk navbar */
-  .navbar .navbar-brand,
-  .navbar .nav-link {
-    color: rgb(255, 255, 255); /* warna teks header */
-  }
-  
-  .navbar .navbar-brand:hover,
-  .navbar .nav-link:hover {
-    color:rgb(0, 0, 0); /* warna hover */
-  }
-  
-  /* Responsivitas tombol toggler */
-  .navbar-toggler {
-    border-color: rgb(0, 0, 0); /* Warna garis toggler */
-  }
-      </style>
+      <link href="css/home/header.css" rel="stylesheet">
     </div>
   </nav>
 </header>
@@ -188,6 +84,7 @@
  </div>
  
  <!-- Bagian Tujuan Populer -->
+  <!-- Bagian 2 - Circle -->
  
  <div class="container marketing">
   <h2>Luxury Hotel</h2>
@@ -299,69 +196,14 @@
     </div>
   </div>
 </div>
-
-<style>
-  .circle-item {
-    margin: 0 10px; /* Jarak antar lingkaran */
-    min-width: 80px; /* Pastikan lebar tetap */
-    text-align: center;
-  }
-
-  #circle-slider {
-    overflow: hidden;
-    flex: 1;
-  }
-
-  #circle-slider .d-flex {
-    gap: 10px; /* Jarak antar elemen */
-  }
-
-  #left-arrow, #right-arrow {
-    font-size: 10px; /* Ukuran panah lebih besar */
-    width: 50px; /* Lebar tombol */
-    height: 50px; /* Tinggi tombol */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:rgb(192, 192, 192); /* Warna tombol */
-    border: none; /* Hilangkan border */
-    border-radius: 50%; /* Membuat tombol bulat */
-    color: white; /* Warna teks putih */
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
-  }
-
-  #left-arrow:hover, #right-arrow:hover {
-    background-color: #495057; /* Warna tombol saat hover */
-  }
-  
-</style>
-
-<script>
-  const slider = document.querySelector("#circle-slider .d-flex");
-  const leftArrow = document.getElementById("left-arrow");
-  const rightArrow = document.getElementById("right-arrow");
-
-  let currentOffset = 0;
-  const scrollAmount = 100; // Geser sejauh 100px setiap kali klik
-
-  // Tombol Panah Kanan
-  rightArrow.addEventListener("click", () => {
-    const maxOffset = slider.scrollWidth - slider.parentElement.clientWidth;
-    currentOffset = Math.min(currentOffset + scrollAmount, maxOffset);
-    slider.style.transform = `translateX(-${currentOffset}px)`;
-  });
-
-  // Tombol Panah Kiri
-  leftArrow.addEventListener("click", () => {
-    currentOffset = Math.max(currentOffset - scrollAmount, 0);
-    slider.style.transform = `translateX(-${currentOffset}px)`;
-  });
-</script>
+<link href="css/home/circle.css" rel="stylesheet">
+<script src="js/home/circle.js"></script>
 
 <div class="container marketing">
-   
+  
 <!-- bagian promo, mungkin? -->
+<!-- Bagian 3 - Promo -->
+<link href="css/home/promosi.css" rel="stylesheet"> 
 <div class="redclub-container">
   <h2>Luxury Hotel</h2>
   <div class="redclub-card">
@@ -393,6 +235,13 @@
     </div>
   </div>
 </div>
+
+<!-- Bagian 4 - Penawaran -->
+ 
+
+
+ 
+
 
 
     <hr class="featurette-divider">
