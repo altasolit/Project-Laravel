@@ -8,14 +8,15 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.122.0">
     <title> Reservation Page </title>
-
+    
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/">
 
     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
-<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 
     <style>
       .bd-placeholder-img {
@@ -167,10 +168,8 @@
     <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
   </symbol>
 </svg>
-
 <div class="container"> 
   <header class="border-bottom lh-1 py-3">
-    
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <img src="IMG/logo.png" alt="Luxury" width="70" height="54">
@@ -181,14 +180,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="/home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="a">Link</a>
         </li>
+        
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Menu
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Action</a></li>
@@ -203,12 +203,11 @@
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
-  </div>
-</nav>
+      </div>
+    </nav>
   </header>
-    </div>
-
-  
+</div>
+  <main class="container">
     <div class="row mb-2">
   <div class="col-md-4">
     <img src="IMG/singgle bed.jpg" class="img-fluid" alt="VIP Room">
@@ -404,6 +403,7 @@
   </p>
 </footer>
 <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
 
     </body>
 </html>
