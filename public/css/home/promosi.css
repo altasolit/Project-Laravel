@@ -15,9 +15,9 @@
   /* Kartu Utama */
   .redclub-card {
     background: linear-gradient(to right, #1c1c1c, #3a3a3a);
-    border-radius: 12px;
+    border-radius: 20px;
     color: white;
-    padding: 20px;
+    padding: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
