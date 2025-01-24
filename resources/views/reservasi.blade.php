@@ -29,7 +29,7 @@
     <header class="container">
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/">
             <img src="IMG/logo.png" alt="Luxury Logo" width="50" height="50">
             The Luxury
           </a>
@@ -39,18 +39,19 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="/home">Home</a>
+                <a class="nav-link active" href="#">Recommendedgit</a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
-              </li>
+              </li> -->
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pilihan Kamar</a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else</a></li>
+                  <li><a class="dropdown-item" href="#">Single Bed</a></li>
+                  <li><a class="dropdown-item" href="#">Double Bed</a></li>
+                  <li><a class="dropdown-item" href="#">Twin Single Bed</a></li>
+                  <li><a class="dropdown-item" href="#">Twin Double Bed</a></li>
+                  <li><a class="dropdown-item" href="#">VIP Room</a></li>
                 </ul>
               </li>
             </ul>
@@ -74,7 +75,7 @@
             <p class="card-text">
               This is a wider card with supporting text below as a natural lead-in to additional content.
             </p>
-            <a href="#" class="btn btn-primary">Continue Reading</a>
+            <a href="#" class="btn btn-primary">Book Now!</a>
           </div>
         </article>
       </section>
