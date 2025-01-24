@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-  <head><script src="assets/js/color-modes.js"></script>
+  <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -100,7 +100,7 @@
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="blog.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ public_path('css/reservasi.css') }}" >
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -168,50 +168,115 @@
   </symbol>
 </svg>
 
-<div class="container">
+<div class="container"> 
   <header class="border-bottom lh-1 py-3">
-    <div class="row flex-nowrap justify-content-between align-items-center">
-      <div class="col-4 pt-1">
-        <a class="link-secondary" href="#">Subscribe</a>
-      </div>
-      <div class="col-4 text-center">
-        <a class="blog-header-logo text-body-emphasis text-decoration-none" href="#">The Luxury</a>
-      </div>
-      <div class="col-4 d-flex justify-content-end align-items-center">
-        <a class="link-secondary" href="#" aria-label="Search">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
-        </a>
-        <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
-      </div>
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <img src="IMG/logo.png" alt="Luxury" width="70" height="54">
+    <a class="navbar-brand" href="#">The Luxury</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </div>
+  </div>
+</nav>
   </header>
+    </div>
 
-  <div class="nav-scroller py-1 mb-3 border-bottom">
-    <nav class="nav nav-underline justify-content-between">
-      <a class="nav-item nav-link link-body-emphasis active" href="#">World</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">U.S.</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Technology</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Design</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Culture</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Business</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Politics</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Opinion</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Science</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Health</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Style</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Travel</a>
-    </nav>
+  
+    <div class="row mb-2">
+  <div class="col-md-4">
+    <img src="IMG/singgle bed.jpg" class="img-fluid" alt="VIP Room">
+  </div>
+  <div class="col-md-8 d-flex align-items-center">
+    <div>
+      <strong class="d-inline-block mb-2 text-primary-emphasis">World</strong>
+      <h3 class="mb-0">Featured post</h3>
+      <div class="mb-1 text-body-secondary">Nov 12</div>
+      <p class="card-text mb-auto">
+        This is a wider card with supporting text below as a natural lead-in to additional content.
+      </p>
+      <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+        Continue reading
+        <svg class="bi" fill="currentColor" width="1em" height="1em">
+          <use xlink:href="#chevron-right" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+    <div class="row mb-2">
+  <div class="col-md-4">
+    <img src="IMG/singgle bed.jpg" class="img-fluid" alt="VIP Room">
+  </div>
+  <div class="col-md-8 d-flex align-items-center">
+    <div>
+      <strong class="d-inline-block mb-2 text-primary-emphasis">World</strong>
+      <h3 class="mb-0">Featured post</h3>
+      <div class="mb-1 text-body-secondary">Nov 12</div>
+      <p class="card-text mb-auto">
+        This is a wider card with supporting text below as a natural lead-in to additional content.
+      </p>
+      <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+        Continue reading
+        <svg class="bi" fill="currentColor" width="1em" height="1em">
+          <use xlink:href="#chevron-right" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+    <div class="row mb-2">
+  <div class="col-md-4">
+    <img src="IMG/singgle bed.jpg" class="img-fluid" alt="VIP Room">
+  </div>
+  <div class="col-md-8 d-flex align-items-center">
+    <div>
+      <strong class="d-inline-block mb-2 text-primary-emphasis">World</strong>
+      <h3 class="mb-0">Featured post</h3>
+      <div class="mb-1 text-body-secondary">Nov 12</div>
+      <p class="card-text mb-auto">
+        This is a wider card with supporting text below as a natural lead-in to additional content.
+      </p>
+      <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+        Continue reading
+        <svg class="bi" fill="currentColor" width="1em" height="1em">
+          <use xlink:href="#chevron-right" />
+        </svg>
+      </a>
+    </div>
   </div>
 </div>
 
-<main class="container">
-  <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
-    <div class="col-lg-6 px-0">
-      <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
-      <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
-      <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">Continue reading...</a></p>
-    </div>
-  </div>
+
+
+       
+
 
   <div class="row mb-2">
     <div class="col-md-6">
@@ -291,72 +356,40 @@
     </div>
   </div>
 
-
-
-  <div class="row g-5">
-    <div class="col-md-8">
-      <h3 class="pb-4 mb-4 fst-italic border-bottom">
-        From the Firehose
-      </h3>
-
-        <div>
-          <h4 class="fst-italic">Recent posts</h4>
-          <ul class="list-unstyled">
-            <li>
-              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
-                <img class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></img>
-                <div class="col-lg-8">
-                  <h6 class="mb-0">Example blog post title</h6>
-                  <small class="text-body-secondary">January 15, 2024</small>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
-                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-                <div class="col-lg-8">
-                  <h6 class="mb-0">This is another blog post title</h6>
-                  <small class="text-body-secondary">January 14, 2024</small>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
-                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-                <div class="col-lg-8">
-                  <h6 class="mb-0">Longer blog post title: This one has multiple lines!</h6>
-                  <small class="text-body-secondary">January 13, 2024</small>
-                </div>
-              </a>
-            </li>
-          </ul>
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary-emphasis">World</strong>
+          <h3 class="mb-0">Featured post</h3>
+          <div class="mb-1 text-body-secondary">Nov 12</div>
+          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+            Continue reading
+            <img class="bi"><use xlink:href="#chevron-right"/></img>
+          </a>
+         </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="IMG/double bed 4.jpg" class="bd-placeholder-img" width="250" height="250" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
+        </div> 
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
+          <h3 class="mb-0">Post title</h3>
+          <div class="mb-1 text-body-secondary">Nov 11</div>
+          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+            Continue reading
+            <svg class="bi"><use xlink:href="#chevron-right"/></svg>
+          </a>
         </div>
-
-        <div class="p-4">
-          <h4 class="fst-italic">Archives</h4>
-          <ol class="list-unstyled mb-0">
-            <li><a href="#">March 2021</a></li>
-            <li><a href="#">February 2021</a></li>
-            <li><a href="#">January 2021</a></li>
-            <li><a href="#">December 2020</a></li>
-            <li><a href="#">November 2020</a></li>
-            <li><a href="#">October 2020</a></li>
-            <li><a href="#">September 2020</a></li>
-            <li><a href="#">August 2020</a></li>
-            <li><a href="#">July 2020</a></li>
-            <li><a href="#">June 2020</a></li>
-            <li><a href="#">May 2020</a></li>
-            <li><a href="#">April 2020</a></li>
-          </ol>
-        </div>
-
-        <div class="p-4">
-          <h4 class="fst-italic">Elsewhere</h4>
-          <ol class="list-unstyled">
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Facebook</a></li>
-          </ol>
+        <div class="col-auto d-none d-lg-block">
+          <img src="IMG/double bed 3.jpg" class="bd-placeholder-img" width="250" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
         </div>
       </div>
     </div>
@@ -370,7 +403,7 @@
     <a href="#">Back to top</a>
   </p>
 </footer>
-<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 
     </body>
 </html>

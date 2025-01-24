@@ -1,5 +1,28 @@
 /* stylelint-disable @stylistic/selector-list-comma-newline-after */
 
+
+
+.row.mb-2 {
+  display: flex;
+  align-items: center;
+}
+
+.col-md-4 img {
+  margin: 0; /* Hapus margin di sekitar gambar */
+}
+
+.col-md-8 {
+  padding: 0; /* Hapus padding internal */
+}
+
+.row.mb-2 div {
+  margin: 0; /* Hapus margin di dalam kolom */
+}
+
+.d-flex.align-items-center {
+  gap: 5px; /* Atur jarak antar elemen gambar dan teks */
+}
+
 .blog-header-logo {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
   font-size: 2.25rem;
