@@ -39,7 +39,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="#">Recommendedgit</a>
+                <a class="nav-link active" href="#">Recommended</a>
               </li>
               <!-- <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
@@ -71,10 +71,16 @@
         </article>
         <article class="col-md-8 mb-4 d-flex align-items-center">
           <div>
-            <h3 class="mb-3">Featured Post</h3>
-            <p class="card-text">
-              This is a wider card with supporting text below as a natural lead-in to additional content.
-            </p>
+            <h3 class="mb-3">Single Room</h3>
+<body>
+  <!-- <div class="input-group flex-nowrap">
+  <span class="input-group-text" id="addon-wrapping">Check In</span>
+  <input type="date" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+</div>
+<div class="input-group flex-nowrap">
+  <span class="input-group-text" id="addon-wrapping">Check Out</span>
+  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+</div> -->
             <a href="#" class="btn btn-primary">Book Now!</a>
           </div>
         </article>
