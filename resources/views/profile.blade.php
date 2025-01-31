@@ -330,7 +330,7 @@
                     </div>
                 </div>
                         <h1>Bagian profile</h1>
-                        <h4>haloo ini halaman </h4>
+                            <h4>hsllooo</h4>
                 
                 </div>
             </main>
