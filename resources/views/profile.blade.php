@@ -302,7 +302,7 @@
                                     <svg class="bi">
                                         <use xlink:href="#door-closed" />
                                     </svg>
-                                    Sign hayya out
+                                    Sign out
                                 </a>
                             </li>
                         </ul>
