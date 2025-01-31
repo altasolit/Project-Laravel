@@ -1,5 +1,5 @@
 .circle-item {
-    margin: 0 10px; /* Jarak antar lingkaran */
+    margin: 0 px; /* Jarak antar lingkaran */
     min-width: 80px; /* Pastikan lebar tetap */
     text-align: center;
   }
