@@ -331,7 +331,6 @@
                 </div>
                         <h1>Bagian profile</h1>
                             <h4>hsllooo</h4>
-                            <h1>dvchisdlw</h1>
                 
                 </div>
             </main>
