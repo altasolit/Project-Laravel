@@ -72,6 +72,8 @@
         <article class="col-md-8 mb-4 d-flex align-items-center">
           <div>
             <h3 class="mb-3">Single Room</h3>
+            <p>Istirahat tenang di single room yang cozy dan lengkap dengan fasilitas terbaik. </p>
+            <div class="mb-1 text-body-secondary">○ Sarapan ○ Kolam Renang</div>
 <body>
   <!-- <div class="input-group flex-nowrap">
   <span class="input-group-text" id="addon-wrapping">Check In</span>
@@ -81,6 +83,7 @@
   <span class="input-group-text" id="addon-wrapping">Check Out</span>
   <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
 </div> -->
+<br
             <a href="#" class="btn btn-primary">Book Now!</a>
           </div>
         </article>
