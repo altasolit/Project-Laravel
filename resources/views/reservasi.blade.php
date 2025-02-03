@@ -1,11 +1,6 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-<<<<<<< HEAD
-
-
-=======
   <head>
->>>>>>> 8d2c1796b312f0674a35f1cbf4f87c2ebf2ffd9f
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Reservation Page for The Luxury">

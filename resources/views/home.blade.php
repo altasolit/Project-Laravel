@@ -208,9 +208,6 @@
 <!-- Bagian 3 - Promo -->
 <link href="css/home/promosi.css" rel="stylesheet"> 
 <div class="redclub-container">
-
-  <h2></h2>
-  <h3>Luxury Hotel</h3>
   <div class="redclub-card">
     <div class="redclub-content">
       <img src="redclub-logo.png" alt="Logo Hotel" class="redclub-logo">
@@ -269,7 +266,7 @@
 <!-- Bagian 5 - Blog -->   
 <script src="js/home/blog.js"></script>
 <link href="css/home/blog.css" rel="stylesheet">
-<div class="blog-container">
+<div class="blog-container" data-bs-wrap="false">
   <h3>Blog</h3>
   <div class="blog-carousel">
     <button class="blog-prev" onclick="blogPrevSlide()">&#10094;</button>
