@@ -1,25 +1,29 @@
-let currentIndex = 0;
+let penawaranCurrentIndex = 0;
 
-function updateSlide() {
-  const slides = document.querySelector('.slides');
-  const totalSlides = document.querySelectorAll('.slide').length;
+function penawaranUpdateCarousel() {
+  const track = document.querySelector(".penawaran-track");
+  const items = document.querySelectorAll(".penawaran-item");
+  const totalItems = items.length;
 
-  // Ensure the index loops around correctly
-  if (currentIndex < 0) {
-    currentIndex = totalSlides - 1;
-  } else if (currentIndex >= totalSlides) {
-    currentIndex = 0;
+  if (penawaranCurrentIndex < 0) {
+    penawaranCurrentIndex = totalItems - 1;
+  } else if (penawaranCurrentIndex >= totalItems) {
+    penawaranCurrentIndex = 0;
   }
 
-  slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+  const offset = -penawaranCurrentIndex * (items[0].offsetWidth + 20); // 20px is margin
+  track.style.transform = `translateX(${offset}px)`;
 }
 
-function prevSlide() {
-  currentIndex--;
-  updateSlide();
+function penawaranPrevSlide() {
+  penawaranCurrentIndex--;
+  penawaranUpdateCarousel();
 }
 
-function nextSlide() {
-  currentIndex++;
-  updateSlide();
+function penawaranNextSlide() {
+  penawaranCurrentIndex++;
+  penawaranUpdateCarousel();
 }
+
+// Initial setup
+document.addEventListener("DOMContentLoaded", penawaranUpdateCarousel);

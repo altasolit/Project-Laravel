@@ -1,0 +1,97 @@
+.blog-container {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    padding: 20px 0;
+    overflow: hidden;
+  }
+  
+  .blog-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    padding: 0 60px;
+  }
+  
+  .blog-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    padding: 10px 0;
+  }
+  
+  .blog-item {
+    min-width: 300px;
+    margin: 0 10px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  
+  .blog-item img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+  }
+  
+  /* Tombol Navigasi HANYA untuk blog */
+  .blog-prev,
+  .blog-next {
+    display: block;  /* Pastikan tombol terlihat */
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100; /* Pastikan tombol berada di atas */
+  }
+  
+  .blog-prev {
+    left: 10px;
+  }
+  
+  .blog-next {
+    right: 10px;
+  }
+  
+  .blog-prev:hover,
+  .blog-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .blog-item {
+      min-width: 250px;
+    }
+  
+    .blog-carousel {
+      padding: 0 40px;
+    }
+  
+    .blog-container button {
+      padding: 8px 15px;
+      margin: 0 -40px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .blog-item {
+      min-width: 200px;
+    }
+  
+    .blog-carousel {
+      padding: 0 30px;
+    }
+  
+    .blog-container button {
+      padding: 5px 10px;
+      font-size: 12px;
+      margin: 0 -30px;
+    }
+  }
