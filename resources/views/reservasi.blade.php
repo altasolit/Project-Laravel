@@ -72,7 +72,7 @@
         </article>
         <article class="col-md-8 mb-4 d-flex align-items-center">
           <div>
-            <h3 class="mb-3">Single Room</h3>
+            <h3 class="mb-3" id="singlebed">Single Room</h3>
             <p>Istirahat dengan tenang di single room yang cozy nyaman yang dilengkapi fasilitas terbaik. </p>
             <div class="mb-1 text-body-secondary">○ Sarapan ○ Kolam Renang</div>
             <br>
