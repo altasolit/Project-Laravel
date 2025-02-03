@@ -32,6 +32,7 @@
   </head>
   <body>
     <header class="container">
+      
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">
@@ -46,9 +47,6 @@
               <li class="nav-item">
                 <a class="nav-link active" href="#">Recommended</a>
               </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li> -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pilihan Kamar</a>
                 <ul class="dropdown-menu">
