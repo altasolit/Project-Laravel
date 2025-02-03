@@ -78,6 +78,10 @@
       </div>
     </div>
  </div>
+
+ 
+
+   
  
  <!-- Bagian Tujuan Populer -->
   <!-- Bagian 2 - Circle -->
@@ -87,7 +91,7 @@
     <h3>Tujuan Populer</h3>
   </div>
    <div class="row">
-    <div class="col-12 d-flex justify-content-between align-items-center">
+    <div class="col-12 d-flex justify-content-between align-items-center"> 
 
       <!-- Tombol Panah Kiri -->
       <button id="left-arrow" class="btn btn-secondary">&lt;</button>
@@ -197,13 +201,16 @@
 <link href="css/home/circle.css" rel="stylesheet">
 <script src="js/home/circle.js"></script>
 
+
 <div class="container marketing">
   
 <!-- bagian promo, mungkin? -->
 <!-- Bagian 3 - Promo -->
 <link href="css/home/promosi.css" rel="stylesheet"> 
 <div class="redclub-container">
-  
+
+  <h2></h2>
+  <h3>Luxury Hotel</h3>
   <div class="redclub-card">
     <div class="redclub-content">
       <img src="redclub-logo.png" alt="Logo Hotel" class="redclub-logo">
