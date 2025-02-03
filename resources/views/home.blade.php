@@ -186,13 +186,17 @@
       </div>
     </div>
  </div>
+
+ 
+
+   
  
  <!-- Bagian Tujuan Populer -->
  
  <div class="container marketing">
   <h2>Luxury Hotel</h2>
    <div class="row">
-    <div class="col-12 d-flex justify-content-between align-items-center">
+    <div class="col-12 d-flex justify-content-between align-items-center"> 
 
       <!-- Tombol Panah Kiri -->
       <button id="left-arrow" class="btn btn-secondary">&lt;</button>
@@ -300,6 +304,10 @@
   </div>
 </div>
 
+
+
+    
+
 <style>
   .circle-item {
     margin: 0 10px; /* Jarak antar lingkaran */
@@ -363,7 +371,7 @@
    
 <!-- bagian promo, mungkin? -->
 <div class="redclub-container">
-  <h2>Luxury Hotel</h2>
+  <h2></h2>
   <div class="redclub-card">
     <div class="redclub-content">
       <img src="redclub-logo.png" alt="Logo Hotel" class="redclub-logo">
