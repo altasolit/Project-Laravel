@@ -47,7 +47,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pilihan Kamar</a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Single Bed</a></li>
+                  <li><a class="dropdown-item" href="#singlebed">Single Bed</a></li>
                   <li><a class="dropdown-item" href="#">Double Bed</a></li>
                   <li><a class="dropdown-item" href="#">Twin Single Bed</a></li>
                   <li><a class="dropdown-item" href="#">Twin Double Bed</a></li>
@@ -63,7 +63,8 @@
         </div>
       </nav>
     </header>
-
+    
+    <body>
     <main class="container mt-4">
       <section class="row">
         <article class="col-md-4 mb-4">
@@ -72,19 +73,12 @@
         <article class="col-md-8 mb-4 d-flex align-items-center">
           <div>
             <h3 class="mb-3">Single Room</h3>
-            <p>Istirahat tenang di single room yang cozy dan lengkap dengan fasilitas terbaik. </p>
+            <p>Istirahat dengan tenang di single room yang cozy nyaman yang dilengkapi fasilitas terbaik. </p>
             <div class="mb-1 text-body-secondary">○ Sarapan ○ Kolam Renang</div>
-<body>
-  <!-- <div class="input-group flex-nowrap">
-  <span class="input-group-text" id="addon-wrapping">Check In</span>
-  <input type="date" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-</div>
-<div class="input-group flex-nowrap">
-  <span class="input-group-text" id="addon-wrapping">Check Out</span>
-  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-</div> -->
+            <br>
+            <button type="button" class="btn btn-primary">Book Now!</button>
 <br
-            <a href="#" class="btn btn-primary">Book Now!</a>
+           
           </div>
         </article>
       </section>
@@ -99,7 +93,6 @@
           <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
           <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
             Continue reading
-            <img class="bi"><use xlink:href="#chevron-right"/></img>
           </a>
          </div>
         <div class="col-auto d-none d-lg-block">
@@ -117,7 +110,6 @@
           <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
           <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
             Continue reading
-            <svg class="bi"><use xlink:href="#chevron-right"/></svg>
           </a>
         </div>
         <div class="col-auto d-none d-lg-block">
@@ -138,7 +130,6 @@
           <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
           <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
             Continue reading
-            <img class="bi"><use xlink:href="#chevron-right"/></img>
           </a>
          </div>
         <div class="col-auto d-none d-lg-block">
@@ -156,7 +147,6 @@
           <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
           <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
             Continue reading
-            <svg class="bi"><use xlink:href="#chevron-right"/></svg>
           </a>
         </div>
         <div class="col-auto d-none d-lg-block">
@@ -177,7 +167,6 @@
           <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
           <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
             Continue reading
-            <img class="bi"><use xlink:href="#chevron-right"/></img>
           </a>
          </div>
         <div class="col-auto d-none d-lg-block">
@@ -195,7 +184,6 @@
           <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
           <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
             Continue reading
-            <svg class="bi"><use xlink:href="#chevron-right"/></svg>
           </a>
         </div>
         <div class="col-auto d-none d-lg-block">
