@@ -236,7 +236,7 @@ trait BuildsQueries
 
         $this->enforceOrderBy();
 
-        return new LazyCollection(function () use ($chunkSize) {
+        return LazyCollection::make(function () use ($chunkSize) {
             $page = 1;
 
             while (true) {
@@ -304,7 +304,7 @@ trait BuildsQueries
 
         $alias ??= $column;
 
-        return new LazyCollection(function () use ($chunkSize, $column, $alias, $descending) {
+        return LazyCollection::make(function () use ($chunkSize, $column, $alias, $descending) {
             $lastId = null;
 
             while (true) {

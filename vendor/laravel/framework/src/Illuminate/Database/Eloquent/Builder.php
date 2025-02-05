@@ -950,7 +950,7 @@ class Builder implements BuilderContract
         if (! $this->model->hasAnyGetMutator($column) &&
             ! $this->model->hasCast($column) &&
             ! in_array($column, $this->model->getDates())) {
-            return $this->applyAfterQueryCallbacks($results);
+            return $results;
         }
 
         return $this->applyAfterQueryCallbacks(
