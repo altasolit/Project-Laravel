@@ -66,7 +66,7 @@
       <label>Rooms</label>
       <span>1 Room, 2 Guest</span>
     </div>
-    <button id="carousel-button" class="custom-search-button">
+    <button class="custom-search-button">
       <span>&#128269; Cari</span>
     </button>
   </div>
@@ -78,10 +78,6 @@
       </div>
     </div>
  </div>
-
- 
-
-   
  
  <!-- Bagian Tujuan Populer -->
   <!-- Bagian 2 - Circle -->
@@ -91,7 +87,7 @@
     <h3>Tujuan Populer</h3>
   </div>
    <div class="row">
-    <div class="col-12 d-flex justify-content-between align-items-center"> 
+    <div class="col-12 d-flex justify-content-between align-items-center">
 
       <!-- Tombol Panah Kiri -->
       <button id="left-arrow" class="btn btn-secondary">&lt;</button>
@@ -198,9 +194,79 @@
     </div>
   </div>
 </div>
+<<<<<<< HEAD
+
+
+
+
+    
+
+<style>
+  .circle-item {
+    margin: 0 10px; /* Jarak antar lingkaran */
+    min-width: 80px; /* Pastikan lebar tetap */
+    text-align: center;
+  }
+
+  #circle-slider {
+    overflow: hidden;
+    flex: 1;
+  }
+
+  #circle-slider .d-flex {
+    gap: 10px; /* Jarak antar elemen */
+  }
+
+  #left-arrow, #right-arrow {
+    font-size: 10px; /* Ukuran panah lebih besar */
+    width: 50px; /* Lebar tombol */
+    height: 50px; /* Tinggi tombol */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(192, 192, 192); /* Warna tombol */
+    border: none; /* Hilangkan border */
+    border-radius: 50%; /* Membuat tombol bulat */
+    color: white; /* Warna teks putih */
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
+  }
+
+  #left-arrow:hover, #right-arrow:hover {
+    background-color: #495057; /* Warna tombol saat hover */
+  }
+  
+</style>
+
+<script>
+  const slider = document.querySelector("#circle-slider .d-flex");
+  const leftArrow = document.getElementById("left-arrow");
+  const rightArrow = document.getElementById("right-arrow");
+
+  let currentOffset = 0;
+  const scrollAmount = 100; // Geser sejauh 100px setiap kali klik
+
+  // Tombol Panah Kanan
+  rightArrow.addEventListener("click", () => {
+    const maxOffset = slider.scrollWidth - slider.parentElement.clientWidth;
+    currentOffset = Math.min(currentOffset + scrollAmount, maxOffset);
+    slider.style.transform = `translateX(-${currentOffset}px)`;
+  });
+
+  // Tombol Panah Kiri
+  leftArrow.addEventListener("click", () => {
+    currentOffset = Math.max(currentOffset - scrollAmount, 0);
+    slider.style.transform = `translateX(-${currentOffset}px)`;
+  });
+</script>
+
 <link href="css/home/circle.css" rel="stylesheet">
 <script src="js/home/circle.js"></script>
 
+=======
+<link href="css/home/circle.css" rel="stylesheet">
+<script src="js/home/circle.js"></script>
+>>>>>>> a2044cacc9e0bf936fb761929c9fe74557576a4e
 
 <div class="container marketing">
   
@@ -208,9 +274,15 @@
 <!-- Bagian 3 - Promo -->
 <link href="css/home/promosi.css" rel="stylesheet"> 
 <div class="redclub-container">
+<<<<<<< HEAD
 
   <h2></h2>
+
   <h3>Luxury Hotel</h3>
+
+=======
+  <h3>Luxury Hotel</h3>
+>>>>>>> a2044cacc9e0bf936fb761929c9fe74557576a4e
   <div class="redclub-card">
     <div class="redclub-content">
       <img src="redclub-logo.png" alt="Logo Hotel" class="redclub-logo">
@@ -241,73 +313,12 @@
   </div>
 </div>
 
-<!-- Bagian 4 - Penawaran -->   
-<script src="js/home/penawaran.js"></script>
-<link href="css/home/penawaran.css" rel="stylesheet">
-<div class="penawaran-container">
-  <h3>Penawaran</h3>
-  <div class="penawaran-carousel">
-    <button class="penawaran-prev" onclick="penawaranPrevSlide()">&#10094;</button>
-    <div class="penawaran-track">
-      <div class="penawaran-item">
-        <img src="img/lobby.jpg" alt="Slide 1">
-        <p>Saatnya Mengikuti #RedDoorzChallenge</p>
-      </div>
-      <div class="penawaran-item">
-        <img src="img/lobby.jpg" alt="Slide 2">
-        <p>Looong Weekend, Diskon hingga 25%</p>
-      </div>
-      <div class="penawaran-item">
-        <img src="img/lobby.jpg" alt="Slide 3">
-        <p>RedClub: Dapatkan Poin 2x Lipat</p>
-      </div>
-    </div>
-    <button class="penawaran-next" onclick="penawaranNextSlide()">&#10095;</button>
-  </div>
-</div>
-
-<!-- Bagian 5 - Blog -->   
-<script src="js/home/blog.js"></script>
-<link href="css/home/blog.css" rel="stylesheet">
-<div class="blog-container">
-  <h3>Blog</h3>
-  <div class="blog-carousel">
-    <button class="blog-prev" onclick="blogPrevSlide()">&#10094;</button>
-    <div class="blog-track">
-      <div class="blog-item">
-        <img src="img/lobby.jpg" alt="Slide 1">
-        <p>Saatnya Mengikuti #RedDoorzChallenge</p>
-      </div>
-      <div class="blog-item">
-        <img src="img/lobby.jpg" alt="Slide 2">
-        <p>Looong Weekend, Diskon hingga 25%</p>
-      </div>
-      <div class="blog-item">
-        <img src="img/lobby.jpg" alt="Slide 3">
-        <p>RedClub: Dapatkan Poin 2x Lipat</p>
-      </div>
-      <!-- Tambahan tiga item -->
-      <div class="blog-item">
-        <img src="img/lobby.jpg" alt="Slide 4">
-        <p>Promo Spesial Akhir Tahun</p>
-      </div>
-      <div class="blog-item">
-        <img src="img/lobby.jpg" alt="Slide 5">
-        <p>Pengalaman Menginap di RedDoorz</p>
-      </div>
-      <div class="blog-item">
-        <img src="img/lobby.jpg" alt="Slide 6">
-        <p>RedDoorz Mulai Dari 99K</p>
-      </div>
-    </div>
+<!-- Bagian 4 - Penawaran -->
  
-    <button class="blog-next" onclick="blogNextSlide()">&#10095;</button>
-  </div>
-</div>
 
 
+ 
 
-   
 
 
     <hr class="featurette-divider">
