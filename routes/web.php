@@ -10,6 +10,10 @@ Route::get('/reservasi', function () {
     return view('Reservasi');
 });
 
+Route::get('/profile', function () {
+    return view('profile');
+});
+
 Route::get('/dashboard', function () {
     return view('index');
 });

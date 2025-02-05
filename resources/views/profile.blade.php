@@ -205,7 +205,7 @@
                 <select id="gender" class="form-select" required>
                     <option selected disabled>Pilih jenis kelamin</option>
                     <option value="male">Laki-laki</option>
-                    <option value="female">Perempuan</option>
+                    <option value="female">Perempuans</option>
                 </select>
             </div>
 
