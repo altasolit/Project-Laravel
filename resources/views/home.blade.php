@@ -266,45 +266,40 @@
 <!-- Bagian 5 - Blog -->   
 <script src="js/home/blog.js"></script>
 <link href="css/home/blog.css" rel="stylesheet">
-<div class="blog-container" data-bs-wrap="false">
-  <h3>Blog</h3>
-  <div class="blog-carousel">
-    <button class="blog-prev" onclick="blogPrevSlide()">&#10094;</button>
-    <div class="blog-track">
-      <div class="blog-item">
-        <img src="img/lobby.jpg" alt="Slide 1">
-        <p>Saatnya Mengikuti #RedDoorzChallenge</p>
-      </div>
-      <div class="blog-item">
-        <img src="img/lobby.jpg" alt="Slide 2">
-        <p>Looong Weekend, Diskon hingga 25%</p>
-      </div>
-      <div class="blog-item">
-        <img src="img/lobby.jpg" alt="Slide 3">
-        <p>RedClub: Dapatkan Poin 2x Lipat</p>
-      </div>
-      <!-- Tambahan tiga item -->
-      <div class="blog-item">
-        <img src="img/lobby.jpg" alt="Slide 4">
-        <p>Promo Spesial Akhir Tahun</p>
-      </div>
-      <div class="blog-item">
-        <img src="img/lobby.jpg" alt="Slide 5">
-        <p>Pengalaman Menginap di RedDoorz</p>
-      </div>
-      <div class="blog-item">
-        <img src="img/lobby.jpg" alt="Slide 6">
-        <p>RedDoorz Mulai Dari 99K</p>
-      </div>
+<div class="blog-container">
+    <h3>Penawaran</h3>
+    <div class="blog-carousel">
+        <button class="blog-prev" onclick="blogPrevSlide()">&#10094;</button>
+        <div class="blog-track">
+            <div class="blog-item">
+                <img src="img/lobby.jpg" alt="Slide 1">
+                <p>Saatnya Mengikuti #RedDoorzChallenge</p>
+            </div>
+            <div class="blog-item">
+                <img src="img/lobby.jpg" alt="Slide 2">
+                <p>Looong Weekend, Diskon hingga 25%</p>
+            </div>
+            <div class="blog-item">
+                <img src="img/lobby.jpg" alt="Slide 3">
+                <p>RedClub: Dapatkan Poin 2x Lipat</p>
+            </div>
+            <div class="blog-item">
+                <img src="img/lobby.jpg" alt="Slide 4">
+                <p>Promo Spesial Akhir Tahun</p>
+            </div>
+            <div class="blog-item">
+                <img src="img/lobby.jpg" alt="Slide 5">
+                <p>Pengalaman Menginap di RedDoorz</p>
+            </div>
+            <div class="blog-item">
+                <img src="img/lobby.jpg" alt="Slide 6">
+                <p>RedDoorz Mulai Dari 99K</p>
+            </div>
+        </div>
+        <button class="blog-next" onclick="blogNextSlide()">&#10095;</button>
     </div>
- 
-    <button class="blog-next" onclick="blogNextSlide()">&#10095;</button>
-  </div>
 </div>
 
-
-
-   
 
 
     <hr class="featurette-divider">

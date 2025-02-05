@@ -1,97 +1,57 @@
 .blog-container {
+    text-align: center;
     width: 100%;
-    text-align: left;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.blog-carousel {
     position: relative;
-    padding: 20px 0;
     overflow: hidden;
-  }
-  
-  .blog-carousel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-    padding: 0 60px;
-  }
-  
-  .blog-track {
+    width: 100%;
+}
+
+.blog-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    padding: 10px 0;
-  }
-  
-  .blog-item {
-    min-width: 300px;
-    margin: 0 10px;
+    gap: 10px;
+}
+
+.blog-item {
+    flex: 0 0 calc(33.33% - 10px); /* 3 item per slide */
     text-align: center;
-    flex-shrink: 0;
-  }
-  
-  .blog-item img {
+    border-radius: 10px;
+}
+
+.blog-item img {
     width: 100%;
-    max-width: 300px;
-    border-radius: 8px;
-  }
-  
-  /* Tombol Navigasi HANYA untuk blog */
-  .blog-prev,
-  .blog-next {
-    display: block;  /* Pastikan tombol terlihat */
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Tombol Navigasi */
+.blog-prev,
+.blog-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 100; /* Pastikan tombol berada di atas */
-  }
-  
-  .blog-prev {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.blog-prev {
     left: 10px;
-  }
-  
-  .blog-next {
+}
+
+.blog-next {
     right: 10px;
-  }
-  
-  .blog-prev:hover,
-  .blog-next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  
-  
-  /* Responsiveness */
-  @media (max-width: 768px) {
-    .blog-item {
-      min-width: 250px;
-    }
-  
-    .blog-carousel {
-      padding: 0 40px;
-    }
-  
-    .blog-container button {
-      padding: 8px 15px;
-      margin: 0 -40px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .blog-item {
-      min-width: 200px;
-    }
-  
-    .blog-carousel {
-      padding: 0 30px;
-    }
-  
-    .blog-container button {
-      padding: 5px 10px;
-      font-size: 12px;
-      margin: 0 -30px;
-    }
-  }
+}
+
+.blog-prev:disabled,
+.blog-next:disabled {
+    background: rgba(0, 0, 0, 0.2);
+    cursor: not-allowed;
+}

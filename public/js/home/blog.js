@@ -1,29 +1,36 @@
-let blogCurrentIndex = 0;
-
-function blogUpdateCarousel() {
+document.addEventListener("DOMContentLoaded", function () {
   const track = document.querySelector(".blog-track");
   const items = document.querySelectorAll(".blog-item");
-  const totalItems = items.length;
+  const prevBtn = document.querySelector(".blog-prev");
+  const nextBtn = document.querySelector(".blog-next");
 
-  if (blogCurrentIndex < 0) {
-    blogCurrentIndex = totalItems - 1;
-  } else if (blogCurrentIndex >= totalItems) {
-    blogCurrentIndex = 0;
+  let currentIndex = 0;
+  const slidesToShow = 3; // Menampilkan 3 item per slide
+  const totalSlides = Math.ceil(items.length / slidesToShow);
+  const slideWidth = items[0].offsetWidth + 10; // Lebar satu slide + margin
+
+  function updateCarousel() {
+      track.style.transform = `translateX(-${currentIndex * slideWidth * slidesToShow}px)`;
+
+      // Sembunyikan tombol prev di slide pertama, dan tombol next di slide terakhir
+      prevBtn.disabled = currentIndex === 0;
+      nextBtn.disabled = currentIndex === totalSlides - 1;
   }
 
-  const offset = -blogCurrentIndex * (items[0].offsetWidth + 20); // 20px is margin
-  track.style.transform = `translateX(${offset}px)`;
-}
+  window.blogNextSlide = function () {
+      if (currentIndex < totalSlides - 1) {
+          currentIndex++;
+          updateCarousel();
+      }
+  };
 
-function blogPrevSlide() {
-  blogCurrentIndex--;
-  blogUpdateCarousel();
-}
+  window.blogPrevSlide = function () {
+      if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+      }
+  };
 
-function blogNextSlide() {
-  blogCurrentIndex++;
-  blogUpdateCarousel();
-}
-
-// Initial setup
-document.addEventListener("DOMContentLoaded", blogUpdateCarousel);
+  // Pastikan tombol navigasi diperbarui saat halaman dimuat
+  updateCarousel();
+});
