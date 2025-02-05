@@ -29,3 +29,10 @@ Route::get('/fasilitas', function () {
 Route::get('/customers', function () {
     return view('customers');
 });
+
+Route::get('/detailreservasi', function () {
+    return view('detailreservasi');
+});
+Route::get('/contoh', function () {
+    return view('contoh');
+});
