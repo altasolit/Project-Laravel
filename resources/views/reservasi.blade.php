@@ -90,10 +90,10 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary-emphasis">World</strong>
-          <h3 class="mb-0">Featured post</h3>
-          <div class="mb-1 text-body-secondary">Nov 12</div>
-          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <strong class="d-inline-block mb-2 text-primary-emphasis">VIP</strong>
+          <h3 class="mb-0">Cozy & Private</h3>
+          <div class="mb-1 text-body-secondary">Kamar single dengan desain minimalis dan nyaman cocok untuk Anda yang mencari ketenangan dan privasi</div>
+          <p class="card-text mb-auto"></p>
           <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
             Continue reading
             <img class="bi"><use xlink:href="#chevron-right"/></img>
@@ -101,17 +101,18 @@
          </div>
         <div class="col-auto d-none d-lg-block">
           <img src="IMG/rek 1.jpg" class="bd-placeholder-img" width="250" height="250" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
+            <title></title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
         </div> 
       </div>
     </div>
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
-          <h3 class="mb-0">Post title</h3>
-          <div class="mb-1 text-body-secondary">Nov 11</div>
-          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <strong class="d-inline-block mb-2 text-success-emphasis">VIP</strong>
+          <h3 class="mb-0">Modern Simplicity
+          </h3>
+          <div class="mb-1 text-body-secondary">Kamar bergaya modern dengan suasana hangat dan nyaman Ideal untuk solo traveler yang ingin istirahat dengan tenang setelah hari yang sibuk</div>
+          <p class="mb-auto"></p>
           <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
             Continue reading
             <svg class="bi"><use xlink:href="#chevron-right"/></svg>
@@ -129,10 +130,10 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary-emphasis">World</strong>
-          <h3 class="mb-0">Featured post</h3>
-          <div class="mb-1 text-body-secondary">Nov 12</div>
-          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <strong class="d-inline-block mb-2 text-primary-emphasis">VIP</strong>
+          <h3 class="mb-0">Deluxe Room</h3>
+          <div class="mb-1 text-body-secondary">Luas, modern, dan elegan. Dilengkapi dengan fasilitas premium untuk kenyamanan maksimal</div>
+          <p class="card-text mb-auto"></p>
           <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
             Continue reading
             <img class="bi"><use xlink:href="#chevron-right"/></img>
@@ -147,10 +148,10 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
-          <h3 class="mb-0">Post title</h3>
-          <div class="mb-1 text-body-secondary">Nov 11</div>
-          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <strong class="d-inline-block mb-2 text-success-emphasis">VIP</strong>
+          <h3 class="mb-0">Executive Suite</h3>
+          <div class="mb-1 text-body-secondary">Kemewahan dalam setiap detail. Nikmati ruang luas dengan pemandangan inda</div>
+          <p class="mb-auto"></p>
           <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
             Continue reading
             <svg class="bi"><use xlink:href="#chevron-right"/></svg>
@@ -168,10 +169,10 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary-emphasis">World</strong>
-          <h3 class="mb-0">Featured post</h3>
-          <div class="mb-1 text-body-secondary">Nov 12</div>
-          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <strong class="d-inline-block mb-2 text-primary-emphasis">VIP</strong>
+          <h3 class="mb-0">Twin Room</h3>
+          <div class="mb-1 text-body-secondary">Nyaman untuk dua orang, dengan desain stylish dan fasilitas lengkap</div>
+          <p class="card-text mb-auto"></p>
           <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
             Continue reading
             <img class="bi"><use xlink:href="#chevron-right"/></img>
@@ -186,10 +187,10 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
-          <h3 class="mb-0">Post title</h3>
-          <div class="mb-1 text-body-secondary">Nov 11</div>
-          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <strong class="d-inline-block mb-2 text-success-emphasis">VIP</strong>
+          <h3 class="mb-0">Luxury Suite</h3>
+          <div class="mb-1 text-body-secondary">Gabungan sempurna antara kenyamanan dan kemewahan, ideal untuk pengalaman menginap eksklusif</div>
+          <p class="mb-auto"></p>
           <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
             Continue reading
             <svg class="bi"><use xlink:href="#chevron-right"/></svg>
