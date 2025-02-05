@@ -262,10 +262,10 @@
     slider.style.transform = `translateX(-${currentOffset}px)`;
   });
 </script>
-=======
+
 <link href="css/home/circle.css" rel="stylesheet">
 <script src="js/home/circle.js"></script>
->>>>>>> 8d2c1796b312f0674a35f1cbf4f87c2ebf2ffd9f
+
 
 <div class="container marketing">
   
@@ -273,11 +273,11 @@
 <!-- Bagian 3 - Promo -->
 <link href="css/home/promosi.css" rel="stylesheet"> 
 <div class="redclub-container">
-<<<<<<< HEAD
+
   <h2></h2>
-=======
+
   <h3>Luxury Hotel</h3>
->>>>>>> 8d2c1796b312f0674a35f1cbf4f87c2ebf2ffd9f
+
   <div class="redclub-card">
     <div class="redclub-content">
       <img src="redclub-logo.png" alt="Logo Hotel" class="redclub-logo">
