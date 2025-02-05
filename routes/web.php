@@ -9,6 +9,23 @@ Route::get('/', function () {
 Route::get('/reservasi', function () {
     return view('Reservasi');
 });
+
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('index');
+});
+
+Route::get('/orders', function () {
+    return view('orders');
+});
+
+Route::get('/kamar', function () {
+    return view('Kamar');
+});
+
+Route::get('/fasilitas', function () {
+    return view('fasilitas');
+});
+
+Route::get('/customers', function () {
+    return view('customers');
 });
