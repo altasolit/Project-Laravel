@@ -30,8 +30,8 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">
-            <img src="IMG/logo.png" alt="Luxury Logo" width="50" height="50">
-            The Luxury
+            <img src="IMG/logo.png" alt="Luxury Logo" width="50" height="50"><b>
+            The Luxury</b>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -44,11 +44,11 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pilihan Kamar</a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#singlebed">Single Bed</a></li>
-                  <li><a class="dropdown-item" href="#">Double Bed</a></li>
-                  <li><a class="dropdown-item" href="#">Twin Single Bed</a></li>
-                  <li><a class="dropdown-item" href="#">Twin Double Bed</a></li>
-                  <li><a class="dropdown-item" href="#">VIP Room</a></li>
+                  <li><a class="dropdown-item" href="#singlebed"><b>Single Bed</b></a></li>
+                  <li><a class="dropdown-item" href="#"><b>Double Bed</b></a></li>
+                  <li><a class="dropdown-item" href="#"><b>Twin Single Bed</b></a></li>
+                  <li><a class="dropdown-item" href="#"><b>Twin Double Bed</b></a></li>
+                  <li><a class="dropdown-item" href="#"> <b><span style="color :gold">VIP</span> Room</b></a></li>
                 </ul>
               </li>
             </ul>
@@ -79,7 +79,11 @@
           </div>
         </article>
       </section>
-
+      <hr>
+      <hr>
+      <h1 class="text-center"><i><b>《 <span style="color :gold"> VIP</span> Recomended  》</b></i></h1>
+      <hr>
+      <hr>
       <div class="row mb-2">
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
