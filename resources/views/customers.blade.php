@@ -442,6 +442,7 @@
                             <button type="button" class="changeLogoHeaderColor" data-color="red2"></button>
                         </div>
                     </div>
+                    <!-- k -->
                     <div class="switch-block">
                         <h4>Navbar Header</h4>
                         <div class="btnSwitch">
