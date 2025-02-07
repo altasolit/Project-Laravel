@@ -51,7 +51,7 @@
                   <li><a class="dropdown-item" href="#">Double Bed</a></li>
                   <li><a class="dropdown-item" href="#">Twin Single Bed</a></li>
                   <li><a class="dropdown-item" href="#">Twin Double Bed</a></li>
-                  <li><a class="dropdown-item" href="#">VIP Room</a></li>
+                  <li><a class="dropdown-item" href="#"><i><b><span style="color :gold"> VIP</span></b></i></b> Room</a></li>
                 </ul>
               </li>
             </ul>
