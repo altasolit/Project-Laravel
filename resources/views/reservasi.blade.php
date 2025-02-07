@@ -51,7 +51,7 @@
                   <li><a class="dropdown-item" href="#">Double Bed</a></li>
                   <li><a class="dropdown-item" href="#">Twin Single Bed</a></li>
                   <li><a class="dropdown-item" href="#">Twin Double Bed</a></li>
-                  <li><a class="dropdown-item" href="#">VIP Room</a></li>
+                  <li><a class="dropdown-item" href="#"><i><b><span style="color :gold"> VIP</span></b></i></b> Room</a></li>
                 </ul>
               </li>
             </ul>
@@ -71,21 +71,21 @@
         </article>
         <article class="col-md-8 mb-4 d-flex align-items-center">
           <div>
-            <h3 class="mb-3">Single Room</h3>
+            <h3 class="mb-3"><b>Single Room</b></h3>
+            <p>Istirahat tenang di single room yang cozy dan lengkap dengan fasilitas terbaik. </p>
+            <div class="mb-1 text-body-secondary">○ Sarapan ○ Kolam Renang</div>
+            <br>
+            <button type="button" class="btn btn-primary">Book Now!</button>
 <body>
-  <!-- <div class="input-group flex-nowrap">
-  <span class="input-group-text" id="addon-wrapping">Check In</span>
-  <input type="date" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-</div>
-<div class="input-group flex-nowrap">
-  <span class="input-group-text" id="addon-wrapping">Check Out</span>
-  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-</div> -->
-            <a href="#" class="btn btn-primary">Book Now!</a>
+<br
           </div>
         </article>
       </section>
-
+      <hr>
+      <hr>
+      <h1 class="text-center"><i><b>《 <span style="color :gold"> VIP</span> Recomended  》</b></i></h1>
+      <hr>
+      <hr>
       <div class="row mb-2">
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
@@ -203,6 +203,8 @@
       </div>
     </div>
   </div>
+
+
 
 
       <!-- Duplicate section can follow the same structure -->
