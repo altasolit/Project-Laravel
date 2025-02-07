@@ -130,8 +130,8 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary-emphasis">VIP</strong>
-          <h3 class="mb-0">Deluxe Room</h3>
+        <strong class="d-inline-block mb-2" style="color:#FFB200;">VIP</strong>
+          <h3 class="mb-0">Twin Room</h3>
           <div class="mb-1 text-body-secondary">Luas, modern, dan elegan. Dilengkapi dengan fasilitas premium untuk kenyamanan maksimal</div>
           <p class="card-text mb-auto"></p>
           <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
@@ -149,8 +149,8 @@
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-success-emphasis">VIP</strong>
-          <h3 class="mb-0">Executive Suite</h3>
-          <div class="mb-1 text-body-secondary">Kemewahan dalam setiap detail. Nikmati ruang luas dengan pemandangan inda</div>
+          <h3 class="mb-0">Twin Room</h3>
+          <div class="mb-1 text-body-secondary">Nyaman untuk dua orang, dengan desain stylish dan fasilitas lengkap</div>
           <p class="mb-auto"></p>
           <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
             Continue reading
@@ -170,8 +170,8 @@
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-primary-emphasis">VIP</strong>
-          <h3 class="mb-0">Twin Room</h3>
-          <div class="mb-1 text-body-secondary">Nyaman untuk dua orang, dengan desain stylish dan fasilitas lengkap</div>
+          <h3 class="mb-0">Executive Suite</h3>
+          <div class="mb-1 text-body-secondary">Kemewahan dalam setiap detail. Nikmati ruang luas dengan pemandangan indah</div>
           <p class="card-text mb-auto"></p>
           <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
             Continue reading
@@ -187,7 +187,7 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-success-emphasis">VIP</strong>
+        <strong class="d-inline-block mb-2 text-success-emphasis">VIP</strong>
           <h3 class="mb-0">Luxury Suite</h3>
           <div class="mb-1 text-body-secondary">Gabungan sempurna antara kenyamanan dan kemewahan, ideal untuk pengalaman menginap eksklusif</div>
           <p class="mb-auto"></p>
