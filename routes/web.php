@@ -37,6 +37,4 @@ Route::get('/customers', function () {
 Route::get('/detailreservasi', function () {
     return view('detailreservasi');
 });
-Route::get('/contoh', function () {
-    return view('contoh');
-});
+
