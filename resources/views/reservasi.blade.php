@@ -90,7 +90,7 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary-emphasis">VIP</strong>
+        <strong class="d-inline-block mb-2" style="color:#FFB200;">VIP</strong>
           <h3 class="mb-0">Cozy & Private</h3>
           <div class="mb-1 text-body-secondary">Kamar single dengan desain minimalis dan nyaman cocok untuk Anda yang mencari ketenangan dan privasi</div>
           <p class="card-text mb-auto"></p>
@@ -108,7 +108,7 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-success-emphasis">VIP</strong>
+        <strong class="d-inline-block mb-2" style="color:#FFB200;">VIP</strong>
           <h3 class="mb-0">Modern Simplicity
           </h3>
           <div class="mb-1 text-body-secondary">Kamar bergaya modern dengan suasana hangat dan nyaman Ideal untuk solo traveler yang ingin istirahat dengan tenang setelah hari yang sibuk</div>
@@ -148,7 +148,7 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-success-emphasis">VIP</strong>
+        <strong class="d-inline-block mb-2" style="color:#FFB200;">VIP</strong>
           <h3 class="mb-0">Twin Room</h3>
           <div class="mb-1 text-body-secondary">Nyaman untuk dua orang, dengan desain stylish dan fasilitas lengkap</div>
           <p class="mb-auto"></p>
@@ -169,7 +169,7 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary-emphasis">VIP</strong>
+        <strong class="d-inline-block mb-2" style="color:#FFB200;">VIP</strong>
           <h3 class="mb-0">Executive Suite</h3>
           <div class="mb-1 text-body-secondary">Kemewahan dalam setiap detail. Nikmati ruang luas dengan pemandangan indah</div>
           <p class="card-text mb-auto"></p>
@@ -187,7 +187,7 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-        <strong class="d-inline-block mb-2 text-success-emphasis">VIP</strong>
+        <strong class="d-inline-block mb-2" style="color:#FFB200;">VIP</strong>
           <h3 class="mb-0">Luxury Suite</h3>
           <div class="mb-1 text-body-secondary">Gabungan sempurna antara kenyamanan dan kemewahan, ideal untuk pengalaman menginap eksklusif</div>
           <p class="mb-auto"></p>
