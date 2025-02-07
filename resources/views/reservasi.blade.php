@@ -39,7 +39,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="#">Recommended</a>
+                <a class="nav-link active" href="Recommended">Recommended</a>
               </li>
               <!-- <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
@@ -47,14 +47,16 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pilihan Kamar</a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Single Bed</a></li>
-                  <li><a class="dropdown-item" href="#">Double Bed</a></li>
-                  <li><a class="dropdown-item" href="#">Twin Single Bed</a></li>
-                  <li><a class="dropdown-item" href="#">Twin Double Bed</a></li>
-                  <li><a class="dropdown-item" href="#"><i><b><span style="color :gold"> VIP</span></b></i> Room</b></a></li>
+                  <li><a class="dropdown-item" href="#Single Bed">Single Bed</a></li>
+                  <li><a class="dropdown-item" href="#Double Bed">Double Bed</a></li>
+                  <li><a class="dropdown-item" href="#Twin Single Bed">Twin Single Bed</a></li>
+                  <li><a class="dropdown-item" href="#Twin Double Bed">Twin Double Bed</a></li>
+                  <li><a class="dropdown-item" href="#VIP"><i><b><span style="color :gold"> VIP</span></b></i> Room</b></a></li>
                 </ul>
               </li>
             </ul>
+
+
             <form class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
@@ -71,7 +73,7 @@
         </article>
         <article class="col-md-8 mb-4 d-flex align-items-center">
           <div>
-            <h3 class="mb-3"><b>Single Room</b></h3>
+            <h3 class="mb-3" id="Single Bed"><b>Single Bed</b></h3>
             <p>Istirahat tenang di single room yang cozy dan lengkap dengan fasilitas terbaik. </p>
             <div class="mb-1 text-body-secondary">○ Sarapan ○ Kolam Renang</div>
             <br>
@@ -90,13 +92,12 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-        <strong class="d-inline-block mb-2" style="color:#FFB200;">VIP</strong>
+        <strong class="d-inline-block mb-2" style="color:#FFB200;"><b>VIP</b></strong>
           <h3 class="mb-0">Cozy & Private</h3>
           <div class="mb-1 text-body-secondary">Kamar single dengan desain minimalis dan nyaman cocok untuk Anda yang mencari ketenangan dan privasi</div>
           <p class="card-text mb-auto"></p>
           <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
             Continue reading
-            <img class="bi"><use xlink:href="#chevron-right"/></img>
           </a>
          </div>
         <div class="col-auto d-none d-lg-block">
@@ -108,10 +109,9 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-        <strong class="d-inline-block mb-2" style="color:#FFB200;">VIP</strong>
-          <h3 class="mb-0">Modern Simplicity
-          </h3>
-          <div class="mb-1 text-body-secondary">Kamar bergaya modern dengan suasana hangat dan nyaman Ideal untuk solo traveler yang ingin istirahat dengan tenang setelah hari yang sibuk</div>
+        <strong class="d-inline-block mb-2" style="color:#FFB200;"><b>VIP</b></strong>
+          <h3 class="mb-0"><b>Modern Simplicity</b></h3>
+          <div class="mb-1 text-body-secondary">Kamar bergaya modern dengan suasana hangat dan nyaman Ideal untuk solo traveler</div>
           <p class="mb-auto"></p>
           <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
             Continue reading
@@ -130,13 +130,12 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-        <strong class="d-inline-block mb-2" style="color:#FFB200;">VIP</strong>
+        <strong class="d-inline-block mb-2" style="color:#FFB200;"><b>VIP</b></strong>
           <h3 class="mb-0">Twin Room</h3>
           <div class="mb-1 text-body-secondary">Luas, modern, dan elegan. Dilengkapi dengan fasilitas premium untuk kenyamanan maksimal</div>
           <p class="card-text mb-auto"></p>
           <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
             Continue reading
-            <img class="bi"><use xlink:href="#chevron-right"/></img>
           </a>
          </div>
         <div class="col-auto d-none d-lg-block">
@@ -148,7 +147,7 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-        <strong class="d-inline-block mb-2" style="color:#FFB200;">VIP</strong>
+        <strong class="d-inline-block mb-2" style="color:#FFB200;"><b>VIP</b></strong>
           <h3 class="mb-0">Twin Room</h3>
           <div class="mb-1 text-body-secondary">Nyaman untuk dua orang, dengan desain stylish dan fasilitas lengkap</div>
           <p class="mb-auto"></p>
@@ -169,13 +168,12 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-        <strong class="d-inline-block mb-2" style="color:#FFB200;">VIP</strong>
+        <strong class="d-inline-block mb-2" style="color:#FFB200;"><b>VIP</b></strong>
           <h3 class="mb-0">Executive Suite</h3>
           <div class="mb-1 text-body-secondary">Kemewahan dalam setiap detail. Nikmati ruang luas dengan pemandangan indah</div>
           <p class="card-text mb-auto"></p>
           <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
             Continue reading
-            <img class="bi"><use xlink:href="#chevron-right"/></img>
           </a>
          </div>
         <div class="col-auto d-none d-lg-block">
@@ -187,7 +185,7 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-        <strong class="d-inline-block mb-2" style="color:#FFB200;">VIP</strong>
+        <strong class="d-inline-block mb-2" style="color:#FFB200;"><b>VIP</b></strong>
           <h3 class="mb-0">Luxury Suite</h3>
           <div class="mb-1 text-body-secondary">Gabungan sempurna antara kenyamanan dan kemewahan, ideal untuk pengalaman menginap eksklusif</div>
           <p class="mb-auto"></p>
@@ -199,13 +197,20 @@
         <div class="col-auto d-none d-lg-block">
           <img src="IMG/rek 6.jpg" class="bd-placeholder-img" width="250" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
             <title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
-        </div>
+    </div>
       </div>
     </div>
+
+    <hr>
+      <hr>
+      <h1 class="text-center"><i><b>《   Fasilitas   》</b></i></h1>
+      <hr>
+      <hr>
+
   </div>
 
 
-
+   
 
       <!-- Duplicate section can follow the same structure -->
     </main>
