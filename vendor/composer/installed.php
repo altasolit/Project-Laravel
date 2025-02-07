@@ -3,7 +3,7 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '33b33de6da3f9253693575d3db53c4c4e879c64d',
+        'reference' => '89c45e550f4996dc669091f2dfdde12b421f4fc8',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -397,6 +397,15 @@
                 0 => 'v11.38.2',
             ),
         ),
+        'jean85/pretty-package-versions' => array(
+            'pretty_version' => '2.1.0',
+            'version' => '2.1.0.0',
+            'reference' => '3c4e5f62ba8d7de1734312e4fff32f67a8daaf10',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../jean85/pretty-package-versions',
+            'aliases' => array(),
+            'dev_requirement' => true,
+        ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -424,7 +433,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '33b33de6da3f9253693575d3db53c4c4e879c64d',
+            'reference' => '89c45e550f4996dc669091f2dfdde12b421f4fc8',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
