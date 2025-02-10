@@ -36,6 +36,9 @@ Route::get('/customers', function () {
 Route::get('/detailreservasi', function () {
     return view('detailreservasi');
 });
+Route::get('/reservasi', function () {
+    return view('reservasi');
+});
 
 
 require __DIR__.'/auth.php';
