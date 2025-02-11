@@ -39,7 +39,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="Recommended">Recommended</a>
+                <a class="nav-link active" href="#recomended">Recommended</a>
               </li>
               <!-- <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
@@ -73,7 +73,7 @@
         </article>
         <article class="col-md-8 mb-4 d-flex align-items-center">
           <div>
-            <h3 class="mb-3" id="Single Bed"><b>Single Bed</b></h3>
+            <h3 class="mb-3"></h3>d="<b>Single Room</b></h3>
             <p>Istirahat tenang di single room yang cozy dan lengkap dengan fasilitas terbaik. </p>
             <div class="mb-1 text-body-secondary">○ Sarapan ○ Kolam Renang</div>
             <br>
@@ -85,7 +85,7 @@
       </section>
       <hr>
       <hr>
-      <h1 class="text-center"><i><b>《 <span style="color :gold"> VIP</span> Recomended  》</b></i></h1>
+      <h1 class="text-center" id="recomended"><i><b>《 <span style="color :gold"> VIP</span> Recomended  》</b></i></h1>
       <hr>
       <hr>
       <div class="row mb-2">
