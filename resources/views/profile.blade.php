@@ -33,15 +33,12 @@
             <div class="profile-icon ms-3">D</div>
             </button>
             <div class="dropdown-menu" id="profileMenu">
-                <a href="#" class="dropdown-item">Lihat Profil</a>
+                <a href="#" class="dropdown-item">Profil</a>
                 <a href="#" class="dropdown-item">Pengaturan Akun</a>
                 <div class="dropdown-divider"></div>
                 <a href="#" class="dropdown-item logout">Keluar</a>
             </div>
         </div>
-    
-
-<!-- CSS untuk Dropdown -->
 <style>
    
     .profile-btn {
