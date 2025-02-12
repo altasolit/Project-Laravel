@@ -48,6 +48,7 @@
             <!-- <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
               </li> -->
+
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pilihan Kamar</a>
               <ul class="dropdown-menu">
@@ -59,6 +60,19 @@
               </ul>
             </li>
           </ul>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pilihan Kamar</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#Single Bed">Single Bed</a></li>
+                  <li><a class="dropdown-item" href="#Double Bed">Double Bed</a></li>
+                  <li><a class="dropdown-item" href="#Twin Single Bed">Twin Single Bed</a></li>
+                  <li><a class="dropdown-item" href="#Twin Double Bed">Twin Double Bed </a></li>
+                  <li><a class="dropdown-item" href="#VIP"><i><b><span style="color :gold"> VIP</span></b></i> Room</b></a></li>
+                </ul>
+              </li>
+            </ul>
+
 
 
           <form class="d-flex">
