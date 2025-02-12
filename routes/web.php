@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/h', function () {
+    return view('home');
+});
 
 
 Route::get('/dashboard', function () {
@@ -21,9 +24,12 @@ Route::middleware('auth')->group(function () {
 Route::get('/home', function () {
     return view('home');
 });
+
 Route::get('/info', function () {
     return view('profile-customer');
 });
+=======
+>>>>>>> 24da4ec8ccabd7ce3565769dbe99242a7cdfffc7
 Route::get('/orders', function () {
     return view('orders');
 });

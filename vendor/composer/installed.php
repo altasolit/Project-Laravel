@@ -4,8 +4,13 @@
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'reference' => '3359e8d70437eaa15ce465b2b8196b278d0af78c',
 =======
+=======
+        'reference' => 'fa7a8ccaa06e38c12d9e432a64355868ba71ff09',
+
+>>>>>>> 24da4ec8ccabd7ce3565769dbe99242a7cdfffc7
         'reference' => 'bd4bdc926f80b4c11f9f3a5a00d19ad4a93b9361',
 >>>>>>> e64440eac35153188a3aaf38d24f5c1bbbc1e4d4
         'type' => 'project',
@@ -438,8 +443,12 @@
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
 <<<<<<< HEAD
+<<<<<<< HEAD
             'reference' => '3359e8d70437eaa15ce465b2b8196b278d0af78c',
 =======
+=======
+            'reference' => 'fa7a8ccaa06e38c12d9e432a64355868ba71ff09',
+>>>>>>> 24da4ec8ccabd7ce3565769dbe99242a7cdfffc7
             'reference' => 'bd4bdc926f80b4c11f9f3a5a00d19ad4a93b9361',
 >>>>>>> e64440eac35153188a3aaf38d24f5c1bbbc1e4d4
             'type' => 'project',
