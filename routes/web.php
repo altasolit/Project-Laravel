@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/h', function () {
+    return view('home');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -43,5 +46,10 @@ Route::get('/customers', function () {
 Route::get('/detailreservasi', function () {
     return view('detailreservasi');
 });
+Route::get('/reservasi', function () {
+    return view('reservasi');
+});
+
 
 require __DIR__.'/auth.php';
+
