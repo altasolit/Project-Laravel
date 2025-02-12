@@ -1,5 +1,17 @@
 /* stylelint-disable @stylistic/selector-list-comma-newline-after */
 
+.container-fasilitas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img-top {
+  height: 250px; /* Sesuaikan tinggi gambar */
+  object-fit: cover; /* Memastikan gambar tetap proporsional */
+  width: 100%; /* Agar gambar mengisi lebar kartu */
+}
+
 
 
 .row.mb-2 {
