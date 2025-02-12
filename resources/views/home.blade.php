@@ -80,7 +80,7 @@
  </div>
  
  <!-- Bagian Tujuan Populer -->
-  <!-- Bagian 2 - Circle -->
+  <!-- Bagian 1 - Circle -->
  
  <div class="container marketing">
   <div class="margin-right mb-4">
@@ -102,90 +102,6 @@
             </svg>
             <p>1</p>
           </div>
-          <div class="circle-item text-center">
-            <svg class="bd-placeholder-img rounded-circle" width="60" height="60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <rect width="100%" height="100%" fill="#6c757d"></rect>
-            </svg>
-            <p>2</p>
-          </div>
-          <div class="circle-item text-center">
-            <svg class="bd-placeholder-img rounded-circle" width="60" height="60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <rect width="100%" height="100%" fill="#6c757d"></rect>
-            </svg>
-            <p>3</p>
-          </div>
-          <div class="circle-item text-center">
-            <svg class="bd-placeholder-img rounded-circle" width="60" height="60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <rect width="100%" height="100%" fill="#6c757d"></rect>
-            </svg>
-            <p>4</p>
-          </div>
-          <div class="circle-item text-center">
-            <svg class="bd-placeholder-img rounded-circle" width="60" height="60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <rect width="100%" height="100%" fill="#6c757d"></rect>
-            </svg>
-            <p>5</p>
-          </div>
-          <div class="circle-item text-center">
-            <svg class="bd-placeholder-img rounded-circle" width="60" height="60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <rect width="100%" height="100%" fill="#6c757d"></rect>
-            </svg>
-            <p>6</p>
-          </div>
-          <div class="circle-item text-center">
-            <svg class="bd-placeholder-img rounded-circle" width="60" height="60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <rect width="100%" height="100%" fill="#6c757d"></rect>
-            </svg>
-            <p>7</p>
-          </div>
-          <div class="circle-item text-center">
-            <svg class="bd-placeholder-img rounded-circle" width="60" height="60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <rect width="100%" height="100%" fill="#6c757d"></rect>
-            </svg>
-            <p>8</p>
-          </div>
-          <div class="circle-item text-center">
-            <svg class="bd-placeholder-img rounded-circle" width="60" height="60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <rect width="100%" height="100%" fill="#6c757d"></rect>
-            </svg>
-            <p>9</p>
-          </div>
-          <div class="circle-item text-center">
-            <svg class="bd-placeholder-img rounded-circle" width="60" height="60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <rect width="100%" height="100%" fill="#6c757d"></rect>
-            </svg>
-            <p>10</p>
-          </div>
-          <div class="circle-item text-center">
-            <svg class="bd-placeholder-img rounded-circle" width="60" height="60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <rect width="100%" height="100%" fill="#6c757d"></rect>
-            </svg>
-            <p>11</p>
-          </div>
-          <div class="circle-item text-center">
-            <svg class="bd-placeholder-img rounded-circle" width="60" height="60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <rect width="100%" height="100%" fill="#6c757d"></rect>
-            </svg>
-            <p>12</p>
-          </div>
-          <div class="circle-item text-center">
-            <svg class="bd-placeholder-img rounded-circle" width="60" height="60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <rect width="100%" height="100%" fill="#6c757d"></rect>
-            </svg>
-            <p>13</p>
-          </div>
-          <div class="circle-item text-center">
-            <svg class="bd-placeholder-img rounded-circle" width="60" height="60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <rect width="100%" height="100%" fill="#6c757d"></rect>
-            </svg>
-            <p>14</p>
-          </div>
-          <div class="circle-item text-center">
-            <svg class="bd-placeholder-img rounded-circle" width="60" height="60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <rect width="100%" height="100%" fill="#6c757d"></rect>
-            </svg>
-            <p>15</p>
-          </div>
         </div>
       </div>
       
@@ -194,76 +110,6 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-    
-
-<style>
-  .circle-item {
-    margin: 0 10px; /* Jarak antar lingkaran */
-    min-width: 80px; /* Pastikan lebar tetap */
-    text-align: center;
-  }
-
-  #circle-slider {
-    overflow: hidden;
-    flex: 1;
-  }
-
-  #circle-slider .d-flex {
-    gap: 10px; /* Jarak antar elemen */
-  }
-
-  #left-arrow, #right-arrow {
-    font-size: 10px; /* Ukuran panah lebih besar */
-    width: 50px; /* Lebar tombol */
-    height: 50px; /* Tinggi tombol */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:rgb(192, 192, 192); /* Warna tombol */
-    border: none; /* Hilangkan border */
-    border-radius: 50%; /* Membuat tombol bulat */
-    color: white; /* Warna teks putih */
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
-  }
-
-  #left-arrow:hover, #right-arrow:hover {
-    background-color: #495057; /* Warna tombol saat hover */
-  }
-  
-</style>
-
-<script>
-  const slider = document.querySelector("#circle-slider .d-flex");
-  const leftArrow = document.getElementById("left-arrow");
-  const rightArrow = document.getElementById("right-arrow");
-
-  let currentOffset = 0;
-  const scrollAmount = 100; // Geser sejauh 100px setiap kali klik
-
-  // Tombol Panah Kanan
-  rightArrow.addEventListener("click", () => {
-    const maxOffset = slider.scrollWidth - slider.parentElement.clientWidth;
-    currentOffset = Math.min(currentOffset + scrollAmount, maxOffset);
-    slider.style.transform = `translateX(-${currentOffset}px)`;
-  });
-
-  // Tombol Panah Kiri
-  leftArrow.addEventListener("click", () => {
-    currentOffset = Math.max(currentOffset - scrollAmount, 0);
-    slider.style.transform = `translateX(-${currentOffset}px)`;
-  });
-</script>
-
-<link href="css/home/circle.css" rel="stylesheet">
-<script src="js/home/circle.js"></script>
-
-
 <link href="css/home/circle.css" rel="stylesheet">
 <script src="js/home/circle.js"></script>
 
@@ -271,17 +117,10 @@
 <div class="container marketing">
   
 <!-- bagian promo, mungkin? -->
-<!-- Bagian 3 - Promo -->
+<!-- Bagian 2 - Promo -->
 <link href="css/home/promosi.css" rel="stylesheet"> 
 <div class="redclub-container">
-
-
-  <h2></h2>
-
-
-
   <h3>Luxury Hotel</h3>
-
   <div class="redclub-card">
     <div class="redclub-content">
       <img src="redclub-logo.png" alt="Logo Hotel" class="redclub-logo">
@@ -313,11 +152,10 @@
 </div>
 
 
-<!-- Bagian 4 - Penawaran -->
- 
+<!-- Bagian 3 - Blog -->
 
+     
 
- 
 
 
 
