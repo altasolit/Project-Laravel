@@ -7,6 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -17,8 +18,18 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/home', function () {
+    return view('home');
+});
+Route::get('/info', function () {
+    return view('profile-customer');
+});
 Route::get('/orders', function () {
     return view('orders');
+});
+
+Route::get('/reservasi', function () {
+    return view('Reservasi');
 });
 
 Route::get('/kamar', function () {
@@ -35,6 +46,9 @@ Route::get('/customers', function () {
 
 Route::get('/detailreservasi', function () {
     return view('detailreservasi');
+});
+Route::get('/reservasi', function () {
+    return view('reservasi');
 });
 
 require __DIR__.'/auth.php';
