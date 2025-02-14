@@ -37,35 +37,31 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#"></a>
                         </li>
-                    </ul>
-                    @if (Route::has('login'))
-                            <nav class="-mx-3 flex flex-1 justify-end">
+                                        <div class="container-bar ">
+                        @if (Route::has('login'))
+                            <nav class="-mx-3 flex flex-1 justify-end flex-order">
                                 @auth
-                                    <a
-                                        href="{{ url('/dashboard') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
+                                    <a href="{{ url('/dashboard') }}"
+                                        class="rounded-md px-3 py-2 dcr text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
                                         Dashboard
                                     </a>
                                 @else
-                                    <a
-                                        href="{{ route('login') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
+                                    <a href="{{ route('login') }}"
+                                        class="rounded-md px-3 py-2 dcr text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
                                         Log in
                                     </a>
 
                                     @if (Route::has('register'))
-                                        <a
-                                            href="{{ route('register') }}"
-                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                        >
+                                        <a href="{{ route('register') }}"
+                                            class="rounded-md px-3 py-2 dcr text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
                                             Register
                                         </a>
                                     @endif
                                 @endauth
                             </nav>
                         @endif
+                    </div>
+                </ul>
                 </div>
                 <link href="css/home/header.css" rel="stylesheet">
             </div>
@@ -249,18 +245,11 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Tombol Panah Kanan -->
                     <button id="right-arrow" class="btn btn-secondary">&gt;</button>
                 </div>
             </div>
         </div>
-
-
-
-
-
-
 
         <style>
             .circle-item {
@@ -312,50 +301,13 @@
             }
         </style>
 
-        <script>
-            const slider = document.querySelector("#circle-slider .d-flex");
-            const leftArrow = document.getElementById("left-arrow");
-            const rightArrow = document.getElementById("right-arrow");
-
-            let currentOffset = 0;
-            const scrollAmount = 100; // Geser sejauh 100px setiap kali klik
-
-            // Tombol Panah Kanan
-            rightArrow.addEventListener("click", () => {
-                const maxOffset = slider.scrollWidth - slider.parentElement.clientWidth;
-                currentOffset = Math.min(currentOffset + scrollAmount, maxOffset);
-                slider.style.transform = `translateX(-${currentOffset}px)`;
-            });
-
-            // Tombol Panah Kiri
-            leftArrow.addEventListener("click", () => {
-                currentOffset = Math.max(currentOffset - scrollAmount, 0);
-                slider.style.transform = `translateX(-${currentOffset}px)`;
-            });
-        </script>
-
-        <link href="css/home/circle.css" rel="stylesheet">
-        <script src="js/home/circle.js"></script>
-
-
-        <link href="css/home/circle.css" rel="stylesheet">
-        <script src="js/home/circle.js"></script>
-
 
         <div class="container marketing">
-
             <!-- bagian promo, mungkin? -->
             <!-- Bagian 3 - Promo -->
             <link href="css/home/promosi.css" rel="stylesheet">
             <div class="redclub-container">
-
-
-                <h2></h2>
-
-
-
                 <h3>Luxury Hotel</h3>
-
                 <div class="redclub-card">
                     <div class="redclub-content">
                         <img src="redclub-logo.png" alt="Logo Hotel" class="redclub-logo">
@@ -385,16 +337,7 @@
                     </div>
                 </div>
             </div>
-
-
             <!-- Bagian 4 - Penawaran -->
-
-
-
-
-
-
-
             <hr class="featurette-divider">
 
             <!-- FOOTER -->
@@ -405,7 +348,32 @@
             </footer>
     </main>
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const slider = document.querySelector("#circle-slider .d-flex");
+        const leftArrow = document.getElementById("left-arrow");
+        const rightArrow = document.getElementById("right-arrow");
 
+        let currentOffset = 0;
+        const scrollAmount = 100; // Geser sejauh 100px setiap kali klik
+
+        // Tombol Panah Kanan
+        rightArrow.addEventListener("click", () => {
+            const maxOffset = slider.scrollWidth - slider.parentElement.clientWidth;
+            currentOffset = Math.min(currentOffset + scrollAmount, maxOffset);
+            slider.style.transform = `translateX(-${currentOffset}px)`;
+        });
+
+        // Tombol Panah Kiri
+        leftArrow.addEventListener("click", () => {
+            currentOffset = Math.max(currentOffset - scrollAmount, 0);
+            slider.style.transform = `translateX(-${currentOffset}px)`;
+        });
+    </script>
+
+    <link href="css/home/circle.css" rel="stylesheet">
+    <script src="js/home/circle.js"></script>
+    <link href="css/home/circle.css" rel="stylesheet">
+    <script src="js/home/circle.js"></script>
 </body>
 
 </html>

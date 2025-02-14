@@ -42,7 +42,12 @@ h2 {
   margin-bottom: 20px;
   color: #fff;
 }
-
+.focused {
+  top: 5px;
+  font-size: 12px;
+  color: blue;
+  transition: all 0.3s ease;
+}
 .input-field {
   position: relative;
   width: 100%;
@@ -122,4 +127,39 @@ button:hover {
   text-align: center;
   margin-top: 30px;
   color: #fff;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.floating-label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+  font-size: 16px;
+  color: gray;
+  pointer-events: none;
+}
+
+x-text-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  display: block;
+}
+
+/* Efek saat input aktif atau memiliki nilai */
+.form-group:hover .floating-label,
+.form-group:focus-within .floating-label,
+input:focus + .floating-label,
+input:not(:placeholder-shown) + .floating-label {
+  top: 5px;
+  font-size: 12px;
+  color: gray;
 }
