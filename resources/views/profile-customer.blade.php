@@ -17,7 +17,7 @@
     <div class="container-fluid">
         <!-- Logo -->
         <a class="navbar-brand" href="#">
-            RedDoorz
+        <img src="img/logo.png" alt="Logo">
         </a>
 
         <!-- Bahasa dan Menu -->
