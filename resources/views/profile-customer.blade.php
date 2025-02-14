@@ -33,15 +33,12 @@
             <div class="profile-icon ms-3">D</div>
             </button>
             <div class="dropdown-menu" id="profileMenu">
-                <a href="#" class="dropdown-item">Lihat Profil</a>
+                <a href="#" class="dropdown-item">Profil</a>
                 <a href="#" class="dropdown-item">Pengaturan Akun</a>
                 <div class="dropdown-divider"></div>
                 <a href="#" class="dropdown-item logout">Keluar</a>
             </div>
         </div>
-    
-
-<!-- CSS untuk Dropdown -->
 <style>
    
     .profile-btn {
@@ -232,10 +229,14 @@
                 <input id="current-city" class="form-control" placeholder="Masukkan kota sekarang" type="text" required>
             </div>
         </div>
+            <div class="col-md-6 mb-3">
+                
+            </div>
+
     </form>
 </main>
 
-<!-- CSS untuk Memperindah Tampilan -->
+<!-- CSS Form  -->
 <style>
    
     .profile-header {
