@@ -28,8 +28,7 @@ Route::get('/home', function () {
 Route::get('/info', function () {
     return view('profile-customer');
 });
-=======
->>>>>>> 24da4ec8ccabd7ce3565769dbe99242a7cdfffc7
+
 Route::get('/orders', function () {
     return view('orders');
 });
