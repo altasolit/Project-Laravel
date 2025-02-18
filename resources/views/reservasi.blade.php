@@ -233,6 +233,7 @@
       </div>
     </div>
     <hr>
+    <hr>
       <h1 class="text-center"><i><b>《 Fasilitas Umum 》</b></i></h1>
       <hr>
       <hr>
@@ -290,8 +291,8 @@
                     <p class="card-text">Fasilitas meeting room mewah dan lengkap.</p>
                 </div>
             </div>
-        </div>
-
+        </div> 
+        <hr>
         <hr>
       <h1 class="text-center"><i><b>《 Fasilitas <span style="color :gold"> VIP</span> 》</b></i></h1>
       <hr>
@@ -327,8 +328,7 @@
                 </div>
             </div>
         </div>
-
-        <div class="container mt-4">
+      <div class="container mt-4">
     <div class="row">
         <div class="col-md-4 d-flex justify-content-center">
             <div class="card" style="width: 20rem;">
@@ -341,10 +341,7 @@
         </div>
     </div>
 </div>
-
-
-    
-    </div>
+  </div>
     </div>
     
 
