@@ -52,5 +52,7 @@ Route::get('/detailreservasi', function () {
 Route::get('/reservasi', function () {
     return view('reservasi');
 });
+Route::get('/profile/detailreservasi', [ProfileController::class, 'detailReservasi'])
+->name('profile.detailreservasi');
 
 require __DIR__.'/auth.php';
