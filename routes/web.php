@@ -4,9 +4,6 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/h', function () {
     return view('home');
 });
 
@@ -28,6 +25,10 @@ Route::get('/home', function () {
 Route::get('/info', function () {
     return view('profile-customer');
 });
+Route::get('/booking', function () {
+    return view('customer-booking');
+});
+
 Route::get('/orders', function () {
     return view('orders');
 });
