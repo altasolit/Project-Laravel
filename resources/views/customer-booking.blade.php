@@ -172,7 +172,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/booking" class="link-body-emphasis d-inline-flex text-decoration-none rounded">
+                        <a href="/bookings" class="link-body-emphasis d-inline-flex text-decoration-none rounded">
                             <h3>My Booking</h3>
                         </a>
                     </li>
