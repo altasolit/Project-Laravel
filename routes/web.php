@@ -25,6 +25,9 @@ Route::get('/home', function () {
 Route::get('/info', function () {
     return view('profile-customer');
 });
+Route::get('/bookings', function () {
+    return view('customer-booking');
+});
 
 Route::get('/orders', function () {
     return view('orders');
