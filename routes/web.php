@@ -10,6 +10,7 @@ Route::get('/', function () {
 //     return view('home');
 // });
 
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -23,6 +24,14 @@ Route::middleware('auth')->group(function () {
 Route::get('/home', function () {
     return view('home');
 });
+
+Route::get('/info', function () {
+    return view('profile-customer');
+});
+Route::get('/bookings', function () {
+    return view('customer-booking');
+});
+
 Route::get('/orders', function () {
     return view('orders');
 });
@@ -49,7 +58,7 @@ Route::get('/detailreservasi', function () {
 Route::get('/reservasi', function () {
     return view('reservasi');
 });
-
+Route::get('/profile/detailreservasi', [ProfileController::class, 'detailReservasi'])
+->name('profile.detailreservasi');
 
 require __DIR__.'/auth.php';
-
