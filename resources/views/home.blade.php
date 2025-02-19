@@ -28,7 +28,7 @@
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
                             <div class="nav-logo">
-                                <img src="img/logo.png" alt="Logo">
+                                <img src="img/logo2.png" alt="Logo">
                             </div>
                         </li>
                         <li class="nav-item">
@@ -75,7 +75,7 @@
 
     <main>
 
- <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+ <div id="myCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="img/bg-home.jpg" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/>
@@ -111,7 +111,7 @@
   <!-- Bagian 1 - Circle -->
  
  <div class="container marketing">
-  <div class="margin-right mb-4">
+  <div class="margin-right mb-5">
     <h3>Tujuan Populer</h3>
   </div>
    <div class="row">
@@ -144,32 +144,32 @@
 
 <div class="container marketing">
   
-<!-- bagian promo, mungkin? -->
-<!-- Bagian 2 - Promo -->
-<link href="css/home/promosi.css" rel="stylesheet"> 
+<!-- Bagian Fasilitas, mungkin? -->
+<!-- Bagian 2 - Fasilitas -->
+<link href="css/home/fasilitas.css" rel="stylesheet"> 
 <div class="redclub-container">
-  <h3>Luxury Hotel</h3>
+  <h3>Fasilitas Hotel</h3>
   <div class="redclub-card">
     <div class="redclub-content">
-      <img src="redclub-logo.png" alt="Logo Hotel" class="redclub-logo">
+      <img src="img/logo2.png" alt="Logo Hotel" class="redclub-logo">
       <p>Makin banyak menginap, makin hemat dengan Luxury Club terbaru</p>
     </div>
     <div class="redclub-benefits">
       <div class="benefit-item">
-        <img src="icon-discount.png" alt="Diskon" class="benefit-icon">
-        <p>Diskon Ekstra 12%</p>
+        <img src="img/bg-wifi.png" alt="Wifi" class="benefit-icon">
+        <p>Free WIFI</p>
       </div>
       <div class="benefit-item">
-        <img src="icon-points.png" alt="Poin" class="benefit-icon">
-        <p>Dapatkan poin 3x lipat</p>
+        <img src="img/bg-car.png" alt="Mobil" class="benefit-icon">
+        <p>Layanan antar jemput bandara</p>
       </div>
       <div class="benefit-item">
-        <img src="icon-redeem.png" alt="Tukar Poin" class="benefit-icon">
-        <p>Bisa tukar poin dengan diskon</p>
+        <img src="img/bg-clean.png" alt="Clean Service" class="benefit-icon">
+        <p>Cleaning Service</p>
       </div>
       <div class="benefit-item">
-        <img src="icon-support.png" alt="Bantuan" class="benefit-icon">
-        <p>Layanan bantuan prioritas</p>
+        <img src="img/bg-laundry.png" alt="Laundry" class="benefit-icon">
+        <p>Laundry</p>
       </div>
       <div class="benefit-item">
         <img src="icon-price.png" alt="Harga Terbaik" class="benefit-icon">
@@ -179,9 +179,32 @@
   </div>
 </div>
 
+<!-- Bagian 3 - Rekomendasi Hotel -->
+<link href="css/home/rek.css" rel="stylesheet"> 
 
-<!-- Bagian 3 - Blog -->
 
+
+<!-- Bagian 4 - Blog -->
+<link href="css/home/blog.css" rel="stylesheet"> 
+<div class="container blog">
+        <h3>Blog Perjalanan</h3>
+        <div class="blog-slider">
+            <div class="blog-card">
+                <img src="img/lobby.jpg" alt="Surabaya">
+                <div class="blog-tag">Surabaya</div>
+                <div class="blog-content">
+                    <h3>Keindahan Kebun Raya Mangrove Surabaya</h3>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="img/vip 2.jpg" alt="Jakarta">
+                <div class="blog-tag">Jakarta</div>
+                <div class="blog-content">
+                    <h3>SEVENTEEN Jakarta: "RIGHT HERE" WORLD TOUR</h3>
+                </div>
+            </div>
+        </div>
+    </div>
      
 
 
