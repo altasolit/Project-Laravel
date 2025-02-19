@@ -28,7 +28,7 @@
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
                             <div class="nav-logo">
-                                <img src="img/logo.png" alt="Logo">
+                                <img src="img/logo2.png" alt="Logo">
                             </div>
                         </li>
                         <li class="nav-item">

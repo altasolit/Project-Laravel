@@ -1,0 +1,49 @@
+.container.blog {
+    width: 100%;
+    margin: auto;
+}
+.blog-title {
+    font-size: 24px;
+}
+.blog-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    scroll-behavior: smooth;
+}
+.blog-card {
+    min-width: 150px;
+    max-width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background: #f1f1f1;
+}
+.blog-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.blog-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+.blog-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.blog-content h3 {
+    font-size: 16px;
+    margin: 0;
+}
