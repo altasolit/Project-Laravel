@@ -17,7 +17,7 @@
     <div class="container-fluid">
         <!-- Logo -->
         <a class="navbar-brand" href="#">
-            RedDoorz
+        <img src="img/logo.png" alt="Logo">
         </a>
 
         <!-- Bahasa dan Menu -->
@@ -33,15 +33,12 @@
             <div class="profile-icon ms-3">D</div>
             </button>
             <div class="dropdown-menu" id="profileMenu">
-                <a href="#" class="dropdown-item">Lihat Profil</a>
+                <a href="#" class="dropdown-item">Profil</a>
                 <a href="#" class="dropdown-item">Pengaturan Akun</a>
                 <div class="dropdown-divider"></div>
                 <a href="#" class="dropdown-item logout">Keluar</a>
             </div>
         </div>
-    
-
-<!-- CSS untuk Dropdown -->
 <style>
    
     .profile-btn {
@@ -170,12 +167,12 @@
             <div class="flex-shrink-0 p-3 sidebar" style="width: 280px;">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                     <li>
-                        <a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded " style="margin-bottom: 25px; margin-top: 50px;">
+                        <a href="/info" class="link-body-emphasis d-inline-flex text-decoration-none rounded " style="margin-bottom: 25px; margin-top: 50px;">
                             <h3>My Profile</h3>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">
+                        <a href="/bookings" class="link-body-emphasis d-inline-flex text-decoration-none rounded">
                             <h3>My Booking</h3>
                         </a>
                     </li>
@@ -186,7 +183,7 @@
         <!-- Bagian Profile -->
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="margin-bottom: 500px;">
         <h1 class="h2" style="margin-bottom: 50px; margin-top: 50px;">My Profile</h1>
-    <form class="profile-form">
+    <form class="profile-form" action="" name="profile-form">
         <div class="row">
 
             <div class="col-md-6 mb-3" >
@@ -232,10 +229,14 @@
                 <input id="current-city" class="form-control" placeholder="Masukkan kota sekarang" type="text" required>
             </div>
         </div>
+            <div class="col-md-6 mb-3">
+                
+            </div>
+
     </form>
 </main>
 
-<!-- CSS untuk Memperindah Tampilan -->
+<!-- CSS Form  -->
 <style>
    
     .profile-header {

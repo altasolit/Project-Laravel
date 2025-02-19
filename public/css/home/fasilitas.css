@@ -8,13 +8,13 @@
   /* Judul */
   .redclub-container h2 {
     font-size: 24px;
-    color: #333;
-    margin-bottom: 16px;
+    color: rgb(8, 12, 56);
+    margin-bottom: 20px;
   }
   
   /* Kartu Utama */
   .redclub-card {
-    background: linear-gradient(to right, #1c1c1c, #3a3a3a);
+    background: linear-gradient(to right, #1c1c1c, rgb(8, 12, 56));
     border-radius: 20px;
     color: white;
     padding: 30px;
