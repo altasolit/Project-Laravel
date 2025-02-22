@@ -42,9 +42,12 @@
                                 <nav
                                     class="d-flex justify-content-end"style="width: {{ Request::is('dashboard') ? '110px' : '165px' }};">
                                     @auth
-                                        <a href="{{ url('/dashboard') }}" class="btn btn-outline-dark me-2">
-                                            Dashboard
-                                        </a>
+                                    <a href="{{ url('/dashboard') }}" class="btn ">
+                                        {{-- untuk profil dari database --}}
+                                        {{-- <img src="{{ Auth::user()->profile_image ?? asset('default_profile.png') }}" alt="Profile" width="30" height="30" class="rounded-circle"> --}}
+                                        {{-- sementara dulu --}}
+                                        <img src="img/arle.jpg" alt="Profile" width="35" height="35" class="rounded-circle">
+                                    </a>
                                     @else
                                         <a href="{{ route('login') }}" class="btn btn-outline-dark me-2">
                                             Log in
@@ -199,7 +202,7 @@
             <div class=" mb-4">
                 <h3>Luxury Hotel</h3>
             </div>
-            <link href="css/home/promosi.css" rel="stylesheet">
+            <link href="css/home/fasilitas.css" rel="stylesheet">
             <div class="redclub-container">
 
                 <div class="redclub-card">
