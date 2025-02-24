@@ -155,15 +155,12 @@
         }
 </style>
 
-
-
-
 </div>
   </nav>
 <!-- Sidebar -->
 <div class="container-fluid">
     <div class="row">
-        <div class="sidebar col-md-3 col-lg-2 p-0">
+        <div class="sidebar col-md-3 col-lg-2 p-0 sidebar border border-right col-md-3 col-lg-2 p-0">
             <div class="flex-shrink-0 p-3 sidebar" style="width: 280px;">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                     <li>
@@ -232,7 +229,7 @@
             </div>
         </div>
             <div class="col-md-6 mb-3">
-                
+            <button type="submit" class="btn btn-save">Simpan</button>
             </div>
 
     </form>
