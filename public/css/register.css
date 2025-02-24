@@ -163,3 +163,8 @@ input:not(:placeholder-shown) + .floating-label {
     font-size: 12px;
     color: gray;
 }
+
+.login p {
+    margin-top: 20px;
+    color: #fff;
+}

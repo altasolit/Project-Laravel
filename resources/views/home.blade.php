@@ -28,7 +28,7 @@
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
                             <div class="nav-logo">
-                                <img src="img/logo.png" alt="Logo">
+                                <img src="img/logo2.png" alt="Logo">
                             </div>
                         </li>
                         <li class="nav-item">
@@ -37,41 +37,37 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#"></a>
                         </li>
-                                        <div class="container-bar ">
-                        @if (Route::has('login'))
-                            <nav class="-mx-3 flex flex-1 justify-end flex-order">
-                                @auth
-                                    <a href="{{ url('/dashboard') }}"
-                                        class="rounded-md px-3 py-2 dcr text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                                        Dashboard
+                        <div class="container-bar">
+                            @if (Route::has('login'))
+                                <nav
+                                    class="d-flex justify-content-end"style="width: {{ Request::is('dashboard') ? '110px' : '165px' }};">
+                                    @auth
+                                    <a href="{{ url('/dashboard') }}" class="btn ">
+                                        {{-- untuk profil dari database --}}
+                                        {{-- <img src="{{ Auth::user()->profile_image ?? asset('default_profile.png') }}" alt="Profile" width="30" height="30" class="rounded-circle"> --}}
+                                        {{-- sementara dulu --}}
+                                        <img src="img/arle.jpg" alt="Profile" width="35" height="35" class="rounded-circle">
                                     </a>
-                                @else
-                                    <a href="{{ route('login') }}"
-                                        class="rounded-md px-3 py-2 dcr text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                                        Log in
-                                    </a>
-
-                                    @if (Route::has('register'))
-                                        <a href="{{ route('register') }}"
-                                            class="rounded-md px-3 py-2 dcr text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                                            Register
+                                    @else
+                                        <a href="{{ route('login') }}" class="btn btn-outline-dark me-2">
+                                            Log in
                                         </a>
-                                    @endif
-                                @endauth
-                            </nav>
-                        @endif
-                    </div>
-                </ul>
+                                        @if (Route::has('register'))
+                                            <a href="{{ route('register') }}" class="btn btn-outline-dark">
+                                                Register
+                                            </a>
+                                        @endif
+                                    @endauth
+                                </nav>
+                            @endif
+                        </div>
+                    </ul>
                 </div>
                 <link href="css/home/header.css" rel="stylesheet">
             </div>
         </nav>
     </header>
-
-
     <main>
-
-
         <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -104,219 +100,141 @@
                 </div>
             </div>
         </div>
-        </div>
-        </div>
-
-        <!-- Bagian Tujuan Populer -->
-        <!-- Bagian 2 - Circle -->
-
         <div class="container marketing">
             <div class="margin-right mb-4">
                 <h3>Tujuan Populer</h3>
             </div>
-            <div class="row">
-                <div class="col-12 d-flex justify-content-between align-items-center">
+            <div class="horizontal-scroll">
+                <div class="container-slider">
+                    <div class="circle-item text-center">
+                        <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <rect width="100%" height="100%" fill="#6c757d"></rect>
+                        </svg>
+                        <p>1</p>
+                    </div>
+                    <div class="circle-item text-center">
+                        <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <rect width="100%" height="100%" fill="#6c757d"></rect>
+                        </svg>
+                        <p>1</p>
+                    </div>
+                    <div class="circle-item text-center">
+                        <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <rect width="100%" height="100%" fill="#6c757d"></rect>
+                        </svg>
+                        <p>1</p>
+                    </div>
+                    <div class="circle-item text-center">
+                        <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <rect width="100%" height="100%" fill="#6c757d"></rect>
+                        </svg>
+                        <p>1</p>
+                    </div>
+                    <div class="circle-item text-center">
+                        <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <rect width="100%" height="100%" fill="#6c757d"></rect>
+                        </svg>
+                        <p>1</p>
+                    </div>
+                    <div class="circle-item text-center">
+                        <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <rect width="100%" height="100%" fill="#6c757d"></rect>
+                        </svg>
+                        <p>1</p>
+                    </div>
+                    <div class="circle-item text-center">
+                        <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <rect width="100%" height="100%" fill="#6c757d"></rect>
+                        </svg>
+                        <p>1</p>
+                    </div>
+                    <div class="circle-item text-center">
+                        <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <rect width="100%" height="100%" fill="#6c757d"></rect>
+                        </svg>
+                        <p>1</p>
+                    </div>
+                    <div class="circle-item text-center">
+                        <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <rect width="100%" height="100%" fill="#6c757d"></rect>
+                        </svg>
+                        <p>1</p>
+                    </div>
+                    <div class="circle-item text-center">
+                        <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <rect width="100%" height="100%" fill="#6c757d"></rect>
+                        </svg>
+                        <p>1</p>
+                    </div>
+                    <div class="circle-item text-center">
+                        <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <rect width="100%" height="100%" fill="#6c757d"></rect>
+                        </svg>
+                        <p>1</p>
+                    </div>
+                </div>
+            </div>
 
-                    <!-- Tombol Panah Kiri -->
-                    <button id="left-arrow" class="btn btn-secondary">&lt;</button>
+        </div>
+        <div class="container marketing">
+            <div class=" mb-4">
+                <h3>Luxury Hotel</h3>
+            </div>
+            <link href="css/home/fasilitas.css" rel="stylesheet">
+            <div class="redclub-container">
 
-                    <!-- Slider Kontainer -->
-                    <div id="circle-slider" class="d-flex overflow-hidden flex-nowrap" style="flex: 1;">
-                        <div class="d-flex" style="transition: transform 0.3s ease;">
-                            <!-- Tambahkan Lingkaran -->
-                            <div class="circle-item text-center">
-                                <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                                    <rect width="100%" height="100%" fill="#6c757d"></rect>
-                                </svg>
-                                <p>1</p>
-                            </div>
-                            <div class="circle-item text-center">
-                                <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                                    <rect width="100%" height="100%" fill="#6c757d"></rect>
-                                </svg>
-                                <p>2</p>
-                            </div>
-                            <div class="circle-item text-center">
-                                <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                                    <rect width="100%" height="100%" fill="#6c757d"></rect>
-                                </svg>
-                                <p>3</p>
-                            </div>
-                            <div class="circle-item text-center">
-                                <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                                    <rect width="100%" height="100%" fill="#6c757d"></rect>
-                                </svg>
-                                <p>4</p>
-                            </div>
-                            <div class="circle-item text-center">
-                                <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                                    <rect width="100%" height="100%" fill="#6c757d"></rect>
-                                </svg>
-                                <p>5</p>
-                            </div>
-                            <div class="circle-item text-center">
-                                <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                                    <rect width="100%" height="100%" fill="#6c757d"></rect>
-                                </svg>
-                                <p>6</p>
-                            </div>
-                            <div class="circle-item text-center">
-                                <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                                    <rect width="100%" height="100%" fill="#6c757d"></rect>
-                                </svg>
-                                <p>7</p>
-                            </div>
-                            <div class="circle-item text-center">
-                                <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                                    <rect width="100%" height="100%" fill="#6c757d"></rect>
-                                </svg>
-                                <p>8</p>
-                            </div>
-                            <div class="circle-item text-center">
-                                <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                                    <rect width="100%" height="100%" fill="#6c757d"></rect>
-                                </svg>
-                                <p>9</p>
-                            </div>
-                            <div class="circle-item text-center">
-                                <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                                    <rect width="100%" height="100%" fill="#6c757d"></rect>
-                                </svg>
-                                <p>10</p>
-                            </div>
-                            <div class="circle-item text-center">
-                                <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                                    <rect width="100%" height="100%" fill="#6c757d"></rect>
-                                </svg>
-                                <p>11</p>
-                            </div>
-                            <div class="circle-item text-center">
-                                <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                                    <rect width="100%" height="100%" fill="#6c757d"></rect>
-                                </svg>
-                                <p>12</p>
-                            </div>
-                            <div class="circle-item text-center">
-                                <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                                    <rect width="100%" height="100%" fill="#6c757d"></rect>
-                                </svg>
-                                <p>13</p>
-                            </div>
-                            <div class="circle-item text-center">
-                                <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                                    <rect width="100%" height="100%" fill="#6c757d"></rect>
-                                </svg>
-                                <p>14</p>
-                            </div>
-                            <div class="circle-item text-center">
-                                <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                                    <rect width="100%" height="100%" fill="#6c757d"></rect>
-                                </svg>
-                                <p>15</p>
-                            </div>
+                <div class="redclub-card">
+                    <div class="redclub-content">
+                        <img src="redclub-logo.png" alt="Logo Hotel" class="redclub-logo">
+                        <p>Makin banyak menginap, makin hemat dengan Luxury Club terbaru</p>
+                    </div>
+                    <div class="redclub-benefits">
+                        <div class="benefit-item">
+                            <img src="icon-discount.png" alt="Diskon" class="benefit-icon">
+                            <p>Diskon Ekstra 12%</p>
+                        </div>
+                        <div class="benefit-item">
+                            <img src="icon-points.png" alt="Poin" class="benefit-icon">
+                            <p>Dapatkan poin 3x lipat</p>
+                        </div>
+                        <div class="benefit-item">
+                            <img src="icon-redeem.png" alt="Tukar Poin" class="benefit-icon">
+                            <p>Bisa tukar poin dengan diskon</p>
+                        </div>
+                        <div class="benefit-item">
+                            <img src="icon-support.png" alt="Bantuan" class="benefit-icon">
+                            <p>Layanan bantuan prioritas</p>
+                        </div>
+                        <div class="benefit-item">
+                            <img src="icon-price.png" alt="Harga Terbaik" class="benefit-icon">
+                            <p>Jaminan Harga Terbaik</p>
                         </div>
                     </div>
-                    <!-- Tombol Panah Kanan -->
-                    <button id="right-arrow" class="btn btn-secondary">&gt;</button>
                 </div>
-
- <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="img/bg-home.jpg" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/>
-        <div class="custom-search-bar-container">
-  <div class="custom-search-bar">
-    <input type="text" placeholder="Enter a City, Locality or Hotel" class="custom-search-input"/>
-    <div class="custom-date-input">
-      <label>Check In</label>
-      <span>y</span>
-    </div>
-    <div class="custom-date-input">
-      <label>Check Out</label>
-      <span>Thu, 23 Jan</span>
-    </div>
-    <div class="custom-guest-input">
-      <label>Rooms</label>
-      <span>1 Room, 2 Guest</span>
-    </div>
-    <button class="custom-search-button">
-      <span>&#128269; Cari</span>
-    </button>
-  </div>
-</div>
-  <link href="css/home/search.css">
-  <script src="js/home/search.js"></script>
->>>>>>> e2a84df4aebbbc275baec9bdc6f30e50911c1b1c
             </div>
-          </div>
-      </div>
-    </div>
- </div>
- 
- <!-- Bagian Tujuan Populer -->
-  <!-- Bagian 1 - Circle -->
- 
- <div class="container marketing">
-  <div class="margin-right mb-4">
-    <h3>Tujuan Populer</h3>
-  </div>
-   <div class="row">
-    <div class="col-12 d-flex justify-content-between align-items-center">
-
-      <!-- Tombol Panah Kiri -->
-      <button id="left-arrow" class="btn btn-secondary">&lt;</button>
-      
-      <!-- Slider Kontainer -->
-      <div id="circle-slider" class="d-flex overflow-hidden flex-nowrap" style="flex: 1;">
-        <div class="d-flex" style="transition: transform 0.3s ease;">
-          <!-- Tambahkan Lingkaran -->
-          <div class="circle-item text-center">
-            <svg class="bd-placeholder-img rounded-circle" width="60" height="60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <rect width="100%" height="100%" fill="#6c757d"></rect>
-            </svg>
-            <p>1</p>
-          </div>
         </div>
-      </div>
-      
-      <!-- Tombol Panah Kanan -->
-      <button id="right-arrow" class="btn btn-secondary">&gt;</button>
-    </div>
-  </div>
-</div>
-<link href="css/home/circle.css" rel="stylesheet">
-<script src="js/home/circle.js"></script>
-
 
         <style>
             .circle-item {
@@ -368,98 +286,13 @@
             }
         </style>
 
-
-        <div class="container marketing">
-            <!-- bagian promo, mungkin? -->
-            <!-- Bagian 3 - Promo -->
-            <link href="css/home/promosi.css" rel="stylesheet">
-            <div class="redclub-container">
-                <h3>Luxury Hotel</h3>
-                <div class="redclub-card">
-                    <div class="redclub-content">
-                        <img src="redclub-logo.png" alt="Logo Hotel" class="redclub-logo">
-                        <p>Makin banyak menginap, makin hemat dengan Luxury Club terbaru</p>
-                    </div>
-                    <div class="redclub-benefits">
-                        <div class="benefit-item">
-                            <img src="icon-discount.png" alt="Diskon" class="benefit-icon">
-                            <p>Diskon Ekstra 12%</p>
-                        </div>
-                        <div class="benefit-item">
-                            <img src="icon-points.png" alt="Poin" class="benefit-icon">
-                            <p>Dapatkan poin 3x lipat</p>
-                        </div>
-                        <div class="benefit-item">
-                            <img src="icon-redeem.png" alt="Tukar Poin" class="benefit-icon">
-                            <p>Bisa tukar poin dengan diskon</p>
-                        </div>
-                        <div class="benefit-item">
-                            <img src="icon-support.png" alt="Bantuan" class="benefit-icon">
-                            <p>Layanan bantuan prioritas</p>
-                        </div>
-                        <div class="benefit-item">
-                            <img src="icon-price.png" alt="Harga Terbaik" class="benefit-icon">
-                            <p>Jaminan Harga Terbaik</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Bagian 4 - Penawaran -->
-
-
-<div class="container marketing">
-  
-<!-- bagian promo, mungkin? -->
-<!-- Bagian 2 - Promo -->
-<link href="css/home/promosi.css" rel="stylesheet"> 
-<div class="redclub-container">
-  <h3>Luxury Hotel</h3>
-  <div class="redclub-card">
-    <div class="redclub-content">
-      <img src="redclub-logo.png" alt="Logo Hotel" class="redclub-logo">
-      <p>Makin banyak menginap, makin hemat dengan Luxury Club terbaru</p>
-    </div>
-    <div class="redclub-benefits">
-      <div class="benefit-item">
-        <img src="icon-discount.png" alt="Diskon" class="benefit-icon">
-        <p>Diskon Ekstra 12%</p>
-      </div>
-      <div class="benefit-item">
-        <img src="icon-points.png" alt="Poin" class="benefit-icon">
-        <p>Dapatkan poin 3x lipat</p>
-      </div>
-      <div class="benefit-item">
-        <img src="icon-redeem.png" alt="Tukar Poin" class="benefit-icon">
-        <p>Bisa tukar poin dengan diskon</p>
-      </div>
-      <div class="benefit-item">
-        <img src="icon-support.png" alt="Bantuan" class="benefit-icon">
-        <p>Layanan bantuan prioritas</p>
-      </div>
-      <div class="benefit-item">
-        <img src="icon-price.png" alt="Harga Terbaik" class="benefit-icon">
-        <p>Jaminan Harga Terbaik</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- Bagian 3 - Blog -->
-
-     
-
-
-
-
-            <hr class="featurette-divider">
-
-            <!-- FOOTER -->
-            <footer class="container">
-                <p class="float-end"><a href="#">Back to top</a></p>
-                <p>&copy; 2025 RPL, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
-                </p>
-            </footer>
+        <hr class="featurette-divider">
+        <!-- FOOTER -->
+        <footer class="container">
+            <p class="float-end"><a href="#">Back to top</a></p>
+            <p>&copy; 2025 RPL, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
+            </p>
+        </footer>
     </main>
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -484,6 +317,9 @@
         });
     </script>
 
+    <link href="css/home/circle.css" rel="stylesheet">
+    <script src="js/home/circle.js"></script>
+    <link href="css/home/promosi.css" rel="stylesheet">
     <link href="css/home/circle.css" rel="stylesheet">
     <script src="js/home/circle.js"></script>
     <link href="css/home/circle.css" rel="stylesheet">
