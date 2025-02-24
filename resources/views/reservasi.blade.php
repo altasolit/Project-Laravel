@@ -229,39 +229,10 @@
       <h1 class="text-center"><i><b>《 Fasilitas Umum 》</b></i></h1>
       <hr>
       <hr>
-      <div class="container mt-4">
-    <div class="row">
-        <div class="col-md-4 d-flex justify-content-center">
-            <div class="card" style="width: 20rem;">
-                <img src="IMG/biliard umum.jpg" class="card-img-top" alt="Billiard">
-                <div class="card-body">
-                    <h5 class="card-title">Billiard</h5>
-                    <p class="card-text">Tempat billiard mewah dengan suasana nyaman.</p>
-
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main class="container mt-4">
-        <section class="row">
-            <article class="col-md-4 mb-4">
-                <img src="IMG/singgle bed.jpg" class="img-fluid rounded" alt="Single Bed">
-            </article>
-            <article class="col-md-8 mb-4 d-flex align-items-center">
-                <div>
-                    <h3 class="mb-3"><b>SINGLE ROOM</b></h3>
-                    <p>Istirahat tenang di single room yang cozy dan lengkap dengan fasilitas terbaik. </p>
-                    <div class="mb-1 text-body-secondary">○ Sarapan ○ Kolam Renang</div>
-                    <br>
-                    <button type="button" class="btn btn-primary" onclick="window.location.href='{{ route('profile.detailreservasi') }}'">Book Now!</button>
-
-
-                    <body>
-                        <br </div>
-            </article>
-        </section>
-
+      
+      <main class="container mt-4">
+    <div class="container mt-4">
+      <div class="row">
         <div class="col-md-4 d-flex justify-content-center">
             <div class="card" style="width: 20rem;">
                 <img src="IMG/kolam umum.jpg" class="card-img-top" alt="Kolam Renang">
@@ -271,7 +242,25 @@
                 </div>
             </div>
         </div>
-    </div>
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="card" style="width: 20rem;">
+                <img src="IMG/kolam umum.jpg" class="card-img-top" alt="Kolam Renang">
+                <div class="card-body">
+                    <h5 class="card-title">Kolam Renang</h5>
+                    <p class="card-text">Kolam renang rooftop dengan pemandangan indah.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="card" style="width: 20rem;">
+                <img src="IMG/kolam umum.jpg" class="card-img-top" alt="Kolam Renang">
+                <div class="card-body">
+                    <h5 class="card-title">Kolam Renang</h5>
+                    <p class="card-text">Kolam renang rooftop dengan pemandangan indah.</p>
+                </div>
+            </div>
+        </div>
+      </div>
     </div>
     
     <div class="container mt-4">
@@ -285,7 +274,15 @@
                 </div>
             </div>
         </div>
-
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="card" style="width: 20rem;">
+                <img src="IMG/pingpong umum.jpg" class="card-img-top" alt="Billiard">
+                <div class="card-body">
+                    <h5 class="card-title">Pingpong</h5>
+                    <p class="card-text">Tempat pingpong mewah dengan suasana nyaman.</p>
+                </div>
+            </div>
+        </div>
         <div class="col-md-4 d-flex justify-content-center">
             <div class="card" style="width: 20rem;">
                 <img src="IMG/meeting room umum.jpg" class="card-img-top" alt="Gym">
