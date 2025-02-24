@@ -1,4 +1,21 @@
- 
+.dcr {
+  text-decoration: none;
+}
+
+.container-slider {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+}
+
+.horizontal-scroll {
+  width: 100%;
+  overflow-x: scroll;
+  scrollbar-color: transparent transparent;
+}
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
 /* Container */
 .redclub-container {
     font-family: Arial, sans-serif;
@@ -8,13 +25,13 @@
   /* Judul */
   .redclub-container h2 {
     font-size: 24px;
-    color: #333;
-    margin-bottom: 16px;
+    color: rgb(8, 12, 56);
+    margin-bottom: 20px;
   }
   
   /* Kartu Utama */
   .redclub-card {
-    background: linear-gradient(to right, #1c1c1c, #3a3a3a);
+    background: linear-gradient(to right, #1c1c1c, rgb(8, 12, 56));
     border-radius: 20px;
     color: white;
     padding: 30px;

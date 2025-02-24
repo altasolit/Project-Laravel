@@ -46,3 +46,18 @@
 .navbar .form-control {
   padding: .75rem 1rem;
 }
+
+.status-container {
+  display: flex;
+  align-items: center; /* Agar semua tombol sejajar secara vertikal */
+}
+
+.status-button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.green { background-color: green; color: white; }
+.blue { background-color: blue; color: white; }
+.red { background-color: red; color: white;}

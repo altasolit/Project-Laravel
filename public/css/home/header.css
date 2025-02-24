@@ -1,7 +1,7 @@
 /* Header dengan gradasi transparan */
 .navbar {
-background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 255, 255)); /* Gradasi dari hitam pekat ke transparan */
-backdrop-filter: blur(300px); 
+background: linear-gradient(to bottom, rgb(8, 12, 56), rgba(8, 12, 56, 0.315)); /* Gradasi dari hitam pekat ke transparan */
+backdrop-filter: blur(200px); 
 transition: all 0.3s ease-in-out;
 position: absolute;
 }
@@ -9,12 +9,12 @@ position: absolute;
 /* Warna teks untuk navbar */
 .navbar .navbar-brand,
 .navbar .nav-link {
-color: rgb(255, 255, 255); /* warna teks header */
+color: rgb(8, 12, 56); /* warna teks header */
 }
 
 .navbar .navbar-brand:hover,
 .navbar .nav-link:hover {
-color:rgb(255, 255, 255); /* warna hover */
+color:rgb(8, 12, 56); /* warna hover */
 }
 
 /* Responsivitas tombol toggler */

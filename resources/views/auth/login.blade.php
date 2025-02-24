@@ -50,39 +50,49 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Glassmorphism Login Form | CodingNepal</title>
+        <title>Login Form</title>
         <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     </head>
     <body>
         <div class="wrapper">
-            <!-- Session Status -->
-            <x-auth-session-status class="mb-4" :status="session('status')" />
+            <div class="glass-container">
+                <!-- Session Status -->
+                <x-auth-session-status class="mb-4" :status="session('status')" />
 
-            <form method="POST" action="{{ route('login') }}">
-                @csrf
-                <h2>Login</h2>
-                <div class="input-field">
-                    <x-input-label for="email" :value="__('Email')" />
-                    <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" autofocus autocomplete="username" placeholder=" " required/>
-                    <x-input-error :messages="$errors->get('email')" class="mt-2" />
-                </div>
-                <div class="input-field">
-                    <x-input-label for="password" :value="__('Password')" />
-                    <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" autocomplete="current-password" placeholder=" " required />
-                    <x-input-error :messages="$errors->get('password')" class="mt-2" />
-                </div>
-                <div class="forget">
-                    <label for="remember_me" class="inline-flex items-center">
-                        <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
-                        <p>Remember me</p>
-                    </label>
-                    <a href="{{ route('password.request') }}">Forgot password?</a>
-                </div>
-                <button type="submit">Log In</button>
-                <div class="register">
-                    <p>Don't have an account? <a href="{{ route('register') }}">Register</a></p>
-                </div>
-            </form>
+                <form method="POST" action="{{ route('login') }}">
+                    @csrf
+                    <h2>Login</h2>
+
+                    <!-- Input Email -->
+                    <div class="input-field form-group">
+                        <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" autofocus autocomplete="username" required />
+                        <x-input-label for="email" class="floating-label" :value="('Email')" />
+                        <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                    </div>
+
+                    <!-- Input Password -->
+                    <div class="input-field form-group">
+                        <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" autocomplete="current-password" required />
+                        <x-input-label for="password" class="floating-label" :value="('Password')" />
+                        <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                    </div>
+
+                    <div class="forget">
+                        <label for="remember_me" class="inline-flex items-center">
+                            <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
+                            <p>Remember me</p>
+                        </label>
+                        <a href="{{ route('password.request') }}">Forgot password?</a>
+                    </div>
+
+                    <button type="submit">Log In</button>
+
+                    <div class="register">
+                        <p>Don't have an account? <a href="{{ route('register') }}">Register</a></p>
+                    </div>
+                </form>
+            </div>
         </div>
+        <script src="{{ asset('js/login.js') }}"></script>
     </body>
 </x-guest-layout>
