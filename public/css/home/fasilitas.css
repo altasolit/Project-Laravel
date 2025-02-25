@@ -1,4 +1,21 @@
- 
+.dcr {
+  text-decoration: none;
+}
+
+.container-slider {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+}
+
+.horizontal-scroll {
+  width: 100%;
+  overflow-x: scroll;
+  scrollbar-color: transparent transparent;
+}
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
 /* Container */
 .redclub-container {
     font-family: Arial, sans-serif;

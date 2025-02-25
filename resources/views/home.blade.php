@@ -49,9 +49,12 @@
                                 <nav
                                     class="d-flex justify-content-end"style="width: {{ Request::is('dashboard') ? '110px' : '165px' }};">
                                     @auth
-                                        <a href="{{ url('/dashboard') }}" class="btn btn-outline-dark me-2">
-                                            Dashboard
-                                        </a>
+                                    <a href="{{ url('/dashboard') }}" class="btn ">
+                                        {{-- untuk profil dari database --}}
+                                        {{-- <img src="{{ Auth::user()->profile_image ?? asset('default_profile.png') }}" alt="Profile" width="30" height="30" class="rounded-circle"> --}}
+                                        {{-- sementara dulu --}}
+                                        <img src="img/arle.jpg" alt="Profile" width="35" height="35" class="rounded-circle">
+                                    </a>
                                     @else
                                         <a href="{{ route('login') }}" class="btn btn-outline-dark me-2">
                                             Log in
@@ -78,25 +81,33 @@
                         aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
                     <div class="custom-search-bar-container">
-                    <div class="b-search-bar">
-                        <input type="text" id="destination" class="b-input" placeholder="Where are you going?" />  
-                    <div class="b-text">
-                        <label>Test</label>
-                        <input type="text" class="b-input b-checkin-date" placeholder="Check-in date" />
-                    </div>    
-                    <div class="b-text">
-                        <label>Test</label>
-                        <input type="text" class="b-input b-checkout-date" placeholder="Check-out date" />
-                    </div>    
-        <button id="search-btn" class="b-button">Search</button>
-    </div>
-</div>
-
-<!-- Tambahkan Flatpickr -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="search.js"></script>
-
+                        <div class="custom-search-bar">
+                            <div class="custom-guest-input">
+                                <input type="text" placeholder="Enter a City, Locality or Hotel"
+                                    class="custom-search-input" />
+                            </div>
+                            <div class="divider"></div>
+                            <div class="custom-guest-input">
+                                <label>Check-in</label>
+                                <input type="text" class=" b-checkin-date" placeholder="Check-in date" />
+                            </div> 
+                            <div class="divider"></div>
+                            <div class="custom-guest-input">
+                                <label>Check-out</label>
+                                <input type="text" class=" b-checkout-date" placeholder="Check-out date" />
+                            </div>  
+                            <div class="divider"></div>
+                            <div class="custom-guest-input">
+                                <label>Rooms</label>
+                                <span>1 Room, 2 Guest</span>
+                            </div>
+                            <button class="custom-search-button">
+                                <span>&#128269; Cari</span>
+                            </button>
+                        </div>
+                    </div>
+                    <link href="css/home/search.css">
+                    <script src="js/home/search.js"></script>
                 </div>
             </div>
         </div>
@@ -202,6 +213,7 @@
             <div class=" mb-4">
                 <h3>Luxury Hotel</h3>
             </div>
+            <link href="css/home/fasilitas.css" rel="stylesheet">
             <div class="redclub-container">
                 <div class="redclub-card">
                     <div class="redclub-content">
@@ -284,4 +296,40 @@
         </footer>
     </main>
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const slider = document.querySelector("#circle-slider .d-flex");
+        const leftArrow = document.getElementById("left-arrow");
+        const rightArrow = document.getElementById("right-arrow");
+
+        let currentOffset = 0;
+        const scrollAmount = 100; // Geser sejauh 100px setiap kali klik
+
+        // Tombol Panah Kanan
+        rightArrow.addEventListener("click", () => {
+            const maxOffset = slider.scrollWidth - slider.parentElement.clientWidth;
+            currentOffset = Math.min(currentOffset + scrollAmount, maxOffset);
+            slider.style.transform = `translateX(-${currentOffset}px)`;
+        });
+
+        // Tombol Panah Kiri
+        leftArrow.addEventListener("click", () => {
+            currentOffset = Math.max(currentOffset - scrollAmount, 0);
+            slider.style.transform = `translateX(-${currentOffset}px)`;
+        });
+    </script>
+
+    <link href="css/home/circle.css" rel="stylesheet">
+    <script src="js/home/circle.js"></script>
+    <link href="css/home/promosi.css" rel="stylesheet">
+    <link href="css/home/circle.css" rel="stylesheet">
+    <script src="js/home/circle.js"></script>
+    <link href="css/home/circle.css" rel="stylesheet">
+    <script src="js/home/circle.js"></script>
+    <!-- Tambahkan Flatpickr -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="{{ asset('js/search.js') }}"></script>
+
+</body>
+
 </html>

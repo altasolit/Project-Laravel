@@ -155,20 +155,18 @@
         }
 </style>
 
-
-
-
 </div>
   </nav>
 <!-- Sidebar -->
 <div class="container-fluid">
     <div class="row">
-        <div class="sidebar col-md-3 col-lg-2 p-0">
+        <div class="sidebar col-md-3 col-lg-2 p-0 sidebar border border-right col-md-3 col-lg-2 p-0">
             <div class="flex-shrink-0 p-3 sidebar" style="width: 280px;">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                     <li>
                         <a href="/info" class="link-body-emphasis d-inline-flex text-decoration-none rounded " style="margin-bottom: 25px; margin-top: 50px;">
                             <h3>My Profile</h3>
+                            
                         </a>
                     </li>
                     <li>
@@ -183,6 +181,7 @@
         <!-- Bagian Profile -->
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="margin-bottom: 500px;">
         <h1 class="h2" style="margin-bottom: 50px; margin-top: 50px;">My Profile</h1>
+        <p>nullemail@gmail.com</p>
     <form class="profile-form" action="" name="profile-form">
         <div class="row">
 
@@ -230,7 +229,7 @@
             </div>
         </div>
             <div class="col-md-6 mb-3">
-                
+            <button type="submit" class="btn btn-save">Simpan</button>
             </div>
 
     </form>

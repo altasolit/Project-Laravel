@@ -1,6 +1,4 @@
-<!doctype html>
-<html lang="en" data-bs-theme="auto">
-
+<html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,6 +8,7 @@
     <title> Profile Page </title>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/dashboard/">
     <link href="css/profile/body.css" rel="stylesheet">
+    <link href="css/booking.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -33,7 +32,7 @@
             <div class="profile-icon ms-3">D</div>
             </button>
             <div class="dropdown-menu" id="profileMenu">
-                <a href="#" class="dropdown-item">Profil</a>
+                <a href="/info" class="dropdown-item">Profil</a>
                 <a href="#" class="dropdown-item">Pengaturan Akun</a>
                 <div class="dropdown-divider"></div>
                 <a href="#" class="dropdown-item logout">Keluar</a>
@@ -163,12 +162,13 @@
 <!-- Sidebar -->
 <div class="container-fluid">
     <div class="row">
-        <div class="sidebar col-md-3 col-lg-2 p-0">
+        <div class="sidebar col-md-3 col-lg-2 p-0 sidebar border border-right col-md-3 col-lg-2 p-0">
             <div class="flex-shrink-0 p-3 sidebar" style="width: 280px;">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                     <li>
                         <a href="/info" class="link-body-emphasis d-inline-flex text-decoration-none rounded " style="margin-bottom: 25px; margin-top: 50px;">
                             <h3>My Profile</h3>
+                            
                         </a>
                     </li>
                     <li>
@@ -179,3 +179,93 @@
                 </ul>
             </div>
         </div>
+
+
+
+
+
+
+
+        
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="margin-bottom: 500px;">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">My Booking</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group me-2">
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div id="reservations">
+            <div class="reservation" data-status="confirmed">
+                <strong>Nama:</strong> Andi<br>
+                <strong>Check-in:</strong> 10 Feb 2025<br>
+                <strong>Check-out:</strong> 15 Feb 2025<br>
+                <strong>Tipe Kamar:</strong> Deluxe<br>
+                <strong>Jumlah Tamu:</strong> 2<br>
+                <strong>Status:</strong> Dikonfirmasi
+            </div>
+                </div>
+    </div>
+      <div class="container">
+        <div id="reservations">
+            <div class="reservation" data-status="confirmed">
+                <strong>Nama:</strong> Andi<br>
+                <strong>Check-in:</strong> 10 Feb 2025<br>
+                <strong>Check-out:</strong> 15 Feb 2025<br>
+                <strong>Tipe Kamar:</strong> Deluxe<br>
+                <strong>Jumlah Tamu:</strong> 2<br>
+                <strong>Status:</strong> Dikonfirmasi
+            </div>
+                </div>
+    </div>
+    <style>
+        .container {
+            position: absolute;
+            justify-content: center;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .label-filter{
+            text-align: center;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .reservation {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .reservation:last-child {
+            border-bottom: none;
+        }
+    </style>
+
+<script>
+        function filterReservations() {
+            var filterValue = document.getElementById("filter").value;
+            var reservations = document.querySelectorAll(".reservation");
+            
+            reservations.forEach(function(reservation) {
+                if (filterValue === "all" || reservation.getAttribute("data-status") === filterValue) {
+                    reservation.style.display = "block";
+                } else {
+                    reservation.style.display = "none";
+                }
+            });
+        }
+    </script>
+
+      
+    </main>
+    <script src="js/booking.js"></script>
+    
