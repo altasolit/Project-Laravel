@@ -162,24 +162,32 @@
 <!-- Sidebar -->
 <div class="container-fluid">
     <div class="row">
-        <div class="sidebar col-md-3 col-lg-2 p-0">
+        <div class="sidebar col-md-3 col-lg-2 p-0 sidebar border border-right col-md-3 col-lg-2 p-0">
             <div class="flex-shrink-0 p-3 sidebar" style="width: 280px;">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                     <li>
                         <a href="/info" class="link-body-emphasis d-inline-flex text-decoration-none rounded " style="margin-bottom: 25px; margin-top: 50px;">
                             <h3>My Profile</h3>
+                            
                         </a>
                     </li>
                     <li>
                         <a href="/bookings" class="link-body-emphasis d-inline-flex text-decoration-none rounded">
-                            <h3>My Booking </h3>
+                            <h3>My Booking</h3>
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
+
+
+
+
+
+
+
         
-        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="margin-bottom: 500px;">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">My Booking</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
@@ -199,9 +207,23 @@
                 <strong>Status:</strong> Dikonfirmasi
             </div>
                 </div>
-
+    </div>
+      <div class="container">
+        <div id="reservations">
+            <div class="reservation" data-status="confirmed">
+                <strong>Nama:</strong> Andi<br>
+                <strong>Check-in:</strong> 10 Feb 2025<br>
+                <strong>Check-out:</strong> 15 Feb 2025<br>
+                <strong>Tipe Kamar:</strong> Deluxe<br>
+                <strong>Jumlah Tamu:</strong> 2<br>
+                <strong>Status:</strong> Dikonfirmasi
+            </div>
+                </div>
+    </div>
     <style>
         .container {
+            position: absolute;
+            justify-content: center;
             max-width: 800px;
             margin: auto;
             background: white;
@@ -243,7 +265,7 @@
         }
     </script>
 
-      </div>
+      
     </main>
     <script src="js/booking.js"></script>
     
