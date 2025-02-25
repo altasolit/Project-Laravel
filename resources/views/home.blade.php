@@ -76,16 +76,21 @@
                     <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
                     <div class="custom-search-bar-container">
                         <div class="custom-search-bar">
-                            <input type="text" placeholder="Enter a City, Locality or Hotel"
-                                class="custom-search-input" />
-                            <div class="custom-date-input">
-                                <label>Check In</label>
-                                <span>y</span>
+                            <div class="custom-guest-input">
+                                <input type="text" placeholder="Enter a City, Locality or Hotel"
+                                    class="custom-search-input" />
                             </div>
-                            <div class="custom-date-input">
-                                <label>Check Out</label>
-                                <span>Thu, 23 Jan</span>
-                            </div>
+                            <div class="divider"></div>
+                            <div class="custom-guest-input">
+                                <label>Check-in</label>
+                                <input type="text" class=" b-checkin-date" placeholder="Check-in date" />
+                            </div> 
+                            <div class="divider"></div>
+                            <div class="custom-guest-input">
+                                <label>Check-out</label>
+                                <input type="text" class=" b-checkout-date" placeholder="Check-out date" />
+                            </div>  
+                            <div class="divider"></div>
                             <div class="custom-guest-input">
                                 <label>Rooms</label>
                                 <span>1 Room, 2 Guest</span>
@@ -324,6 +329,11 @@
     <script src="js/home/circle.js"></script>
     <link href="css/home/circle.css" rel="stylesheet">
     <script src="js/home/circle.js"></script>
+    <!-- Tambahkan Flatpickr -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="{{ asset('js/search.js') }}"></script>
+
 </body>
 
 </html>
