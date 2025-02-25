@@ -1,49 +1,87 @@
-.container.blog {
-    width: 100%;
-    margin: auto;
-}
-.blog-title {
-    font-size: 24px;
-}
-.blog-slider {
-    display: flex;
-    overflow-x: auto;
-    gap: 15px;
-    scroll-behavior: smooth;
-}
-.blog-card {
-    min-width: 150px;
-    max-width: 200px;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    background: #f1f1f1;
-}
-.blog-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
-.blog-tag {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-}
-.blog-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    box-sizing: border-box;
-}
-.blog-content h3 {
-    font-size: 16px;
+/* Reset gaya dasar */
+* {
     margin: 0;
-}
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+  }
+  
+  /* Bagian Penawaran */
+  .penawaran-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+  
+  .penawaran-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .penawaran-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .lihat-semua {
+    text-decoration: none;
+    font-size: 0.95rem;
+    color: #e74c3c; /* Warna teks */
+    border: 1px solid #e74c3c;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .lihat-semua:hover {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+  
+  .penawaran-cards {
+    display: flex;
+    flex-wrap: wrap;  /* Supaya tetap rapi di layar lebih kecil */
+    gap: 20px;
+  }
+  
+  .penawaran-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1 1 30%; /* Atur lebar kartu agar 3 kartu muat dalam 1 baris */
+    min-width: 250px; /* Batas minimal lebar kartu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .penawaran-card:hover {
+    transform: translateY(-3px);
+  }
+  
+  .penawaran-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .card-content {
+    padding: 16px;
+  }
+  
+  .card-content h3 {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+  }
+  
+  .card-content p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.4;
+  }
+  

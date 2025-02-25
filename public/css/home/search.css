@@ -1,0 +1,36 @@
+.custom-search-bar-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* Pastikan lebih tinggi dari elemen lain */
+    width: 80%; /* Sesuaikan ukuran */
+    width: 100%px;
+    background: white;
+    padding: 1px;                              
+    border-radius: 50px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.b-search-bar {
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 1px;
+}
+.b-text {
+    flex: 1;
+    text-align: center;
+}
+.b-input, .b-button {
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+}
+
+.b-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

@@ -1,4 +1,11 @@
-document.querySelector('.search-button').addEventListener('click', () => {
-    alert('Pencarian dimulai!');
+document.addEventListener("DOMContentLoaded", function () {
+  flatpickr(".b-checkin-date", {
+      dateFormat: "d-m-Y",
+      minDate: "today"
   });
-  
+
+  flatpickr(".b-checkout-date", {
+      dateFormat: "d-m-Y",
+      minDate: "today"
+  });
+});
