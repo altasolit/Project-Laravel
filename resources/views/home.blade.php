@@ -12,7 +12,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/home/bawaan.css" rel="stylesheet">
+    <link href="css/home/header.css" rel="stylesheet">
+    <link href="css/home/search.css" rel="stylesheet">
+    <script src="js/home/search.js"></script>
+    <link href="css/home/circle.css" rel="stylesheet">
+    <script src="js/home/circle.js"></script>
     <link href="css/home/home.css" rel="stylesheet">
+    <link href="css/home/fasilitas.css" rel="stylesheet">
+    <link href="css/home/blog.css" rel="stylesheet">
 </head>
 
 <body>
@@ -60,7 +67,6 @@
                         </div>
                     </ul>
                 </div>
-                <link href="css/home/header.css" rel="stylesheet">
             </div>
         </nav>
     </header>
@@ -72,28 +78,25 @@
                         aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
                     <div class="custom-search-bar-container">
-                        <div class="custom-search-bar">
-                            <input type="text" placeholder="Enter a City, Locality or Hotel"
-                                class="custom-search-input" />
-                            <div class="custom-date-input">
-                                <label>Check In</label>
-                                <span>y</span>
-                            </div>
-                            <div class="custom-date-input">
-                                <label>Check Out</label>
-                                <span>Thu, 23 Jan</span>
-                            </div>
-                            <div class="custom-guest-input">
-                                <label>Rooms</label>
-                                <span>1 Room, 2 Guest</span>
-                            </div>
-                            <button class="custom-search-button">
-                                <span>&#128269; Cari</span>
-                            </button>
-                        </div>
-                    </div>
-                    <link href="css/home/search.css">
-                    <script src="js/home/search.js"></script>
+                    <div class="b-search-bar">
+                        <input type="text" id="destination" class="b-input" placeholder="Where are you going?" />  
+                    <div class="b-text">
+                        <label>Test</label>
+                        <input type="text" class="b-input b-checkin-date" placeholder="Check-in date" />
+                    </div>    
+                    <div class="b-text">
+                        <label>Test</label>
+                        <input type="text" class="b-input b-checkout-date" placeholder="Check-out date" />
+                    </div>    
+        <button id="search-btn" class="b-button">Search</button>
+    </div>
+</div>
+
+<!-- Tambahkan Flatpickr -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="search.js"></script>
+
                 </div>
             </div>
         </div>
@@ -199,9 +202,7 @@
             <div class=" mb-4">
                 <h3>Luxury Hotel</h3>
             </div>
-            <link href="css/home/promosi.css" rel="stylesheet">
             <div class="redclub-container">
-
                 <div class="redclub-card">
                     <div class="redclub-content">
                         <img src="redclub-logo.png" alt="Logo Hotel" class="redclub-logo">
@@ -233,56 +234,47 @@
             </div>
         </div>
 
-        <style>
-            .circle-item {
-                margin: 0 10px;
-                /* Jarak antar lingkaran */
-                min-width: 80px;
-                /* Pastikan lebar tetap */
-                text-align: center;
-            }
-
-            #circle-slider {
-                overflow: hidden;
-                flex: 1;
-            }
-
-            #circle-slider .d-flex {
-                gap: 10px;
-                /* Jarak antar elemen */
-            }
-
-            #left-arrow,
-            #right-arrow {
-                font-size: 10px;
-                /* Ukuran panah lebih besar */
-                width: 50px;
-                /* Lebar tombol */
-                height: 50px;
-                /* Tinggi tombol */
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: rgb(192, 192, 192);
-                /* Warna tombol */
-                border: none;
-                /* Hilangkan border */
-                border-radius: 50%;
-                /* Membuat tombol bulat */
-                color: white;
-                /* Warna teks putih */
-                cursor: pointer;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-                /* Tambahkan bayangan */
-            }
-
-            #left-arrow:hover,
-            #right-arrow:hover {
-                background-color: #495057;
-                /* Warna tombol saat hover */
-            }
-        </style>
-
+        <section class="penawaran-section">
+    <div class="penawaran-header">
+      <h2>Penawaran</h2>
+      <a href="#" class="lihat-semua">Lihat semua</a>
+    </div>
+    
+    <div class="penawaran-cards">
+      <!-- Kartu 1 -->
+      <div class="penawaran-card">
+        <img src="img/lobby.jpg" alt="Banner 1"/>
+        <div class="card-content">
+          <h3>Saatnya Mengikuti #RedDoorzChallenge</h3>
+        </div>
+      </div>
+      
+      <!-- Kartu 2 -->
+      <div class="penawaran-card">
+        <img 
+          src="https://via.placeholder.com/300x150/FFD700/000000?text=Banner+2" 
+          alt="Banner 2"
+        />
+        <div class="card-content">
+          <h3>Looong Weekend</h3>
+          <p>Nikmati liburan lebih seru bersama RedDoorz!</p>
+        </div>
+      </div>
+      
+      <!-- Kartu 3 -->
+      <div class="penawaran-card">
+        <img 
+          src="https://via.placeholder.com/300x150/FF0000/FFFFFF?text=Banner+3" 
+          alt="Banner 3"
+        />
+        <div class="card-content">
+          <h3>RedClub</h3>
+          <p>Dapatkan poin 2x lipat untuk setiap pemesanan!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+       
         <hr class="featurette-divider">
         <!-- FOOTER -->
         <footer class="container">
@@ -292,35 +284,4 @@
         </footer>
     </main>
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const slider = document.querySelector("#circle-slider .d-flex");
-        const leftArrow = document.getElementById("left-arrow");
-        const rightArrow = document.getElementById("right-arrow");
-
-        let currentOffset = 0;
-        const scrollAmount = 100; // Geser sejauh 100px setiap kali klik
-
-        // Tombol Panah Kanan
-        rightArrow.addEventListener("click", () => {
-            const maxOffset = slider.scrollWidth - slider.parentElement.clientWidth;
-            currentOffset = Math.min(currentOffset + scrollAmount, maxOffset);
-            slider.style.transform = `translateX(-${currentOffset}px)`;
-        });
-
-        // Tombol Panah Kiri
-        leftArrow.addEventListener("click", () => {
-            currentOffset = Math.max(currentOffset - scrollAmount, 0);
-            slider.style.transform = `translateX(-${currentOffset}px)`;
-        });
-    </script>
-
-    <link href="css/home/circle.css" rel="stylesheet">
-    <script src="js/home/circle.js"></script>
-    <link href="css/home/promosi.css" rel="stylesheet">
-    <link href="css/home/circle.css" rel="stylesheet">
-    <script src="js/home/circle.js"></script>
-    <link href="css/home/circle.css" rel="stylesheet">
-    <script src="js/home/circle.js"></script>
-</body>
-
 </html>
