@@ -58,7 +58,6 @@
         border-color: #d0021b;
     }
 
-    /* Dropdown Menu */
     .dropdown-menu {
         position: absolute;
         right: 0;
@@ -89,8 +88,6 @@
         background: #ddd;
         margin: 5px 0;
     }
-
-    /* Warna khusus untuk tombol Keluar */
     .logout {
         color: #d0021b;
         font-weight: bold;
@@ -179,13 +176,6 @@
                 </ul>
             </div>
         </div>
-
-
-
-
-
-
-
         
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="margin-bottom: 500px;">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
