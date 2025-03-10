@@ -20,6 +20,9 @@
     <link href="css/home/home.css" rel="stylesheet">
     <link href="css/home/fasilitas.css" rel="stylesheet">
     <link href="css/home/blog.css" rel="stylesheet">
+    <link href="css/home/styles.css" rel="stylesheet">
+    <link href="css/home/footer.css" rel="stylesheet">
+    <link href="css/home/gallery.css" rel="stylesheet">
 </head>
 
 <body>
@@ -217,29 +220,29 @@
             <div class="redclub-container">
                 <div class="redclub-card">
                     <div class="redclub-content">
-                        <img src="redclub-logo.png" alt="Logo Hotel" class="redclub-logo">
-                        <p>Makin banyak menginap, makin hemat dengan Luxury Club terbaru</p>
+                        <img src="img/logo2.png" alt="Logo Hotel" class="redclub-logo">
+                        <p>Jadilah VIP member The Luxury dan dapatkan promo di setiap kamar yang dipesan, akses fasilitas premium dan nikmati kenyamanannya</p>
                     </div>
                     <div class="redclub-benefits">
                         <div class="benefit-item">
-                            <img src="icon-discount.png" alt="Diskon" class="benefit-icon">
-                            <p>Diskon Ekstra 12%</p>
+                            <img src="img/bg-wifi.png" alt="Diskon" class="benefit-icon">
+                            <p>Free WIFI</p>
                         </div>
                         <div class="benefit-item">
-                            <img src="icon-points.png" alt="Poin" class="benefit-icon">
-                            <p>Dapatkan poin 3x lipat</p>
+                            <img src="img/bg-clean.png" alt="Poin" class="benefit-icon">
+                            <p>Cleaning Service</p>
                         </div>
                         <div class="benefit-item">
-                            <img src="icon-redeem.png" alt="Tukar Poin" class="benefit-icon">
-                            <p>Bisa tukar poin dengan diskon</p>
+                            <img src="img/bg-car.png" alt="Tukar Poin" class="benefit-icon">
+                            <p>Layanan antar jemput bandara</p>
                         </div>
                         <div class="benefit-item">
-                            <img src="icon-support.png" alt="Bantuan" class="benefit-icon">
-                            <p>Layanan bantuan prioritas</p>
+                            <img src="img/bg-team.png" alt="Bantuan" class="benefit-icon">
+                            <p>Meeting room</p>
                         </div>
                         <div class="benefit-item">
-                            <img src="icon-price.png" alt="Harga Terbaik" class="benefit-icon">
-                            <p>Jaminan Harga Terbaik</p>
+                            <img src="img/bg-laundry.png" alt="Harga Terbaik" class="benefit-icon">
+                            <p>Laundry</p>
                         </div>
                     </div>
                 </div>
@@ -249,7 +252,6 @@
         <section class="penawaran-section">
     <div class="penawaran-header">
       <h2>Penawaran</h2>
-      <a href="#" class="lihat-semua">Lihat semua</a>
     </div>
     
     <div class="penawaran-cards">
@@ -286,8 +288,101 @@
       </div>
     </div>
   </section>
+
+  <!-- bagian ??? -->
+  <section class="intro">
+        <h2>Giving the best just for you</h2>
+        <div class="tags">
+            <span>WIFI</span>
+            <span>Cleaning Service</span>
+            <span>Layanan Antar Jemput Bandara</span>
+            <span>Meeting Room</span>
+            <span>Laundry</span>
+        </div>
+        <div class="feature">
+            <img src="img/bg-home.jpg" alt="Restaurant">
+            <div class="feature-text">
+                <h3>Lihatlah</h3>
+                <p>Enjoy fine dining with a selection of international and local cuisines.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="gallery-container">
+        <h2 class="gallery-heading">Explore Our Room Designs</h2>
+        <p class="gallery-description">Explore finished kitchens from some of our customers and see how they created their dream kitchen while getting ideas for your own.</p>
+        <div class="gallery-room">
+            <div class="gallery-item">
+                <img src="img/rek 1.jpg" alt="Cozy And Private">
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-text">Cozy And Private</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/rek 2.jpg" alt="Modern Simplicity">
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-text">Modern Simplicity</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/gallery 3.jpg" alt="Twin Room">
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-text">Twin Room</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/gallery 4.jpg" alt="Twin Room">
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-text">Twin Room</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/gallery 5.jpg" alt="Executive Suite">
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-text">Executive Suite</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/rek 6.jpg" alt="Luxury Suite">
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-text">Luxury Suite</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
        
         <hr class="featurette-divider">
+          <!-- bagian lokasi -->
+    <div class="container-a">
+        <h3 class="location-title">Location</h3>
+        <h2 class="address">RPL 1, SMKN 1 KOTA CIREBON</h2>
+        <button class="map-button">FIND US ON MAP</button>
+
+        <div class="contact-info">
+            <div class="info-box">
+                <img src="call-icon.png" alt="Call Icon" class="icon">
+                <h3>Make a Call</h3>
+                <p>Hubungi kami untuk pertanyaan umum anda.</p>
+                <p class="contact-detail">815-641-5000</p>
+            </div>
+
+            <div class="info-box">
+                <img src="mail-icon.png" alt="Mail Icon" class="icon">
+                <h3>Send a Mail</h3>
+                <p>Kirimkan email anda untuk pertanyaan atau saran.</p>
+                <p class="contact-detail">info@example.com</p>
+            </div>
+
+            <div class="info-box">
+                <img src="toll-free-icon.png" alt="Toll Free Icon" class="icon">
+                <h3>Toll Free</h3>
+                <p>Nomor bebas pulsa untuk tamu yang menginap.</p>
+                <p class="contact-detail">1800-641-1234</p>
+            </div>
+        </div>
+    </div>
         <!-- FOOTER -->
         <footer class="container">
             <p class="float-end"><a href="#">Back to top</a></p>
@@ -296,35 +391,7 @@
         </footer>
     </main>
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const slider = document.querySelector("#circle-slider .d-flex");
-        const leftArrow = document.getElementById("left-arrow");
-        const rightArrow = document.getElementById("right-arrow");
 
-        let currentOffset = 0;
-        const scrollAmount = 100; // Geser sejauh 100px setiap kali klik
-
-        // Tombol Panah Kanan
-        rightArrow.addEventListener("click", () => {
-            const maxOffset = slider.scrollWidth - slider.parentElement.clientWidth;
-            currentOffset = Math.min(currentOffset + scrollAmount, maxOffset);
-            slider.style.transform = `translateX(-${currentOffset}px)`;
-        });
-
-        // Tombol Panah Kiri
-        leftArrow.addEventListener("click", () => {
-            currentOffset = Math.max(currentOffset - scrollAmount, 0);
-            slider.style.transform = `translateX(-${currentOffset}px)`;
-        });
-    </script>
-
-    <link href="css/home/circle.css" rel="stylesheet">
-    <script src="js/home/circle.js"></script>
-    <link href="css/home/promosi.css" rel="stylesheet">
-    <link href="css/home/circle.css" rel="stylesheet">
-    <script src="js/home/circle.js"></script>
-    <link href="css/home/circle.css" rel="stylesheet">
-    <script src="js/home/circle.js"></script>
     <!-- Tambahkan Flatpickr -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
