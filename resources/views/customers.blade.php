@@ -1,3 +1,4 @@
+<x-app-layout>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -82,27 +83,27 @@
                                 <p>Orders</p>
                             </a>
                         </li>
-                        <li class="nav-item submenu">
-                            <a data-bs-toggle="collapse" href="#tables">
+                        <li class="nav-item submenu {{ request()->is('Kamar') || request()->is('fasilitas') ? 'active' : '' }}">
+                            <a  href="#tables">
                                 <i class="fas fa-table"></i>
                                 <p>Product</p>
                                 <span class="caret"></span>
                             </a>
-                            <div class="collapse " id="tables">
+                            <div class="collapse {{ request()->is('Kamar') || request()->is('fasilitas') ? 'show' : '' }}" id="tables">
                                 <ul class="nav nav-collapse">
-                                    <li>
-                                        <a href="/kamar">
+                                    <li class="{{ request()->is('kamar') ? 'active' : '' }}">
+                                        <a href="/Kamar">
                                             <span class="sub-item">Kamar</span>
                                         </a>
                                     </li>
-                                    <li>
+                                    <li class="{{ request()->is('fasilitas') ? 'active' : '' }}">
                                         <a href="/fasilitas">
                                             <span class="sub-item">Fasilitas</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
-                        </li>
+                        </li>                        
                         <li class="nav-item active">
                             <a data-bs-toggle="none" href="/customers">
                                 <i class="bi bi-person" style="font-size: 20px;"></i>
@@ -502,6 +503,8 @@
 
     <!-- Bootstrap Notify -->
     <script src="assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
     <!-- jQuery Vector Maps -->
     <script src="assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
@@ -544,6 +547,15 @@
             fillColor: "rgba(255, 165, 52, .14)",
         });
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let dropdown = new bootstrap.Collapse(document.getElementById('tables'), {
+                toggle: false
+            });
+        });
+        </script>
+        
 </body>
 
 </html>
+</x-app-layout>

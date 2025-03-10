@@ -15,6 +15,8 @@ return new class extends Migration
             $table->decimal('price_per_night', 10, 2);
             $table->enum('status', ['Tersedia', 'Terisi', 'Diperbaiki'])->default('Tersedia');
             $table->string('image')->nullable();
+            $table->integer('capacity')->default(2); // Jumlah tamu maksimal
+            $table->text('facilities')->nullable(); // Fasilitas kamar dalam bentuk teks/json
             $table->text('description');
             $table->timestamps();
         });
