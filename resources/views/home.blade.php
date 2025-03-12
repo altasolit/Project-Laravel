@@ -304,14 +304,14 @@
             <span>Laundry</span>
         </div>
         <!-- Carousel -->
-            <main style="margin-bottom: 0px;">
-        <div class="container mt-4" style="margin-bottom: 3px;">
-    <div id="blogCarousel" class="carousel-slide" data-bs-interval="200" style="margin-top: 0px;">
-        <div class="carousel-inner" style="margin-bottom: 3px;">
-            <div class="carousel-item active"  style="margin-bottom: 20px;">
-                <div class="row" style="margin-bottom: 3px;">
+        <div class="container mt-4">
+    <h2>Blog Perjalanan</h2>
+    <div id="blogCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
 
-                    <div class="col-md-3" style="margin-inline-end: 0%;">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-3">
                         <div class="card">
                             <span class="badge">Info</span>
                             <img src="IMG/kolam umum.jpg" class="card-img-top" alt="Blog 1">
@@ -390,7 +390,6 @@
                     </div>
                 </div>
             </div>
-            </main>
 
         </div>
 
@@ -402,16 +401,14 @@
         </button>
 
     </div>
-</div>
+</div>          
 <style>
         .carousel-item {
             padding: 10px;
+            transition: transform 0.5s ease-in-out !important;
         }
         .card {
             border: none;
-        }
-        .carousel-slide{
-            margin-bottom: 0%;
         }
         .carousel-control-prev, .carousel-control-next {
             width: auto;
@@ -424,14 +421,26 @@
             color: white;
             padding: 5px 10px;
             border-radius: 5px;
-        }
+        }        
         
+
     </style>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    let blogCarousel = new bootstrap.Carousel(document.querySelector('#blogCarousel'), {
-        interval: false
+    document.addEventListener("DOMContentLoaded", function () {
+        let blogCarousel = new bootstrap.Carousel(document.querySelector('#blogCarousel'), {
+            interval: 5000, // Slide berganti setiap 5 detik
+            ride: "carousel" // Memastikan auto-slide tetap berjalan
+        });
+
+        // Memperpanjang transisi saat menggeser manual dengan tombol next/prev
+        let carouselItems = document.querySelectorAll(".carousel-item");
+        carouselItems.forEach(item => {
+            item.style.transition = "transform 2s ease-in-out";
+        });
     });
+</script>
+
 </script>
     </section>
 
