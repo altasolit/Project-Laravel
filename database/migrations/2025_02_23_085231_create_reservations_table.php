@@ -16,6 +16,7 @@ return new class extends Migration {
             $table->integer('guests');
             $table->enum('payment_status', ['Pending', 'Paid', 'Verified'])->default('Pending');
             $table->enum('booking_status', ['Pending', 'Confirmed', 'Checked-In', 'Canceled', 'Completed'])->default('Pending');
+            $table->decimal('total_price', 10, 2);
             $table->timestamps();
         });
     }

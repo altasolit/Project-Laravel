@@ -1,3 +1,4 @@
+<x-app-layout>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -73,32 +74,34 @@
             <div class="sidebar-wrapper scrollbar scrollbar-inner">
                 <div class="sidebar-content">
                     <ul class="nav nav-secondary">
-                        <li class="nav-item ">
+                        <li class="nav-item">
                             <a data-bs-toggle="none" href="/dashboard" class="collapsed" aria-expanded="true">
                                 <i class="fas fa-home"></i>
                                 <p>Dashboard</p>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item ">
                             <a href="/orders">
                                 <i class="fas fa-th-list"></i>
                                 <p>Orders</p>
                             </a>
                         </li>
-                        <li class="nav-item active submenu">
+                        <li
+                            class="nav-item submenu {{ request()->is('Kamar') || request()->is('fasilitas') ? 'active' : '' }}">
                             <a data-bs-toggle="collapse" href="#tables">
                                 <i class="fas fa-table"></i>
                                 <p>Product</p>
                                 <span class="caret"></span>
                             </a>
-                            <div class="collapse show" id="tables">
+                            <div class="collapse show {{ request()->is('Kamar') || request()->is('fasilitas') ? 'show' : '' }}"
+                                id="tables"data-bs-toggle="collapse">
                                 <ul class="nav nav-collapse">
-                                    <li class="active">
+                                    <li class="{{ request()->is('kamar') ? 'active' : '' }}">
                                         <a href="/kamar">
                                             <span class="sub-item">Kamar</span>
                                         </a>
                                     </li>
-                                    <li>
+                                    <li class="{{ request()->is('fasilitas') ? 'active' : '' }}">
                                         <a href="/fasilitas">
                                             <span class="sub-item">Fasilitas</span>
                                         </a>
@@ -111,52 +114,6 @@
                                 <i class="bi bi-person" style="font-size: 20px;"></i>
                                 <p>Customers</p>
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <div class="collapse" id="submenu">
-                                <ul class="nav nav-collapse">
-                                    <li>
-                                        <a data-bs-toggle="collapse" href="#subnav1">
-                                            <span class="sub-item">Level 1</span>
-                                            <span class="caret"></span>
-                                        </a>
-                                        <div class="collapse" id="subnav1">
-                                            <ul class="nav nav-collapse subnav">
-                                                <li>
-                                                    <a href="#">
-                                                        <span class="sub-item">Level 2</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <span class="sub-item">Level 2</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a data-bs-toggle="collapse" href="#subnav2">
-                                            <span class="sub-item">Level 1</span>
-                                            <span class="caret"></span>
-                                        </a>
-                                        <div class="collapse" id="subnav2">
-                                            <ul class="nav nav-collapse subnav">
-                                                <li>
-                                                    <a href="#">
-                                                        <span class="sub-item">Level 2</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span class="sub-item">Level 1</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
                         </li>
                     </ul>
                 </div>
@@ -869,3 +826,4 @@
 </body>
 
 </html>
+</x-app-layout>
