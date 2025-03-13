@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\RoomController;
 
 Route::get('/', function () {
     return view('home');
@@ -61,4 +63,7 @@ Route::get('/reservasi', function () {
 Route::get('/profile/detailreservasi', [ProfileController::class, 'detailReservasi'])
 ->name('profile.detailreservasi');
 
+// Route::resource('reservation', ReservationController::class);
+
+Route::resource('rooms', RoomController::class);
 require __DIR__.'/auth.php';

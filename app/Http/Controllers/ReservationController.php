@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Reservation;
 use App\Models\Room;
 use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 
 class ReservationController extends Controller
 {
@@ -35,13 +36,21 @@ class ReservationController extends Controller
             return back()->with('error', 'Kamar tidak tersedia untuk reservasi');
         }
 
+        // Hitung total harga berdasarkan lama menginap
+        $checkIn = Carbon::parse($request->check_in);
+        $checkOut = Carbon::parse($request->check_out);
+        $days = $checkIn->diffInDays($checkOut);
+        $totalPrice = $room->price_per_night * $days;
+
         Reservation::create([
             'user_id' => Auth::id(),
             'room_id' => $request->room_id,
             'check_in' => $request->check_in,
             'check_out' => $request->check_out,
             'guests' => $request->guests,
-            'status' => 'Pending',
+            'booking_status' => 'Pending',
+            'payment_status' => 'Pending',
+            'total_price' => $totalPrice,
         ]);
 
         return redirect()->route('reservations.index')->with('success', 'Reservasi berhasil dibuat');
@@ -55,10 +64,15 @@ class ReservationController extends Controller
     public function update(Request $request, Reservation $reservation)
     {
         $request->validate([
-            'status' => 'required|in:Pending,Confirmed,Checked-In,Canceled,Completed',
+            'booking_status' => 'required|in:Pending,Confirmed,Checked-In,Canceled,Completed',
+            'payment_status' => 'required|in:Pending,Paid,Verified',
         ]);
 
-        $reservation->update(['status' => $request->status]);
+        $reservation->update([
+            'booking_status' => $request->booking_status,
+            'payment_status' => $request->payment_status,
+        ]);
+
         return redirect()->route('reservations.index')->with('success', 'Status reservasi diperbarui');
     }
 
