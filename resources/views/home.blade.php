@@ -253,30 +253,37 @@
                     <div class="redclub-benefits">
                         <div class="benefit-item">
                             <img src="img/bg-wifi.png" alt="Diskon" class="benefit-icon">
-                            <p>Free WIFI</p>
+                            <p style="filter: invert(1) brightness(2);">Free WIFI</p>
                         </div>
                         <div class="benefit-item">
                             <img src="img/bg-clean.png" alt="Poin" class="benefit-icon">
-                            <p>Cleaning Service</p>
+                            <p style="filter: invert(1) brightness(2);">Cleaning Service</p>
                         </div>
                         <div class="benefit-item">
                             <img src="img/bg-car.png" alt="Tukar Poin" class="benefit-icon">
-                            <p>Layanan antar jemput bandara</p>
+                            <p style="filter: invert(1) brightness(2);">Layanan antar jemput bandara</p>
                         </div>
                         <div class="benefit-item">
                             <img src="img/bg-team.png" alt="Bantuan" class="benefit-icon">
-                            <p>Meeting room</p>
+                            <p style="filter: invert(1) brightness(2);">Meeting room</p>
                         </div>
                         <div class="benefit-item">
                             <img src="img/bg-laundry.png" alt="Harga Terbaik" class="benefit-icon">
-                            <p>Laundry</p>
+                            <p style="filter: invert(1) brightness(2);">Laundry</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <style>
+            .benefit-item {
+                filter: invert(1) brightness(2);
+            }
+
+        </style>
 
         <section class="penawaran-section">
+
             <div class="penawaran-header">
                 <h2>Penawaran</h2>
             </div>
@@ -306,6 +313,204 @@
                         <h3>RedClub</h3>
                         <p>Dapatkan poin 2x lipat untuk setiap pemesanan!</p>
                     </div>
+
+    <div class="penawaran-header">
+      <h2>Penawaran</h2>
+    </div>
+    
+    <div class="penawaran-cards">
+      <!-- Kartu 1 -->
+      <div class="penawaran-card">
+        <img src="IMG/biliard umum.jpg" alt="Banner 1" style="height: 300px; object-fit: cover; width: 100%;"/>
+        <div class="card-content">
+         <h3>Billiard</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat in nisi illo laudantium magnam?
+             Doloremque, tenetur libero voluptatem veniam enim ad eos illum facilis natus? A cupiditate enim cumque optio.</p>
+        </div>
+      </div>
+      
+      <!-- Kartu 2 -->
+      <div class="penawaran-card">
+      <img src="IMG/kolam umum.jpg" alt="Banner 1" style="height: 300px; object-fit: cover; width: 100%;"/>
+        <div class="card-content">
+          <h3>Swimming pool</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident praesentium accusantium, accusamus sed, sequi 
+            numquam libero inventore iste amet illo minus ratione beatae blanditiis labore nesciunt quo! Excepturi, deserunt a!</p>
+        </div>
+      </div>
+      
+      <!-- Kartu 3 -->
+      <div class="penawaran-card">
+      <img src="IMG/BarHotel.jpg" alt="Banner 1" style="height: 300px; object-fit: cover; width: 100%;"/>
+        <div class="card-content">
+         <h3>Bar</h3>
+         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet soluta fuga hic aspernatur ullam modi 
+            facere rem. Earum ea numquam pariatur recusandae, nostrum saepe, labore temporibus corporis id perferendis expedita!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- bagian ??? -->
+  <section class="intro">
+        <h2>Giving the best just for you</h2>
+        <div class="tags">
+            <span>WIFI</span>
+            <span>Cleaning Service</span>
+            <span>Layanan Antar Jemput Bandara</span>
+            <span>Meeting Room</span>
+            <span>Laundry</span>
+        </div>
+        <!-- Carousel -->
+        <div class="container mt-4">
+    <h2>Blog Perjalanan</h2>
+    <div id="blogCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <span class="badge">Info</span>
+                            <img src="IMG/kolam umum.jpg" class="card-img-top" alt="Blog 1">
+                            <div class="card-body">
+                                <h6 class="card-title">Kultum Ramadhan: Inspirasi dan Renungan...</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <span class="badge">Info</span>
+                            <img src="IMG/kolam umum.jpg" class="card-img-top" alt="Blog 2">
+                            <div class="card-body">
+                                <h6 class="card-title">Jangan Risau, Ini Dia Cara Menahan Lapar...</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <span class="badge">Singapore</span>
+                            <img src="IMG/kolam umum.jpg" class="card-img-top" alt="Blog 3">
+                            <div class="card-body">
+                                <h6 class="card-title">15 Makanan Khas Probolinggo yang Tidak...</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <span class="badge">Feature</span>
+                            <img src="IMG/kolam umum.jpg" class="card-img-top" alt="Blog 4">
+                            <div class="card-body">
+                                <h6 class="card-title">Staycation Ramadhan: Pilihan Nyaman...</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <span class="badge">Travel</span>
+                            <img src="IMG/kolam umum.jpg" class="card-img-top" alt="Blog 5">
+                            <div class="card-body">
+                                <h6 class="card-title">Destinasi Liburan yang Cocok Saat Ramadhan</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <span class="badge">Tips</span>
+                            <img src="IMG/kolam umum.jpg" class="card-img-top" alt="Blog 6">
+                            <div class="card-body">
+                                <h6 class="card-title">Tips Hemat Saat Traveling di Bulan Puasa</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <span class="badge">Food</span>
+                            <img src="IMG/kolam umum.jpg" class="card-img-top" alt="Blog 7">
+                            <div class="card-body">
+                                <h6 class="card-title">Kuliner Halal di Singapura yang Harus Dicoba</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <span class="badge">Lifestyle</span>
+                            <img src="IMG/kolam umum.jpg" class="card-img-top" alt="Blog 8">
+                            <div class="card-body">
+                                <h6 class="card-title">Rutinitas Sehat Selama Bulan Ramadhan</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#blogCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#blogCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+
+    </div>
+</div>          
+<style>
+        .carousel-item {
+            padding: 10px;
+            transition: transform 0.5s ease-in-out !important;
+        }
+        .card {
+            border: none;
+        }
+        .carousel-control-prev, .carousel-control-next {
+            width: auto;
+        }
+        .badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }        
+        
+
+    </style>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let blogCarousel = new bootstrap.Carousel(document.querySelector('#blogCarousel'), {
+            interval: 5000, // Slide berganti setiap 5 detik
+            ride: "carousel" // Memastikan auto-slide tetap berjalan
+        });
+
+        // Memperpanjang transisi saat menggeser manual dengan tombol next/prev
+        let carouselItems = document.querySelectorAll(".carousel-item");
+        carouselItems.forEach(item => {
+            item.style.transition = "transform 2s ease-in-out";
+        });
+    });
+</script>
+
+</script>
+    </section>
+
+    <div class="gallery-container mt-40" style="margin-top: auto; margin-bottom: 50px;">
+        <h2 class="gallery-heading">Explore Our Room Designs</h2>
+        <p class="gallery-description">Explore finished kitchens from some of our customers and see how they created their dream kitchen while getting ideas for your own.</p>
+        <div class="gallery-room">
+            <div class="gallery-item">
+                <img src="img/rek 1.jpg" alt="Cozy And Private">
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-text">Cozy And Private</div>
+
                 </div>
             </div>
         </section>

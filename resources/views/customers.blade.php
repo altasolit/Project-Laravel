@@ -115,6 +115,38 @@
                             </li>
                         </ul>
                     </div>
+                </nav>
+                <!-- End Navbar -->
+            </div>
+
+            <div class="container">
+                <div class="page-inner">
+                    <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
+                        <div>
+                            <h3 class="fw-bold mb-3">Customers</h3>
+                        </div>
+                        <div class="ms-md-auto py-2 py-md-0">
+                            <a href="#" class="btn btn-label-info btn-round me-2">Manage</a>
+                            <a href="#" class="btn btn-primary btn-round">Add Orders</a>
+                        </div>
+                    </div>
+                    <div class="table-responsive small">
+                        <table class="table table-striped table-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col">No.</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Nama</th>
+                                    <th scope="col">Username</th>
+                                    <th scope="col">Password</th>
+                                    <th scope="col">No.Hp</th>
+                                </tr>
+                            </thead>
+                            <tbody> 
+                                {{-- PHP NANTI DISINI --}}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <!-- End Sidebar -->

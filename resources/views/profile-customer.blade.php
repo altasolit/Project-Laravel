@@ -181,7 +181,6 @@
         <!-- Bagian Profile -->
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="margin-bottom: 500px;">
         <h1 class="h2" style="margin-bottom: 50px; margin-top: 50px;">My Profile</h1>
-        <p>nullemail@gmail.com</p>
     <form class="profile-form" action="" name="profile-form">
         <div class="row">
 
@@ -228,7 +227,7 @@
                 <input id="current-city" class="form-control" placeholder="Masukkan kota sekarang" type="text" required>
             </div>
         </div>
-            <div class="col-md-6 mb-3">
+            <div class="col-md-6 mb-4">
             <button type="submit" class="btn btn-save">Simpan</button>
             </div>
 
