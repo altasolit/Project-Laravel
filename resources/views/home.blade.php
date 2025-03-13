@@ -47,25 +47,51 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#"></a>
                         </li>
+                        {{-- <div class="container-bar">
+                            @if (Route::has('login'))
+                                <nav class="d-flex justify-content-end" style="width: {{ Request::is('dashboard') ? '110px' : '165px' }};">
+                                    @auth
+                                        <a href="{{ url('/dashboard') }}" class="btn">
+                                            <img src="img/arle.jpg" alt="Profile" width="35" height="35" class="rounded-circle">
+                                        </a>
+                        
+                                        @if(Auth::user()->isAdmin())
+                                            <a href="{{ route('dashboard') }}" class="btn btn-primary">Admin Panel</a>
+                                        @elseif(Auth::user()->isCustomer())
+                                            <a href="{{ route('info') }}" class="btn btn-secondary">My Reservations</a>
+                                        @endif
+                        
+                                        <form action="{{ route('logout') }}" method="POST" class="d-inline">
+                                            @csrf
+                                            <button type="submit" class="btn btn-danger">Logout</button>
+                                        </form>
+                                    @else
+                                        <a href="{{ route('login') }}" class="btn btn-outline-dark me-2">Log in</a>
+                                        @if (Route::has('register'))
+                                            <a href="{{ route('register') }}" class="btn btn-outline-dark">Register</a>
+                                        @endif
+                                    @endauth
+                                </nav>
+                            @endif
+                        </div>        --}}
                         <div class="container-bar">
                             @if (Route::has('login'))
-                                <nav
-                                    class="d-flex justify-content-end"style="width: {{ Request::is('dashboard') ? '110px' : '165px' }};">
+                                <nav class="d-flex justify-content-end" style="width: {{ Request::is('dashboard') ? '110px' : '165px' }};">
                                     @auth
-                                    <a href="{{ url('/dashboard') }}" class="btn ">
-                                        {{-- untuk profil dari database --}}
-                                        {{-- <img src="{{ Auth::user()->profile_image ?? asset('default_profile.png') }}" alt="Profile" width="30" height="30" class="rounded-circle"> --}}
-                                        {{-- sementara dulu --}}
-                                        <img src="img/arle.jpg" alt="Profile" width="35" height="35" class="rounded-circle">
-                                    </a>
-                                    @else
-                                        <a href="{{ route('login') }}" class="btn btn-outline-dark me-2">
-                                            Log in
+                                        <!-- Jika user sudah login -->
+                                        <a href="{{ Auth::user()->isAdmin() ? route('admin.dashboard') : route('customer.dashboard') }}" class="btn">
+                                            <img src="{{ asset('img/arle.jpg') }}" alt="Profile" width="35" height="35" class="rounded-circle">
                                         </a>
+                        
+                                        <form action="{{ route('logout') }}" method="POST" class="d-inline">
+                                            @csrf
+                                            <button type="submit" class="btn btn-danger">Logout</button>
+                                        </form>
+                                    @else
+                                        <!-- Jika user belum login -->
+                                        <a href="{{ route('login') }}" class="btn btn-outline-dark me-2">Log in</a>
                                         @if (Route::has('register'))
-                                            <a href="{{ route('register') }}" class="btn btn-outline-dark">
-                                                Register
-                                            </a>
+                                            <a href="{{ route('register') }}" class="btn btn-outline-dark">Register</a>
                                         @endif
                                     @endauth
                                 </nav>
@@ -93,12 +119,12 @@
                             <div class="custom-guest-input">
                                 <label>Check-in</label>
                                 <input type="text" class=" b-checkin-date" placeholder="Check-in date" />
-                            </div> 
+                            </div>
                             <div class="divider"></div>
                             <div class="custom-guest-input">
                                 <label>Check-out</label>
                                 <input type="text" class=" b-checkout-date" placeholder="Check-out date" />
-                            </div>  
+                            </div>
                             <div class="divider"></div>
                             <div class="custom-guest-input">
                                 <label>Rooms</label>
@@ -221,7 +247,8 @@
                 <div class="redclub-card">
                     <div class="redclub-content">
                         <img src="img/logo2.png" alt="Logo Hotel" class="redclub-logo">
-                        <p>Jadilah VIP member The Luxury dan dapatkan promo di setiap kamar yang dipesan, akses fasilitas premium dan nikmati kenyamanannya</p>
+                        <p>Jadilah VIP member The Luxury dan dapatkan promo di setiap kamar yang dipesan, akses
+                            fasilitas premium dan nikmati kenyamanannya</p>
                     </div>
                     <div class="redclub-benefits">
                         <div class="benefit-item">
@@ -256,6 +283,37 @@
         </style>
 
         <section class="penawaran-section">
+
+            <div class="penawaran-header">
+                <h2>Penawaran</h2>
+            </div>
+
+            <div class="penawaran-cards">
+                <!-- Kartu 1 -->
+                <div class="penawaran-card">
+                    <img src="img/lobby.jpg" alt="Banner 1" />
+                    <div class="card-content">
+                        <h3>Saatnya Mengikuti #RedDoorzChallenge</h3>
+                    </div>
+                </div>
+
+                <!-- Kartu 2 -->
+                <div class="penawaran-card">
+                    <img src="https://via.placeholder.com/300x150/FFD700/000000?text=Banner+2" alt="Banner 2" />
+                    <div class="card-content">
+                        <h3>Looong Weekend</h3>
+                        <p>Nikmati liburan lebih seru bersama RedDoorz!</p>
+                    </div>
+                </div>
+
+                <!-- Kartu 3 -->
+                <div class="penawaran-card">
+                    <img src="https://via.placeholder.com/300x150/FF0000/FFFFFF?text=Banner+3" alt="Banner 3" />
+                    <div class="card-content">
+                        <h3>RedClub</h3>
+                        <p>Dapatkan poin 2x lipat untuk setiap pemesanan!</p>
+                    </div>
+
     <div class="penawaran-header">
       <h2>Penawaran</h2>
     </div>
@@ -304,14 +362,14 @@
             <span>Laundry</span>
         </div>
         <!-- Carousel -->
-            <main style="margin-bottom: 0px;">
-        <div class="container mt-4" style="margin-bottom: 3px;">
-    <div id="blogCarousel" class="carousel-slide" data-bs-interval="200" style="margin-top: 0px;">
-        <div class="carousel-inner" style="margin-bottom: 3px;">
-            <div class="carousel-item active"  style="margin-bottom: 20px;">
-                <div class="row" style="margin-bottom: 3px;">
+        <div class="container mt-4">
+    <h2>Blog Perjalanan</h2>
+    <div id="blogCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
 
-                    <div class="col-md-3" style="margin-inline-end: 0%;">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-3">
                         <div class="card">
                             <span class="badge">Info</span>
                             <img src="IMG/kolam umum.jpg" class="card-img-top" alt="Blog 1">
@@ -390,7 +448,6 @@
                     </div>
                 </div>
             </div>
-            </main>
 
         </div>
 
@@ -402,16 +459,14 @@
         </button>
 
     </div>
-</div>
+</div>          
 <style>
         .carousel-item {
             padding: 10px;
+            transition: transform 0.5s ease-in-out !important;
         }
         .card {
             border: none;
-        }
-        .carousel-slide{
-            margin-bottom: 0%;
         }
         .carousel-control-prev, .carousel-control-next {
             width: auto;
@@ -424,14 +479,26 @@
             color: white;
             padding: 5px 10px;
             border-radius: 5px;
-        }
+        }        
         
+
     </style>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    let blogCarousel = new bootstrap.Carousel(document.querySelector('#blogCarousel'), {
-        interval: false
+    document.addEventListener("DOMContentLoaded", function () {
+        let blogCarousel = new bootstrap.Carousel(document.querySelector('#blogCarousel'), {
+            interval: 5000, // Slide berganti setiap 5 detik
+            ride: "carousel" // Memastikan auto-slide tetap berjalan
+        });
+
+        // Memperpanjang transisi saat menggeser manual dengan tombol next/prev
+        let carouselItems = document.querySelectorAll(".carousel-item");
+        carouselItems.forEach(item => {
+            item.style.transition = "transform 2s ease-in-out";
+        });
     });
+</script>
+
 </script>
     </section>
 
@@ -443,73 +510,106 @@
                 <img src="img/rek 1.jpg" alt="Cozy And Private">
                 <div class="gallery-overlay">
                     <div class="gallery-overlay-text">Cozy And Private</div>
+
                 </div>
             </div>
-            <div class="gallery-item">
-                <img src="img/rek 2.jpg" alt="Modern Simplicity">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-text">Modern Simplicity</div>
+        </section>
+
+        <!-- bagian ??? -->
+        <section class="intro">
+            <h2>Giving the best just for you</h2>
+            <div class="tags">
+                <span>WIFI</span>
+                <span>Cleaning Service</span>
+                <span>Layanan Antar Jemput Bandara</span>
+                <span>Meeting Room</span>
+                <span>Laundry</span>
+            </div>
+            <div class="feature">
+                <img src="img/bg-home.jpg" alt="Restaurant">
+                <div class="feature-text">
+                    <h3>Lihatlah</h3>
+                    <p>Enjoy fine dining with a selection of international and local cuisines.</p>
                 </div>
             </div>
-            <div class="gallery-item">
-                <img src="img/gallery 3.jpg" alt="Twin Room">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-text">Twin Room</div>
+        </section>
+
+        <div class="gallery-container">
+            <h2 class="gallery-heading">Explore Our Room Designs</h2>
+            <p class="gallery-description">Explore finished kitchens from some of our customers and see how they
+                created their dream kitchen while getting ideas for your own.</p>
+            <div class="gallery-room">
+                <div class="gallery-item">
+                    <img src="img/rek 1.jpg" alt="Cozy And Private">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-text">Cozy And Private</div>
+                    </div>
                 </div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/gallery 4.jpg" alt="Twin Room">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-text">Twin Room</div>
+                <div class="gallery-item">
+                    <img src="img/rek 2.jpg" alt="Modern Simplicity">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-text">Modern Simplicity</div>
+                    </div>
                 </div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/gallery 5.jpg" alt="Executive Suite">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-text">Executive Suite</div>
+                <div class="gallery-item">
+                    <img src="img/gallery 3.jpg" alt="Twin Room">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-text">Twin Room</div>
+                    </div>
                 </div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/rek 6.jpg" alt="Luxury Suite">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-text">Luxury Suite</div>
+                <div class="gallery-item">
+                    <img src="img/gallery 4.jpg" alt="Twin Room">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-text">Twin Room</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/gallery 5.jpg" alt="Executive Suite">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-text">Executive Suite</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/rek 6.jpg" alt="Luxury Suite">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-text">Luxury Suite</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-  
-       
+
+
         <hr class="featurette-divider">
-          <!-- bagian lokasi -->
-    <div class="container-a">
-        <h3 class="location-title">Location</h3>
-        <h2 class="address">RPL 1, SMKN 1 KOTA CIREBON</h2>
-        <button class="map-button">FIND US ON MAP</button>
+        <!-- bagian lokasi -->
+        <div class="container-a">
+            <h3 class="location-title">Location</h3>
+            <h2 class="address">RPL 1, SMKN 1 KOTA CIREBON</h2>
+            <button class="map-button">FIND US ON MAP</button>
 
-        <div class="contact-info">
-            <div class="info-box">
-                <img src="call-icon.png" alt="Call Icon" class="icon">
-                <h3>Make a Call</h3>
-                <p>Hubungi kami untuk pertanyaan umum anda.</p>
-                <p class="contact-detail">815-641-5000</p>
-            </div>
+            <div class="contact-info">
+                <div class="info-box">
+                    <img src="call-icon.png" alt="Call Icon" class="icon">
+                    <h3>Make a Call</h3>
+                    <p>Hubungi kami untuk pertanyaan umum anda.</p>
+                    <p class="contact-detail">815-641-5000</p>
+                </div>
 
-            <div class="info-box">
-                <img src="mail-icon.png" alt="Mail Icon" class="icon">
-                <h3>Send a Mail</h3>
-                <p>Kirimkan email anda untuk pertanyaan atau saran.</p>
-                <p class="contact-detail">info@example.com</p>
-            </div>
+                <div class="info-box">
+                    <img src="mail-icon.png" alt="Mail Icon" class="icon">
+                    <h3>Send a Mail</h3>
+                    <p>Kirimkan email anda untuk pertanyaan atau saran.</p>
+                    <p class="contact-detail">info@example.com</p>
+                </div>
 
-            <div class="info-box">
-                <img src="toll-free-icon.png" alt="Toll Free Icon" class="icon">
-                <h3>Toll Free</h3>
-                <p>Nomor bebas pulsa untuk tamu yang menginap.</p>
-                <p class="contact-detail">1800-641-1234</p>
+                <div class="info-box">
+                    <img src="toll-free-icon.png" alt="Toll Free Icon" class="icon">
+                    <h3>Toll Free</h3>
+                    <p>Nomor bebas pulsa untuk tamu yang menginap.</p>
+                    <p class="contact-detail">1800-641-1234</p>
+                </div>
             </div>
         </div>
-    </div>
         <!-- FOOTER -->
         <footer class="container">
             <p class="float-end"><a href="#">Back to top</a></p>
@@ -520,9 +620,9 @@
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Tambahkan Flatpickr -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="{{ asset('js/search.js') }}"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="{{ asset('js/search.js') }}"></script>
 
 </body>
 

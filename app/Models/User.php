@@ -45,8 +45,19 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-        public function reservations()
+    public function reservations()
     {
         return $this->hasMany(Reservation::class);
     }
+
+    public function isAdmin()
+    {
+        return $this->role === 'admin'; // Harus sesuai dengan database
+    }
+    
+    public function isCustomer()
+    {
+        return $this->role === 'customer';
+    }
+    
 }
