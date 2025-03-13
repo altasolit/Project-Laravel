@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
+     * Jalankan migration.
      */
     public function up(): void
     {
@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->enum('role', ['Admin', 'Customer'])->default('Customer');
+            $table->enum('role', ['admin', 'customer'])->default('customer'); // ✅ Perbaikan
             $table->string('phone')->nullable();            
             $table->rememberToken();
             $table->timestamps();
@@ -40,7 +40,7 @@ return new class extends Migration
     }
 
     /**
-     * Reverse the migrations.
+     * Reverse migration.
      */
     public function down(): void
     {
