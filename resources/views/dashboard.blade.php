@@ -17,7 +17,8 @@
         <script src="assets/js/plugin/webfont/webfont.min.js"></script>
         <script>
             WebFont.load({
-                google: {qa
+                google: {
+                    qa
                     families: ["Public Sans:300,400,500,600,700"]
                 },
                 custom: {
@@ -85,8 +86,7 @@
                                     <p>Orders</p>
                                 </a>
                             </li>
-                            <li
-                                class="nav-item submenu {{ request()->is('Kamar') || request()->is('fasilitas') ? 'active' : '' }}">
+                            <li class="nav-item submenu {{ request()->is('Kamar') || request()->is('fasilitas') ? 'active' : '' }}">
                                 <a data-bs-toggle="collapse" href="#tables">
                                     <i class="fas fa-table"></i>
                                     <p>Product</p>
@@ -961,45 +961,38 @@
                 });
             });
         });
-    </script>
-     --}}
+    </script> --}}
         <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                let tablesElement = document.getElementById("tables");
 
-document.addEventListener("DOMContentLoaded", function () {
-    let tablesElement = document.getElementById("tables");
+                if (tablesElement) {
+                    console.log("Elemen ditemukan, memeriksa Bootstrap Collapse...");
 
-    if (tablesElement) {
-        console.log("Elemen ditemukan, memeriksa Bootstrap Collapse...");
+                    // Pastikan elemen tetap terbuka setelah inisialisasi
+                    tablesElement.classList.add("show");
 
-        // Pastikan elemen tetap terbuka setelah inisialisasi
-        tablesElement.classList.add("show");
+                    let dropdownTrigger = document.querySelector('[href="#tables"]');
+                    if (dropdownTrigger) {
+                        dropdownTrigger.addEventListener("click", function(event) {
+                            event.preventDefault(); // Cegah reload
 
-        let dropdownTrigger = document.querySelector('[href="#tables"]');
-        if (dropdownTrigger) {
-            dropdownTrigger.addEventListener("click", function (event) {
-                event.preventDefault(); // Cegah reload
-
-                // Toggle secara manual tanpa konflik
-                if (tablesElement.classList.contains("show")) {
-                    bootstrap.Collapse.getOrCreateInstance(tablesElement).hide();
+                            // Toggle secara manual tanpa konflik
+                            if (tablesElement.classList.contains("show")) {
+                                bootstrap.Collapse.getOrCreateInstance(tablesElement).hide();
+                            } else {
+                                bootstrap.Collapse.getOrCreateInstance(tablesElement).show();
+                            }
+                        });
+                    }
                 } else {
-                    bootstrap.Collapse.getOrCreateInstance(tablesElement).show();
+                    console.warn("Elemen #tables belum ditemukan.");
                 }
             });
-        }
-    } else {
-        console.warn("Elemen #tables belum ditemukan.");
-    }
-});
-
-
-
-
         </script>
         <script>
             console.log("DEBUG: Blade telah merender halaman.");
         </script>
-
     </body>
 
     </html>
