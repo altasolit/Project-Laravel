@@ -77,9 +77,9 @@
         </nav>
     </header>
     <main>
-        <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+        <!-- <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div class="carousel-item active"> -->
                     <img src="img/bg-home.jpg" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
                         aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
@@ -293,8 +293,7 @@
     </div>
   </section>
 
-  <!-- bagian ??? -->
-  <section class="intro">
+  <section class="intro" style="margin-top: 50px;">
         <h2>Giving the best just for you</h2>
         <div class="tags">
             <span>WIFI</span>
@@ -303,12 +302,13 @@
             <span>Meeting Room</span>
             <span>Laundry</span>
         </div>
+
         <!-- Carousel -->
-        <div class="container mt-4">
-    <h2>Blog Perjalanan</h2>
+        <div class="container mt-5"> <!-- Menambah margin-top lebih besar -->
     <div id="blogCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
 
+            <!-- Slide Pertama -->
             <div class="carousel-item active">
                 <div class="row">
                     <div class="col-md-3">
@@ -350,6 +350,7 @@
                 </div>
             </div>
 
+            <!-- Slide Kedua -->
             <div class="carousel-item">
                 <div class="row">
                     <div class="col-md-3">
@@ -393,6 +394,7 @@
 
         </div>
 
+        <!-- Tombol Navigasi Carousel -->
         <button class="carousel-control-prev" type="button" data-bs-target="#blogCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         </button>
@@ -402,49 +404,50 @@
 
     </div>
 </div>          
-<style>
-        .carousel-item {
-            padding: 10px;
-            transition: transform 0.5s ease-in-out !important;
-        }
-        .card {
-            border: none;
-        }
-        .carousel-control-prev, .carousel-control-next {
-            width: auto;
-        }
-        .badge {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }        
-        
 
-    </style>
+<style>
+    .container {
+        margin-top: 70px; /* Menurunkan posisi carousel */
+    }
+    .carousel-item {
+        padding: 10px;
+        transition: transform 0.5s ease-in-out;
+    }
+    .card {
+        border: none;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+    .carousel-control-prev, .carousel-control-next {
+        width: auto;
+    }
+    .badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+</style>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        let blogCarousel = new bootstrap.Carousel(document.querySelector('#blogCarousel'), {
+        new bootstrap.Carousel(document.querySelector('#blogCarousel'), {
             interval: 5000, // Slide berganti setiap 5 detik
-            ride: "carousel" // Memastikan auto-slide tetap berjalan
-        });
-
-        // Memperpanjang transisi saat menggeser manual dengan tombol next/prev
-        let carouselItems = document.querySelectorAll(".carousel-item");
-        carouselItems.forEach(item => {
-            item.style.transition = "transform 2s ease-in-out";
+            ride: "carousel"
         });
     });
 </script>
 
-</script>
+
     </section>
 
-    <div class="gallery-container mt-40" style="margin-top: auto; margin-bottom: 50px;">
+
+    <section class="gallery" style="bottom: 400px;">
+    <div class="gallery-container">
         <h2 class="gallery-heading">Explore Our Room Designs</h2>
         <p class="gallery-description">Explore finished kitchens from some of our customers and see how they created their dream kitchen while getting ideas for your own.</p>
         <div class="gallery-room">
@@ -486,10 +489,12 @@
             </div>
         </div>
     </div>
-
+    <hr class="featurette-divider">
+    </section>
+    
   
        
-        <hr class="featurette-divider">
+       
           <!-- bagian lokasi -->
     <div class="container-a">
         <h3 class="location-title">Location</h3>
