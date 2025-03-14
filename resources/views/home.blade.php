@@ -461,31 +461,15 @@
                 </div>
             </div>
         </div>
-        
-<<<<<<< HEAD
+
+
     </div>
-    <hr class="featurette-divider">
-    </section>
-    
-  
-       
-       
-          <!-- bagian lokasi -->
-    <div class="container-a">
-        <h3 class="location-title">Location</h3>
-        <h2 class="address">RPL 1, SMKN 1 KOTA CIREBON</h2>
-        <button class="map-button">FIND US ON MAP</button>
-=======
-
-
-
-        <hr class="featurette-divider">
-        <!-- bagian lokasi -->
+      <!-- bagian lokasi -->
         <div class="container-a">
             <h3 class="location-title">Location</h3>
             <h2 class="address">RPL 1, SMKN 1 KOTA CIREBON</h2>
             <button class="map-button">FIND US ON MAP</button>
->>>>>>> e13552b4cdf64ac4e3044e8baad15984a853e5fb
+
 
             <div class="contact-info">
                 <div class="info-box">
