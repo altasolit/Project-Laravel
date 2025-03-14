@@ -141,104 +141,6 @@
             </div>
         </div>
         <div class="container marketing">
-            <div class="margin-right mb-4">
-                <h3>Tujuan Populer</h3>
-            </div>
-            <div class="horizontal-scroll">
-                <div class="container-slider">
-                    <div class="circle-item text-center">
-                        <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <rect width="100%" height="100%" fill="#6c757d"></rect>
-                        </svg>
-                        <p>1</p>
-                    </div>
-                    <div class="circle-item text-center">
-                        <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <rect width="100%" height="100%" fill="#6c757d"></rect>
-                        </svg>
-                        <p>1</p>
-                    </div>
-                    <div class="circle-item text-center">
-                        <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <rect width="100%" height="100%" fill="#6c757d"></rect>
-                        </svg>
-                        <p>1</p>
-                    </div>
-                    <div class="circle-item text-center">
-                        <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <rect width="100%" height="100%" fill="#6c757d"></rect>
-                        </svg>
-                        <p>1</p>
-                    </div>
-                    <div class="circle-item text-center">
-                        <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <rect width="100%" height="100%" fill="#6c757d"></rect>
-                        </svg>
-                        <p>1</p>
-                    </div>
-                    <div class="circle-item text-center">
-                        <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <rect width="100%" height="100%" fill="#6c757d"></rect>
-                        </svg>
-                        <p>1</p>
-                    </div>
-                    <div class="circle-item text-center">
-                        <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <rect width="100%" height="100%" fill="#6c757d"></rect>
-                        </svg>
-                        <p>1</p>
-                    </div>
-                    <div class="circle-item text-center">
-                        <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <rect width="100%" height="100%" fill="#6c757d"></rect>
-                        </svg>
-                        <p>1</p>
-                    </div>
-                    <div class="circle-item text-center">
-                        <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <rect width="100%" height="100%" fill="#6c757d"></rect>
-                        </svg>
-                        <p>1</p>
-                    </div>
-                    <div class="circle-item text-center">
-                        <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <rect width="100%" height="100%" fill="#6c757d"></rect>
-                        </svg>
-                        <p>1</p>
-                    </div>
-                    <div class="circle-item text-center">
-                        <svg class="bd-placeholder-img rounded-circle" width="60" height="60"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <rect width="100%" height="100%" fill="#6c757d"></rect>
-                        </svg>
-                        <p>1</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="container marketing">
             <div class=" mb-4">
                 <h3>Luxury Hotel</h3>
             </div>
@@ -282,75 +184,92 @@
 
         </style>
 
-        <section class="penawaran-section">
+<section class="penawaran-section">
+  <div class="penawaran-header">
+    <h2>Penawaran</h2>
+  </div>
 
-            <div class="penawaran-header">
-                <h2>Penawaran</h2>
-            </div>
-
-            <div class="penawaran-cards">
-                <!-- Kartu 1 -->
-                <div class="penawaran-card">
-                    <img src="img/lobby.jpg" alt="Banner 1" />
-                    <div class="card-content">
-                        <h3>Saatnya Mengikuti #RedDoorzChallenge</h3>
-                    </div>
-                </div>
-
-                <!-- Kartu 2 -->
-                <div class="penawaran-card">
-                    <img src="https://via.placeholder.com/300x150/FFD700/000000?text=Banner+2" alt="Banner 2" />
-                    <div class="card-content">
-                        <h3>Looong Weekend</h3>
-                        <p>Nikmati liburan lebih seru bersama RedDoorz!</p>
-                    </div>
-                </div>
-
-                <!-- Kartu 3 -->
-                <div class="penawaran-card">
-                    <img src="https://via.placeholder.com/300x150/FF0000/FFFFFF?text=Banner+3" alt="Banner 3" />
-                    <div class="card-content">
-                        <h3>RedClub</h3>
-                        <p>Dapatkan poin 2x lipat untuk setiap pemesanan!</p>
-                    </div>
-
-    <div class="penawaran-header">
-      <h2>Penawaran</h2>
-    </div>
-    
-    <div class="penawaran-cards">
-      <!-- Kartu 1 -->
-      <div class="penawaran-card">
-        <img src="IMG/biliard umum.jpg" alt="Banner 1" style="height: 300px; object-fit: cover; width: 100%;"/>
-        <div class="card-content">
-         <h3>Billiard</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat in nisi illo laudantium magnam?
-             Doloremque, tenetur libero voluptatem veniam enim ad eos illum facilis natus? A cupiditate enim cumque optio.</p>
-        </div>
-      </div>
-      
-      <!-- Kartu 2 -->
-      <div class="penawaran-card">
-      <img src="IMG/kolam umum.jpg" alt="Banner 1" style="height: 300px; object-fit: cover; width: 100%;"/>
-        <div class="card-content">
-          <h3>Swimming pool</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident praesentium accusantium, accusamus sed, sequi 
-            numquam libero inventore iste amet illo minus ratione beatae blanditiis labore nesciunt quo! Excepturi, deserunt a!</p>
-        </div>
-      </div>
-      
-      <!-- Kartu 3 -->
-      <div class="penawaran-card">
-      <img src="IMG/BarHotel.jpg" alt="Banner 1" style="height: 300px; object-fit: cover; width: 100%;"/>
-        <div class="card-content">
-         <h3>Bar</h3>
-         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet soluta fuga hic aspernatur ullam modi 
-            facere rem. Earum ea numquam pariatur recusandae, nostrum saepe, labore temporibus corporis id perferendis expedita!</p>
-        </div>
+  <div class="penawaran-cards">
+    <!-- Kartu 1 -->
+    <div class="penawaran-card">
+      <img src="IMG/BarHotel.jpg" alt="Banner 1" />
+      <div class="card-content">
+        <h3>BarHotel</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam molestias temporibus rerum. Hic, incidunt 
+            a dolore officiis quod deleniti quia debitis repudiandae placeat tempora id, nobis nemo porro, cumque blanditiis?</p>
       </div>
     </div>
-  </section>
 
+    <!-- Kartu 2 -->
+    <div class="penawaran-card">
+      <img src="IMG/poll  vip.jpg" alt="Banner 2" />
+      <div class="card-content">
+        <h3>Looong Weekend</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam id culpa quae pariatur fugiat, aliquid, 
+            sapiente, labore officia quas impedit ex nulla voluptates. Sapiente nulla quas beatae, possimus doloremque inventore.</p>
+      </div>
+    </div>
+
+    <!-- Kartu 3 -->
+    <div class="penawaran-card">
+      <img src="IMG/gym umum.jpg" alt="Banner 3" />
+      <div class="card-content">
+        <h3>Gym</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae eveniet qui labore alias eos dolorum, minima dignissimos 
+            illum blanditiis deserunt minus aperiam soluta asperiores, expedita maiores unde ea quas natus?</p>
+      </div>
+    </div>
+
+        </div>
+  </div>
+</section>
+
+<style>
+    .penawaran-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .penawaran-header h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .penawaran-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .penawaran-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+  }
+
+  .penawaran-card:hover {
+    transform: scale(1.05);
+  }
+
+  .penawaran-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card-content {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .card-content h3 {
+    margin-bottom: 10px;
+  }
+
+</style>
   <section class="intro" style="margin-top: 50px;">
         <h2>Giving the best just for you</h2>
         <div class="tags">
@@ -499,44 +418,6 @@
         });
     });
 </script>
-
-
-    </section>
-
-
-    <section class="gallery" style="bottom: 400px;">
-    <div class="gallery-container">
-        <h2 class="gallery-heading">Explore Our Room Designs</h2>
-        <p class="gallery-description">Explore finished kitchens from some of our customers and see how they created their dream kitchen while getting ideas for your own.</p>
-        <div class="gallery-room">
-            <div class="gallery-item">
-                <img src="img/rek 1.jpg" alt="Cozy And Private">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-text">Cozy And Private</div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- bagian ??? -->
-        <section class="intro">
-            <h2>Giving the best just for you</h2>
-            <div class="tags">
-                <span>WIFI</span>
-                <span>Cleaning Service</span>
-                <span>Layanan Antar Jemput Bandara</span>
-                <span>Meeting Room</span>
-                <span>Laundry</span>
-            </div>
-            <div class="feature">
-                <img src="img/bg-home.jpg" alt="Restaurant">
-                <div class="feature-text">
-                    <h3>Lihatlah</h3>
-                    <p>Enjoy fine dining with a selection of international and local cuisines.</p>
-                </div>
-            </div>
-        </section>
-
         <div class="gallery-container">
             <h2 class="gallery-heading">Explore Our Room Designs</h2>
             <p class="gallery-description">Explore finished kitchens from some of our customers and see how they
@@ -580,6 +461,7 @@
                 </div>
             </div>
         </div>
+        
 <<<<<<< HEAD
     </div>
     <hr class="featurette-divider">
