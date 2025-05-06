@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/', function () {
-    return view('home');
+    return view('home.index');
 });
 
 Route::get('/dashboard', function () {

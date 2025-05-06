@@ -10,19 +10,8 @@
     <title> Home Page </title>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/home/bawaan.css" rel="stylesheet">
-    <link href="css/home/header.css" rel="stylesheet">
-    <link href="css/home/search.css" rel="stylesheet">
-    <script src="js/home/search.js"></script>
-    <link href="css/home/circle.css" rel="stylesheet">
-    <script src="js/home/circle.js"></script>
-    <link href="css/home/home.css" rel="stylesheet">
-    <link href="css/home/fasilitas.css" rel="stylesheet">
-    <link href="css/home/blog.css" rel="stylesheet">
-    <link href="css/home/styles.css" rel="stylesheet">
-    <link href="css/home/footer.css" rel="stylesheet">
-    <link href="css/home/gallery.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/home/style.css') }}">
 </head>
 
 <body>
@@ -112,11 +101,6 @@
                     <div class="custom-search-bar-container">
                         <div class="custom-search-bar">
                             <div class="custom-guest-input">
-                                <input type="text" placeholder="Enter a City, Locality or Hotel"
-                                    class="custom-search-input" />
-                            </div>
-                            <div class="divider"></div>
-                            <div class="custom-guest-input">
                                 <label>Check-in</label>
                                 <input type="text" class=" b-checkin-date" placeholder="Check-in date" />
                             </div>
@@ -135,15 +119,14 @@
                             </button>
                         </div>
                     </div>
-                    <link href="css/home/search.css">
-                    <script src="js/home/search.js"></script>
+                    <script src="{{ asset('js/home/search.js') }}"></script>
                 </div>
             </div>
         </div>
 
         </div>
         <div class="container marketing">
-            <div class=" mb-4">
+            <div class="mt-4">
                 <h3>Luxury Hotel</h3>
             </div>
             <link href="css/home/fasilitas.css" rel="stylesheet">
