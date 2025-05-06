@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/', function () {
-    return view('home');
+    return view('home.index');
 });
 
 Route::get('/dashboard', function () {
@@ -25,12 +25,12 @@ Route::middleware('auth')->group(function () {
 });
 
 // untuk yg sudah login
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth'])->group(function () {
     Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
 
     // Rute untuk admin
-    Route::middleware('admin')->group(function () {
-        Route::get('/admin/dashboard', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
+    Route::middleware(['admin'])->group(function () {
+        Route::get('/admin/dashboard', [DashboardController::class, 'adminDashboard'])->name('admin.dashboard');
         Route::get('/room/create/{id?}', [RoomController::class, 'create'])->name('room.create');
         Route::get('/rooms/create/{id?}', [RoomController::class, 'create'])->name('rooms.create');
         Route::post('/rooms', [RoomController::class, 'store'])->name('rooms.store');
@@ -45,7 +45,7 @@ Route::middleware('auth')->group(function () {
     });
 
     // Rute untuk customer
-    Route::middleware('customer')->group(function () {
+    Route::middleware(['customer'])->group(function () {
         Route::get('/customer/bookings', [HomeController::class, 'customer'])->name('customer.customer-booking');
         Route::get('/customer/profile', [HomeController::class, 'profil'])->name('customer.profile-customer');
     });
@@ -108,7 +108,11 @@ Route::get('/reservasi', function () {
 Route::get('/profile/detailreservasi', [ProfileController::class, 'detailReservasi'])
 ->name('profile.detailreservasi');
 
-// Route::resource('reservation', ReservationController::class);
+Route::middleware(['customer'])->group(function () {
+    Route::get('/customer/dashboard', [DashboardController::class, 'customerDashboard'])
+        ->name('customer.dashboard');
+});
 
-Route::resource('rooms', RoomController::class);
+Route::get('/rooms', [RoomController::class, 'index'])->name('rooms.index');
+
 require __DIR__.'/auth.php';
