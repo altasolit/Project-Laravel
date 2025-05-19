@@ -4,30 +4,26 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\FacilityController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Middleware\CustomerMiddleware;
 use Illuminate\Support\Facades\Route;
 
-// 🌐 Halaman Umum (tanpa login)
-Route::get('/', fn() => view('home'));
+// 🌐 Halaman Umum (Tanpa Login)
+Route::view('/', 'home');
 Route::view('/orders', 'orders');
 Route::view('/reservasi', 'reservasi');
 Route::view('/kamar', 'kamar');
 Route::view('/fasilitas', 'fasilitas');
 Route::view('/detailreservasi', 'detailreservasi');
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
-
-// 📦 Resource Routes
+// 📦 Resource Routes (Jika ingin gunakan controller penuh)
 Route::resource('rooms', RoomController::class);
 
-// 🔐 Autentikasi & Verifikasi
+// 🔐 Rute Admin (Autentikasi & Middleware Admin)
 Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->group(function () {
-
-    // 🔧 ADMIN
-    Route::get('/dashboard/admin', [DashboardController::class, 'adminDashboard'])->name('admin.dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'adminDashboard'])->name('admin.dashboard');
 
     // Manajemen Kamar
     Route::get('/room/create/{id?}', [RoomController::class, 'create'])->name('room.create');
@@ -42,27 +38,29 @@ Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->group(func
     Route::delete('/fasilitas/{id}', [FacilityController::class, 'destroy'])->name('fasilitas.destroy');
 });
 
-// 👤 CUSTOMER
+// 👤 Rute Customer (Autentikasi & Middleware Customer)
 Route::middleware(['auth', CustomerMiddleware::class])->prefix('customer')->group(function () {
-    Route::get('/dashboard/customer', [DashboardController::class, 'customerDashboard'])->name('customer.dashboard');
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('customer.profile-customer');      
-    Route::get('/', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/dashboard', [DashboardController::class, 'customerDashboard'])->name('customer.dashboard');
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('customer.profile-customer');
     Route::get('/detailreservasi', [ProfileController::class, 'detailReservasi'])->name('profile.detailreservasi');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // Tambahan fitur customer
+    Route::get('/bookings', [HomeController::class, 'customer'])->name('customer.customer-booking');
 });
 
-// // 👥 PROFIL Umum (untuk semua user yang login)
-// Route::prefix('profile')->group(function () {
+// 👥 Rute Umum untuk Pengguna yang Sudah Login
+Route::middleware(['auth'])->group(function () {
+    Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
 
-// });
+    // Edit profil (umum)
+    Route::get('/edit', [AuthController::class, 'edit'])->name('customer.edit');
+    Route::put('/update/{id}', [AuthController::class, 'update'])->name('customer.update');
+});
 
-// 🔓 LOGOUT
-Route::post('/logout', [\App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'destroy'])
-    ->name('logout');
+// ✅ Test Middleware Customer
+Route::get('/test-customer', fn() => 'Halo customer!')->middleware(['auth', CustomerMiddleware::class]);
 
-// ✅ Cek Middleware Customer
-Route::get('/test-customer', fn() => 'Halo customer!')->middleware(['auth', 'customer']);
-
-// 🔐 Auth Routes (Laravel Breeze)
+// 🔐 Laravel Breeze Auth
 require __DIR__ . '/auth.php';
