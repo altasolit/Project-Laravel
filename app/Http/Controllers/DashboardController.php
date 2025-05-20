@@ -13,7 +13,6 @@ class DashboardController extends Controller
         if (Auth::user()->role !== 'admin') {
             return redirect()->route('home');
         }
-        return view('admin.dashboard'); // File: resources/views/admin-dashboard.blade.php
 
         if (!Auth::check() || Auth::user()->role !== 'admin') {
             return redirect()->route('customer.profile');
