@@ -22,26 +22,26 @@ class RoomController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'room_number' => 'required|unique:rooms',
-            'type' => 'required',
-            'price_per_night' => 'required|numeric',
+            'nomor_kamar' => 'required|unique:rooms',
+            'tipe_kamar' => 'required',
+            'harga' => 'required|numeric',
             'status' => 'required',
-            'description' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'deskripsi' => 'required',
+            'gambar' => 'required|image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
         
         // dd($request->all()); // Debug: Lihat data sebelum insert
 
-        $imagePath = $request->file('image')->store('room_images', 'public');
+        $imagePath = $request->file('gambar')->store('room_images', 'public');
 
         Room::create([
-            'room_number' => $request->room_number,
-            'type' => $request->type,
-            'price_per_night' => $request->price_per_night,
+            'nomor_kamar' => $request->nomor_kamar,
+            'tipe_kamar' => $request->tipe_kamar,
+            'harga' => $request->harga,
             'status' => $request->status,
-            'description' => $request->description,
-            'image' => $imagePath,
+            'deskripsi' => $request->deskripsi,
+            'gambar' => $imagePath,
         ]);
 
         return redirect()->route('rooms.index')->with('success', 'Kamar berhasil ditambahkan');
@@ -55,29 +55,29 @@ class RoomController extends Controller
     public function update(Request $request, Room $room)
     {
         $request->validate([
-            'room_number' => 'required|unique:rooms,room_number,' . $room->id,
-            'type' => 'required',
-            'price_per_night' => 'required|numeric',
+            'nomor_kamar' => 'required|unique:rooms,nomor_kamar,' . $room->id,
+            'tipe_kamar' => 'required',
+            'harga' => 'required|numeric',
             'status' => 'required',
-            'description' => 'required',
-            'image' => 'image|mimes:jpeg,png,jpg|max:2048',
+            'deskripsi' => 'required',
+            'gambar' => 'image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
-        if ($request->hasFile('image')) {
+        if ($request->hasFile('gambar')) {
             if ($room->image) {
                 Storage::disk('public')->delete($room->image);
             }
-            $imagePath = $request->file('image')->store('room_images', 'public');
+            $imagePath = $request->file('gambar')->store('room_images', 'public');
             $room->image = $imagePath;
         }
 
         // $room->update($request->except('image'));
         $room->update([
-            'room_number' => $request->room_number,
-            'type' => $request->type,
-            'price_per_night' => $request->price_per_night,
+            'nomor_kamar' => $request->nomor_kamar,
+            'tipe_kamar' => $request->tipe_kamar,
+            'harga' => $request->harga,
             'status' => in_array($request->status, ['Tersedia', 'Terisi', 'Diperbaiki']) ? $request->status : 'Tersedia',
-            'description' => $request->description,
+            'deskripsi' => $request->deskripsi,
         ]);
         
         return redirect()->route('rooms.index')->with('success', 'Kamar berhasil diperbarui');
