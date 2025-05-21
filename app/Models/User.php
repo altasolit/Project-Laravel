@@ -19,6 +19,8 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'username',
+        'no_hp',
         'email',
         'password',
     ];
@@ -54,10 +56,10 @@ class User extends Authenticatable
     {
         return $this->role === 'admin'; // Harus sesuai dengan database
     }
-    
+
     public function isCustomer()
     {
         return $this->role === 'customer';
     }
-    
+
 }

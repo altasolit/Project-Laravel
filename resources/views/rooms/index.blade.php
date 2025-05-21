@@ -20,12 +20,14 @@
         </tr>
         @foreach($rooms as $room)
         <tr>
+
             <td>{{ $room->nomor_kamar }}</td>
             <td>{{ $room->tipe }}</td>
             <td>{{ $room->harga }}</td>
             <td>{{ $room->status }}</td>
             <td>{{ $room->deskripsi }}</td>
             <td><img src="{{ asset('storage/' . $room->gambar) }}" width="100"></td>
+
             <td>
                 <a href="{{ route('rooms.edit', $room->id) }}">Edit</a>
                 <form action="{{ route('rooms.destroy', $room->id) }}" method="POST" style="display: inline;">

@@ -5,6 +5,7 @@
     <form action="{{ route('rooms.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <label>Nomor Kamar:</label>
+
         <input type="text" name="nomor_kamar" required>
 
         <label>Tipe:</label>
@@ -21,6 +22,7 @@
         </select>
 
         <label>Deskripsi:</label>
+
         <textarea name="deskripsi" required></textarea>
 
         <label>Gambar:</label>

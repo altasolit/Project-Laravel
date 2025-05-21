@@ -33,6 +33,7 @@ class RoomController extends Controller
         
         // dd($request->all()); // Debug: Lihat data sebelum insert
 
+
         $imagePath = $request->file('gambar')->store('room_images', 'public');
 
         Room::create([
@@ -55,6 +56,7 @@ class RoomController extends Controller
     public function update(Request $request, Room $room)
     {
         $request->validate([
+
             'nomor_kamar' => 'required|unique:rooms,nomor_kamar,' . $room->id,
             'tipe_kamar' => 'required',
             'harga' => 'required|numeric',
@@ -73,6 +75,7 @@ class RoomController extends Controller
 
         // $room->update($request->except('image'));
         $room->update([
+
             'nomor_kamar' => $request->nomor_kamar,
             'tipe_kamar' => $request->tipe_kamar,
             'harga' => $request->harga,

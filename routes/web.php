@@ -75,5 +75,6 @@ Route::get('/dashboard', function () {
 });
 
 
+
 // 🔐 Laravel Breeze Auth
 require __DIR__ . '/auth.php';
