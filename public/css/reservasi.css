@@ -1,0 +1,74 @@
+/* stylelint-disable @stylistic/selector-list-comma-newline-after */
+
+.container-fasilitas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img-top {
+  height: 250px; /* Sesuaikan tinggi gambar */
+  object-fit: cover; /* Memastikan gambar tetap proporsional */
+  width: 100%; /* Agar gambar mengisi lebar kartu */
+}
+
+
+
+.row.mb-2 {
+  display: flex;
+  align-items: center;
+}
+
+.col-md-4 img {
+  margin: 0; /* Hapus margin di sekitar gambar */
+}
+
+.col-md-8 {
+  padding: 0; /* Hapus padding internal */
+}
+
+.row.mb-2 div {
+  margin: 0; /* Hapus margin di dalam kolom */
+}
+
+.d-flex.align-items-center {
+  gap: 5px; /* Atur jarak antar elemen gambar dan teks */
+}
+
+.blog-header-logo {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+  font-size: 2.25rem;
+}
+
+.blog-header-logo:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+}
+
+.flex-auto {
+  flex: 0 0 auto;
+}
+
+.h-250 { height: 250px; }
+@media (min-width: 768px) {
+  .h-md-250 { height: 250px; }
+}
+
+/* Pagination */
+.blog-pagination {
+  margin-bottom: 4rem;
+}
+
+/*
+ * Blog posts
+ */
+.blog-post {
+  margin-bottom: 4rem;
+}
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #727272;
+}
