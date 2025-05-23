@@ -31,7 +31,7 @@
 
         <!-- Page Content -->
         <main>
-            {{ $slot }} {{-- atau {{ $content }} jika kamu pakai slot bernama --}}
+            @yield('content')
         </main>
     </div>
     <!-- Tambahkan ini sebelum </body> -->

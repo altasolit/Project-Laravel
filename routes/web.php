@@ -25,6 +25,7 @@ Route::resource('rooms', RoomController::class);
 
 // 🔐 Rute Admin (Autentikasi & Middleware Admin)
 Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
     Route::get('/dashboard', [DashboardController::class, 'adminDashboard'])->name('admin.dashboard');
 
     // Manajemen Kamar
@@ -49,9 +50,9 @@ Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->group(func
 // 👤 Rute Customer (Autentikasi & Middleware Customer)
 Route::middleware(['auth', CustomerMiddleware::class])->prefix('customer')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'customerDashboard'])->name('customer.dashboard');
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('customer.profile-customer');
+    Route::get('/profile', [ProfileController::class, 'index'])->name('customer.profile');
     Route::get('/detailreservasi', [ProfileController::class, 'detailReservasi'])->name('profile.detailreservasi');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::patch('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     // Tambahan fitur customer

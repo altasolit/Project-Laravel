@@ -22,7 +22,7 @@
         <tr>
 
             <td>{{ $room->nomor_kamar }}</td>
-            <td>{{ $room->tipe }}</td>
+            <td>{{ $room->tipe_kamar }}</td>
             <td>{{ $room->harga }}</td>
             <td>{{ $room->status }}</td>
             <td>{{ $room->deskripsi }}</td>

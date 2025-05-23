@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Booking Page</title>
+    <title>Profile Page</title>
 
     <!-- Bootstrap CSS -->
     <link href="{{ asset('assets/dist/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -71,7 +71,7 @@
                     <div class="profile-icon">D</div>
                 </button>
                 <ul class="dropdown-menu"style="left: inherit; !important">
-                    <li><a class="dropdown-item" href="{{ route('customer.profile')}}">Profil</a></li>
+                    <li><a class="dropdown-item" href="/info">Profil</a></li>
                     <li><a class="dropdown-item" href="#">Pengaturan Akun</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li>
@@ -91,26 +91,64 @@
     <div class="row">
         <!-- Sidebar -->
         <div class="col-md-3 col-lg-2 p-0 sidebar">
-            <a href="{{ route('customer.profile')}}" >My Profile</a>
-            <a href="{{ route('customer.dashboard')}}" class="active">My Booking</a>
+            <a href="{{ route('customer.profile')}}" class="active">My Profile</a>
+            <a href="{{ route('customer.dashboard')}}">My Booking</a>
         </div>
 
-      <!-- Main -->
-        <main class="col-md-9 col-lg-10 p-4">
-            <h2 class="mb-4">My Bookings</h2>
+       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="margin-bottom: 500px;">
+        <h1 class="h2" style="margin-bottom: 50px; margin-top: 50px;">My Profile</h1>
+    <form class="profile-form" action="" name="profile-form">
+        <div class="row">
 
-            <!-- Booking Cards -->
-            <div class="card-reservation">
-                <h5 class="fw-bold">Andi</h5>
-                <p><strong>Check-in:</strong> 10 Feb 2025</p>
-                <p><strong>Check-out:</strong> 15 Feb 2025</p>
-                <p><strong>Tipe Kamar:</strong> Deluxe</p>
-                <p><strong>Jumlah Tamu:</strong> 2</p>
-                <p><strong>Status:</strong> <span class="text-success fw-bold">Dikonfirmasi</span></p>
+            <div class="col-md-6 mb-3" >
+                <label for="name" class="form-label" >Nama</label>
+                <input id="name" class="form-control" placeholder="Nama Lengkap" type="text" required>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="dob" class="form-label">Tanggal lahir</label>
+                <input id="dob" class="form-control" type="date" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="gender" class="form-label">Jenis kelamin</label>
+                <select id="gender" class="form-select" required>
+                    <option selected disabled>Pilih jenis kelamin</option>
+                    <option value="male">Laki-laki</option>
+                    <option value="female">Perempuans</option>
+                </select>
             </div>
 
-            <!-- Tambah reservasi lain jika ada -->
-        </main>
+           
+            <div class="col-md-6 mb-3">
+                <label for="marital-status" class="form-label">Status Pernikahan</label>
+                <select id="marital-status" class="form-select" required>
+                    <option selected disabled>Pilih Status Pernikahan</option>
+                    <option value="single">Belum Menikah</option>
+                    <option value="married">Menikah</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="hometown" class="form-label">Kampung Halaman</label>
+                <input id="hometown" class="form-control" placeholder="Masukkan kampung halaman Anda" type="text" required>
+            </div>
+
+            
+            <div class="col-md-6 mb-3">
+                <label for="current-city" class="form-label">Kota Sekarang</label>
+                <input id="current-city" class="form-control" placeholder="Masukkan kota sekarang" type="text" required>
+            </div>
+        </div>
+            <div class="col-md-6 mb-4">
+            <button type="submit" class="btn btn-save">Simpan</button>
+            </div>
+
+    </form>
+</main>
     </div>
 </div>
 
