@@ -456,7 +456,7 @@
 
     <div class="col-xxl-2 col-md-4 col-12">
       <div class="facility-card">
-        <img src="{{ asset('IMG/kolam umum.jpg') }}" alt="Fasilitas">
+        <img src="{{ asset('IMG/kolam umum.jpg') }}" alt="Fasilitas" width="80">
         <div class="facility-text">Fasilitas</div>
       </div>
     </div>
