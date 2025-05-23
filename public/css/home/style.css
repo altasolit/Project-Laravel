@@ -1,0 +1,645 @@
+/* Header */
+.navbar {
+    background: linear-gradient(to bottom, rgb(8, 12, 56), rgba(8, 12, 56, 0.315)); /* Gradasi dari hitam pekat ke transparan */
+    backdrop-filter: blur(200px); 
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    }
+    
+    /* Warna teks untuk navbar */
+    .navbar .navbar-brand,
+    .navbar .nav-link {
+    color: rgb(8, 12, 56); /* warna teks header */
+    }
+    
+    .navbar .navbar-brand:hover,
+    .navbar .nav-link:hover {
+    color:rgb(8, 12, 56); /* warna hover */
+    }
+    
+    /* Responsivitas tombol toggler */
+    .navbar-toggler {
+    border-color: rgb(255, 255, 255); /* Warna garis toggler */
+    }
+
+/* bagian src bar kebawah */
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: rgb(var(--bs-tertiary-color-rgb));
+}
+
+/* CUSTOMIZE THE CAROUSEL
+  -------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+    margin-bottom: 4rem;
+}
+
+.b-checkin-date {
+    border: none;
+    padding: 0;
+}
+.b-checkout-date {
+    border: none;
+    padding: 0;
+}
+
+.custom-search-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.custom-search-bar-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* Pastikan lebih tinggi dari elemen lain */
+    width: 60%; /* Sesuaikan ukuran */
+    background: white;
+    padding: 10px;                              
+    border-radius: 32px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.b-search-bar {
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 1px;
+}
+.b-text {
+    text-align: center;
+}
+.b-input, .b-button {
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+}
+
+.b-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.custom-search-input {
+    flex: 2;
+    border: 1px solid #ccc;
+    border-radius: 50px; /* Membuat bentuk kapsul */
+    padding: 10px 20px; /* Memberikan padding agar lebih nyaman */
+    width: 100%; /* Mengatur lebar */
+}
+
+.custom-date-input,
+.custom-guest-input {
+    text-align: center;
+    text-align: left;
+}
+
+.custom-date-input label,
+.custom-guest-input label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.custom-search-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.custom-search-button:hover {
+    background-color: #0056b3;
+}
+/* Declare heights because of positioning of img element */
+.carousel-item {
+    height: 28rem;
+}
+
+/* MARKETING CONTENT
+  -------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+/* rtl:begin:ignore */
+.marketing .col-lg-4 p {
+    margin-right: 0.75rem;
+    margin-left: 0.75rem;
+}
+/* rtl:end:ignore */
+
+/* bagian logo */
+.nav-logo > img {
+    width: 50px;
+}
+
+/* Featurettes
+  ------------------------- */
+
+.featurette-divider {
+    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+/* rtl:begin:remove */
+.featurette-heading {
+    letter-spacing: -0.05rem;
+}
+
+/* rtl:end:remove */
+
+/* RESPONSIVE CSS
+  -------------------------------------------------- */
+
+@media (min-width: 40em) {
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+
+    .featurette-heading {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 62em) {
+    .featurette-heading {
+        margin-top: 7rem;
+    }
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.b-example-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: solid rgba(0, 0, 0, 0.15);
+    border-width: 1px 0;
+    box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+        inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+.b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+}
+
+.bi {
+    vertical-align: -0.125em;
+    fill: currentColor;
+}
+
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.btn-bd-primary {
+    --bd-violet-bg: #712cf9;
+    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-violet-bg);
+    --bs-btn-border-color: var(--bd-violet-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #6528e0;
+    --bs-btn-hover-border-color: #6528e0;
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #5a23c8;
+    --bs-btn-active-border-color: #5a23c8;
+}
+
+.bd-mode-toggle {
+    z-index: 1500;
+}
+
+.bd-mode-toggle .dropdown-menu .active .bi {
+    display: block !important;
+}
+
+.container-bar {
+    position: absolute;
+    top: 50%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+}
+
+.flex-order {
+    display: flex;
+    align-items: center;
+}
+
+.dcr {
+    text-decoration: none;
+}
+
+.container-slider {
+    display: flex;
+    width: max-content;
+    gap: 1rem;
+}
+
+.horizontal-scroll {
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-color: transparent transparent;
+}
+.horizontal-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.divider {
+    border-left: 1px solid #b7b7b7;
+    height: 50px;
+}
+
+/* fasilitas */
+.dcr {
+    text-decoration: none;
+  }
+  
+  .container-slider {
+    display: flex;
+    width: max-content;
+    gap: 1rem;
+  }
+  
+  .horizontal-scroll {
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-color: transparent transparent;
+  }
+  .horizontal-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  /* Container */
+  .redclub-container {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    
+    /* Judul */
+    .redclub-container h2 { 
+      font-size: 24px;
+      color: rgb(8, 12, 56);
+      margin-bottom: 20px;
+    }
+    
+    /* Kartu Utama */
+    .redclub-card {
+      background: linear-gradient(to right, #1c1c1c, rgb(8, 12, 56));
+      border-radius: 20px;
+      color: white;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    
+    /* Konten Utama */
+    .redclub-content {
+      flex: 1;
+    }
+    
+    .redclub-content img {
+      width: 80px;
+      margin-bottom: 8px;
+    }
+    
+    .redclub-content p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin: 0;
+    }
+    
+    /* Benefit Section */
+    .redclub-benefits {
+      display: flex;
+      gap: 16px;
+    }
+    
+    .benefit-item {
+      text-align: center;
+      flex: 1;
+    }
+    
+    .benefit-icon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 8px;
+    }
+    
+    .benefit-item p {
+      font-size: 14px;
+      margin: 0;
+    }
+
+/* bagian desain kamar */
+body {
+    margin: 0%;
+    margin-bottom: 50px;
+}
+
+
+.gallery-container {
+    margin: 0px;
+    top: 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 100px;
+   
+}
+
+.gallery-heading {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.gallery-description { 
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.gallery-room {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-overlay-text {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .gallery-room {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-room {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* ini footer ye */
+.intro {
+    padding: 50px;
+    text-align: center;
+}
+
+.tags span {
+    background: rgb(106, 109, 143);
+    padding: 5px 10px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 15px;
+}
+
+.feature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.feature img {
+    width: 40%;
+    border-radius: 10px;
+}
+
+.feature-text {
+    padding: 20px;
+    text-align: left;
+}
+/* body {
+   
+} */
+
+.container-a {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    text-align: center;
+    padding: 50px;
+}
+
+.location-title {
+    font-size: 20px;
+    color: #8b8b8b;
+    margin-bottom: 10px;
+}
+
+.address {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.map-button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.info-box {
+    width: 30%;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.contact-detail {
+    font-weight: bold;
+    color: #555;
+}
+
+/* ni bawaan */
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .b-example-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .btn-bd-primary {
+    --bd-violet-bg: #712cf9;
+    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-violet-bg);
+    --bs-btn-border-color: var(--bd-violet-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #6528e0;
+    --bs-btn-hover-border-color: #6528e0;
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #5a23c8;
+    --bs-btn-active-border-color: #5a23c8;
+  }
+
+  .bd-mode-toggle {
+    z-index: 1500;
+  }
+
+  .bd-mode-toggle .dropdown-menu .active .bi {
+    display: block !important;
+  }

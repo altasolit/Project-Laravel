@@ -15,13 +15,14 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('username')->unique(); // Tambahan
+            $table->string('phone');              // Tambahan
+            $table->enum('role', ['admin', 'customer'])->default('customer'); // Tambahan
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->enum('role', ['admin', 'customer'])->default('customer'); // ✅ Perbaikan
-            $table->string('phone')->nullable();            
             $table->rememberToken();
             $table->timestamps();
-        });
+        });        
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();

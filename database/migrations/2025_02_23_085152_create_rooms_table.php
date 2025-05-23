@@ -16,10 +16,10 @@ return new class extends Migration
             $table->enum('status', ['Tersedia', 'Terisi', 'Diperbaiki'])->default('Tersedia');
             $table->string('image')->nullable();
             $table->integer('capacity')->default(2); // Jumlah tamu maksimal
-            $table->text('facilities')->nullable(); // Fasilitas kamar dalam bentuk teks/json
+            $table->json('facilities')->nullable(); // Lebih baik gunakan json daripada text biasa
             $table->text('description');
             $table->timestamps();
-        });
+        });        
     }
     
     public function down(): void
