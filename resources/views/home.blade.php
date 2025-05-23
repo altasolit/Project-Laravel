@@ -1,3 +1,5 @@
+@extends('navbar')
+@section('navbar')
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
   <head>
@@ -105,48 +107,7 @@
         display: block !important;
       }
     </style>
-
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="{{ asset('carousel/carousel.css') }}">
-  </head>
-  <body>
-    
-    
-<header data-bs-theme="dark">
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <img src="{{ asset('IMG/logo.png') }}" class="navbar-brand" href="#" width="50px" height="50px" style="filter: brightness(0) invert(1);">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Kamar</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-                <button type="button" class="btn btn-outline-secondary">
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-  </svg>
-  Profile
-</button>
-
-      </div>
-    </div>
-  </nav>
-</header>
-@yield('navbar')
 <main>
-
   <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
