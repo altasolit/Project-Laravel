@@ -9,6 +9,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Middleware\CustomerMiddleware;
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 // 🌐 Halaman Umum (Tanpa Login)
 Route::view('/', 'home');
@@ -17,6 +18,7 @@ Route::view('/reservasi', 'reservasi');
 Route::view('/kamar', 'kamar');
 Route::view('/fasilitas', 'fasilitas');
 Route::view('/detailreservasi', 'detailreservasi');
+
 
 // 📦 Resource Routes (Jika ingin gunakan controller penuh)
 Route::resource('rooms', RoomController::class);
@@ -36,6 +38,12 @@ Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->group(func
     Route::post('/fasilitas', [FacilityController::class, 'store'])->name('fasilitas.store');
     Route::put('/fasilitas/{id}', [FacilityController::class, 'update'])->name('fasilitas.update');
     Route::delete('/fasilitas/{id}', [FacilityController::class, 'destroy'])->name('fasilitas.destroy');
+
+    // // Manajemen profile
+    // Route::get('/profile/create/{id?}', [DashboardController::class, 'create'])->name('profile.create');
+    // Route::post('/profile', [DashboardController::class, 'store'])->name('profile.store');
+    // Route::put('/profile/', [DashboardController::class, 'update'])->name('profile.edit');
+    // Route::delete('/profile/{id}', [DashboardController::class, 'destroy'])->name('profile.destroy');
 });
 
 // 👤 Rute Customer (Autentikasi & Middleware Customer)
@@ -61,6 +69,12 @@ Route::middleware(['auth'])->group(function () {
 
 // ✅ Test Middleware Customer
 Route::get('/test-customer', fn() => 'Halo customer!')->middleware(['auth', CustomerMiddleware::class]);
+
+Route::get('/dashboard', function () {
+    return view('admin.dashboard');
+});
+
+
 
 // 🔐 Laravel Breeze Auth
 require __DIR__ . '/auth.php';
