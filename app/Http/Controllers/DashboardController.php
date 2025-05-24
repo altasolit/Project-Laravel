@@ -10,9 +10,9 @@ class DashboardController extends Controller
     public function adminDashboard()
     {
 
-        if (Auth::user()->role !== 'admin') {
-            return redirect()->route('home');
-        }
+        // if (Auth::user()->role !== 'admin') {
+        //     return redirect()->route('home');
+        // }
 
         if (!Auth::check() || Auth::user()->role !== 'admin') {
             return redirect()->route('customer.profile');
@@ -27,9 +27,7 @@ class DashboardController extends Controller
             return redirect()->route('admin.dashboard');
         }
 
-        return view('customer.dashboard'); // File: resources/views/customer-dashboard.blade.php
-
-        return view('customer.profile');
+        return view('customer.dashboard'); 
 
     }
 }

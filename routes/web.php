@@ -3,11 +3,12 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\RoomController;
-use App\Http\Controllers\FacilityController;
+use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Middleware\CustomerMiddleware;
+use App\Models\Fasilitas;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -19,13 +20,13 @@ Route::view('/kamar', 'kamar');
 Route::view('/fasilitas', 'fasilitas');
 Route::view('/detailreservasi', 'detailreservasi');
 
-
 // 📦 Resource Routes (Jika ingin gunakan controller penuh)
 Route::resource('rooms', RoomController::class);
+Route::resource('Fasilitas', FasilitasController::class);
 
 // 🔐 Rute Admin (Autentikasi & Middleware Admin)
 Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'adminDashboard'])->name('admin.dashboard');
+    Route::get('/admi/dashboard', [DashboardController::class, 'adminDashboard'])->name('admin.dashboard');
 
     // Manajemen Kamar
     Route::get('/room/create/{id?}', [RoomController::class, 'create'])->name('room.create');
@@ -34,16 +35,16 @@ Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->group(func
     Route::delete('/rooms/{id}', [RoomController::class, 'destroy'])->name('rooms.destroy');
 
     // Manajemen Fasilitas
-    Route::get('/fasilitas/create/{id?}', [FacilityController::class, 'create'])->name('fasilitas.create');
-    Route::post('/fasilitas', [FacilityController::class, 'store'])->name('fasilitas.store');
-    Route::put('/fasilitas/{id}', [FacilityController::class, 'update'])->name('fasilitas.update');
-    Route::delete('/fasilitas/{id}', [FacilityController::class, 'destroy'])->name('fasilitas.destroy');
+    Route::get('/fasilitas/create/{id?}', [FasilitasController::class, 'create'])->name('fasilitas.create');
+    Route::post('/fasilitas', [FasilitasController::class, 'store'])->name('fasilitas.store');
+    Route::put('/fasilitas/{id}', [FasilitasController::class, 'update'])->name('fasilitas.update');
+    Route::delete('/fasilitas/{id}', [FasilitasController::class, 'destroy'])->name('fasilitas.destroy');
 
-    // // Manajemen profile
-    // Route::get('/profile/create/{id?}', [DashboardController::class, 'create'])->name('profile.create');
-    // Route::post('/profile', [DashboardController::class, 'store'])->name('profile.store');
-    // Route::put('/profile/', [DashboardController::class, 'update'])->name('profile.edit');
-    // Route::delete('/profile/{id}', [DashboardController::class, 'destroy'])->name('profile.destroy');
+    // Manajemen profile
+    Route::get('/profile/create/{id?}', [DashboardController::class, 'create'])->name('profile.create');
+    Route::post('/profile', [DashboardController::class, 'store'])->name('profile.store');
+    Route::put('/profile/', [DashboardController::class, 'update'])->name('profile.edit');
+    Route::delete('/profile/{id}', [DashboardController::class, 'destroy'])->name('profile.destroy');
 });
 
 // 👤 Rute Customer (Autentikasi & Middleware Customer)
@@ -70,11 +71,9 @@ Route::middleware(['auth'])->group(function () {
 // ✅ Test Middleware Customer
 Route::get('/test-customer', fn() => 'Halo customer!')->middleware(['auth', CustomerMiddleware::class]);
 
-Route::get('/dashboard', function () {
-    return view('admin.dashboard');
-});
-
-
+// Route::get('/dashboard', function () {
+//     return view('admin.dashboard');
+// });
 
 // 🔐 Laravel Breeze Auth
 require __DIR__ . '/auth.php';

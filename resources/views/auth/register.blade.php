@@ -47,18 +47,13 @@
                     <div class="input-field form-group">
                         <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" autocomplete="new-password" required />
                         <x-input-label for="password" class="floating-label" :value="__('Password')" />
->>>>>>> 3275ab4 (register)
                         <x-input-error :messages="$errors->get('password')" class="mt-2" />
                     </div>
 
                     <!-- Input Confirm Password -->
                     <div class="input-field form-group">
                         <x-text-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" autocomplete="new-password" required />
-<<<<<<< HEAD
-                        <x-input-label for="password_confirmation" class="floating-label" :value="('Confirm Password')" />
-=======
                         <x-input-label for="password_confirmation" class="floating-label" :value="__('Confirm Password')" />
->>>>>>> 3275ab4 (register)
                         <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                     </div>
 
