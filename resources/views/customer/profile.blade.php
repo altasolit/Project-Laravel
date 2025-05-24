@@ -96,58 +96,37 @@
         </div>
 
        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="margin-bottom: 500px;">
-        <h1 class="h2" style="margin-bottom: 50px; margin-top: 50px;">My Profile</h1>
-    <form class="profile-form" action="" name="profile-form">
-        <div class="row">
+    <h1 class="h2" style="margin-bottom: 50px; margin-top: 50px;">My Profile</h1>
 
-            <div class="col-md-6 mb-3" >
-                <label for="name" class="form-label" >Nama</label>
-                <input id="name" class="form-control" placeholder="Nama Lengkap" type="text" required>
-            </div>
-            <div class="col-md-6 mb-3">
-                <label for="dob" class="form-label">Tanggal lahir</label>
-                <input id="dob" class="form-control" type="date" required>
-            </div>
+    @if(isset($user))
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label class="form-label fw-bold">Nama</label>
+            <div class="form-control-plaintext">{{ $user->name }}</div>
         </div>
-
-        <div class="row">
-            <div class="col-md-6 mb-3">
-                <label for="gender" class="form-label">Jenis kelamin</label>
-                <select id="gender" class="form-select" required>
-                    <option selected disabled>Pilih jenis kelamin</option>
-                    <option value="male">Laki-laki</option>
-                    <option value="female">Perempuans</option>
-                </select>
-            </div>
-
-           
-            <div class="col-md-6 mb-3">
-                <label for="marital-status" class="form-label">Status Pernikahan</label>
-                <select id="marital-status" class="form-select" required>
-                    <option selected disabled>Pilih Status Pernikahan</option>
-                    <option value="single">Belum Menikah</option>
-                    <option value="married">Menikah</option>
-                </select>
-            </div>
+       <div class="col-md-6 mb-3">
+            <label class="form-label fw-bold">Username</label>
+            <div class="form-control-plaintext">{{ $user->username }}</div>
         </div>
+    </div>
 
-        <div class="row">
-            <div class="col-md-6 mb-3">
-                <label for="hometown" class="form-label">Kampung Halaman</label>
-                <input id="hometown" class="form-control" placeholder="Masukkan kampung halaman Anda" type="text" required>
-            </div>
-
-            
-            <div class="col-md-6 mb-3">
-                <label for="current-city" class="form-label">Kota Sekarang</label>
-                <input id="current-city" class="form-control" placeholder="Masukkan kota sekarang" type="text" required>
-            </div>
+    <div class="row"> 
+        <div class="col-md-6 mb-3">
+            <label class="form-label fw-bold">Email</label>
+            <div class="form-control-plaintext">{{ $user->email }}</div>
         </div>
-            <div class="col-md-6 mb-4">
-            <button type="submit" class="btn btn-save">Simpan</button>
-            </div>
+        <div class="col-md-6 mb-3">
+            <label class="form-label fw-bold">No. HP</label>
+            <div class="form-control-plaintext">{{ $user->no_hp }}</div>
+        </div>
+    </div>
+    @else
+    <div class="alert alert-warning">Data user tidak tersedia.</div>
+@endif
 
-    </form>
+         <form action="{{ route('customer.edit', $user->id) }}">
+            <button class="btn btn-primary"> Edit </button>
+        </form>
 </main>
     </div>
 </div>

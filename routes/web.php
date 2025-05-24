@@ -49,10 +49,12 @@ Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->group(func
 
 // 👤 Rute Customer (Autentikasi & Middleware Customer)
 Route::middleware(['auth', CustomerMiddleware::class])->prefix('customer')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'showProfile'])->middleware(['auth'])->name('customer.profile');
     Route::get('/dashboard', [DashboardController::class, 'customerDashboard'])->name('customer.dashboard');
-    Route::get('/profile', [ProfileController::class, 'index'])->name('customer.profile');
+    
     Route::get('/detailreservasi', [ProfileController::class, 'detailReservasi'])->name('profile.detailreservasi');
-    Route::patch('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::get('/edit', [ProfileController::class, 'edit'])->name('customer.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('customer.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     // Tambahan fitur customer
@@ -63,9 +65,9 @@ Route::middleware(['auth', CustomerMiddleware::class])->prefix('customer')->grou
 Route::middleware(['auth'])->group(function () {
     Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
 
-    // Edit profil (umum)
-    Route::get('/edit', [AuthController::class, 'edit'])->name('customer.edit');
-    Route::put('/update/{id}', [AuthController::class, 'update'])->name('customer.update');
+    // // Edit profil (umum)
+    // Route::get('/edit', [AuthController::class, 'edit'])->name('customer.edit');
+    // Route::put('/update/{id}', [AuthController::class, 'update'])->name('customer.update');
 });
 
 // ✅ Test Middleware Customer

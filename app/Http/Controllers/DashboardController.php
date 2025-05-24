@@ -14,7 +14,7 @@ class DashboardController extends Controller
     public function adminDashboard()
     {
         if (!Auth::check() || Auth::user()->role !== 'admin') {
-            return redirect()->route('customer.dashboard');
+            return redirect()->route('customer.profile');
         }
         return view('admin.dashboard');
     }
