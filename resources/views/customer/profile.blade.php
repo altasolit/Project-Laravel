@@ -192,7 +192,7 @@
                 <label class="form-label fw-bold">Email</label>
                 <div class="form-control-plaintext">{{ $user->email }}</div>
             </div>
-        </div>
+        </div>
 
         <div class="row">
             <div class="col-md-6 mb-3">
