@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('username')->unique(); // Tambahan
-            $table->string('phone');              // Tambahan
+            $table->string('no_hp');              // Tambahan
             $table->enum('role', ['admin', 'customer'])->default('customer'); // Tambahan
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

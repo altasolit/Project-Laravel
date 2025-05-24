@@ -7,13 +7,18 @@
         @method('PUT')
 
         <label>Nomor Kamar:</label>
-        <input type="text" name="room_number" value="{{ $room->room_number }}" required>
+''        <input type="text" name="nomor_kamar" value="{{ $room->nomor_kamar }}" required>
 
         <label>Tipe:</label>
-        <input type="text" name="type" value="{{ $room->type }}" required>
+        <select name="tipe_kamar" required>
+            <option value="Standard" {{ $room->tipe_kamar == 'Standard' ? 'selected' : '' }}>Standard</option>
+            <option value="Superior" {{ $room->tipe_kamar == 'Superior' ? 'selected' : '' }}>Superior</option>
+            <option value="Deluxe" {{ $room->tipe_kamar == 'Deluxe' ? 'selected' : '' }}>Deluxe</option>
+            <option value="Executive" {{ $room->tipe_kamar == 'Executive' ? 'selected' : '' }}>Executive</option>
+        </select>
 
         <label>Harga:</label>
-        <input type="number" name="price_per_night" value="{{ $room->price_per_night }}" required>
+        <input type="number" name="harga" value="{{ $room->harga }}" required>
 
         <label>Status:</label>
         <select name="status" required>
@@ -23,10 +28,16 @@
         </select>
 
         <label>Deskripsi:</label>
-        <textarea name="description" required>{{ $room->description }}</textarea>
+        <textarea name="deskripsi" required>{{ $room->deskripsi }}</textarea>
 
-        <label>Gambar (Opsional):</label>
-        <input type="file" name="image">
+        {{-- Tampilkan gambar lama --}}
+        @if ($room->gambar)
+            <p>Gambar saat ini:</p>
+            <img src="{{ asset('storage/' . $room->gambar) }}" width="150">
+        @endif
+
+        <label>Ganti Gambar (Opsional):</label>
+        <input type="file" name="gambar">
 
         <button type="submit">Simpan Perubahan</button>
     </form>

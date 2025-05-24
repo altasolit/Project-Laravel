@@ -11,7 +11,10 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
         <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+        <!-- Tambahkan di <head> layout -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         <!-- Fonts and icons -->
         <script src="assets/js/plugin/webfont/webfont.min.js"></script>
@@ -86,7 +89,8 @@
                                     <p>Orders</p>
                                 </a>
                             </li>
-                            <li class="nav-item submenu {{ request()->is('Kamar') || request()->is('fasilitas') ? 'active' : '' }}">
+                            <li
+                                class="nav-item submenu {{ request()->is('Kamar') || request()->is('fasilitas') ? 'active' : '' }}">
                                 <a data-bs-toggle="collapse" href="#tables">
                                     <i class="fas fa-table"></i>
                                     <p>Product</p>
@@ -327,7 +331,7 @@
                                         </x-slot>
 
                                         <x-slot name="content">
-                                            <x-dropdown-link :href="route('profile.edit')">
+                                            <x-dropdown-link :href="route('admin.dashboard')">
                                                 {{ __('Profile') }}
                                             </x-dropdown-link>
 

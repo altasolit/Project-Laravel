@@ -10,14 +10,12 @@ return new class extends Migration
     {
         Schema::create('rooms', function (Blueprint $table) {
             $table->id();
-            $table->string('room_number')->unique();
-            $table->enum('type', ['Standard', 'Superior', 'Deluxe', 'Executive']);
-            $table->decimal('price_per_night', 10, 2);
+            $table->string('nomor_kamar')->unique();
+            $table->enum('tipe_kamar', ['Standard', 'Superior', 'Deluxe', 'Executive']);
+            $table->decimal('harga', 10, 2);
             $table->enum('status', ['Tersedia', 'Terisi', 'Diperbaiki'])->default('Tersedia');
-            $table->string('image')->nullable();
-            $table->integer('capacity')->default(2); // Jumlah tamu maksimal
-            $table->json('facilities')->nullable(); // Lebih baik gunakan json daripada text biasa
-            $table->text('description');
+            $table->string('gambar')->nullable();            
+            $table->text('deskripsi');
             $table->timestamps();
         });        
     }

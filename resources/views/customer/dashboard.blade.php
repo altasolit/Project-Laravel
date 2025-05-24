@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Profile Page</title>
+    <title>Booking Page</title>
 
     <!-- Bootstrap CSS -->
     <link href="{{ asset('assets/dist/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -71,7 +71,7 @@
                     <div class="profile-icon">D</div>
                 </button>
                 <ul class="dropdown-menu"style="left: inherit; !important">
-                    <li><a class="dropdown-item" href="/info">Profil</a></li>
+                    <li><a class="dropdown-item" href="{{ route('customer.profile')}}">Profil</a></li>
                     <li><a class="dropdown-item" href="#">Pengaturan Akun</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li>
@@ -91,11 +91,11 @@
     <div class="row">
         <!-- Sidebar -->
         <div class="col-md-3 col-lg-2 p-0 sidebar">
-            <a href="/info" class="active">My Profile</a>
-            <a href="/bookings">My Booking</a>
+            <a href="{{ route('customer.profile')}}" >My Profile</a>
+            <a href="{{ route('customer.dashboard')}}" class="active">My Booking</a>
         </div>
 
-        <!-- Main -->
+      <!-- Main -->
         <main class="col-md-9 col-lg-10 p-4">
             <h2 class="mb-4">My Bookings</h2>
 

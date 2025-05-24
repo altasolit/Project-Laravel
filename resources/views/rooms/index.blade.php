@@ -10,22 +10,24 @@
 
     <table border="1">
         <tr>
-            <th>No. Kamar</th>
-            <th>Tipe</th>
-            <th>Harga</th>
-            <th>Status</th>
-            <th>Deskripsi</th>
+            <th>No</th>
+            <th>Tipe Kamar</th>
+            <th>Harga Per Malam</th>
+            <th>Status Kamar</th>
+            <th>Deskripsi Kamar</th>
             <th>Gambar</th>
             <th>Aksi</th>
         </tr>
         @foreach($rooms as $room)
         <tr>
-            <td>{{ $room->room_number }}</td>
-            <td>{{ $room->type }}</td>
-            <td>{{ $room->price }}</td>
+
+            <td>{{ $room->nomor_kamar }}</td>
+            <td>{{ $room->tipe_kamar }}</td>
+            <td>{{ $room->harga }}</td>
             <td>{{ $room->status }}</td>
-            <td>{{ $room->description }}</td>
-            <td><img src="{{ asset('storage/' . $room->image) }}" width="100"></td>
+            <td>{{ $room->deskripsi }}</td>
+            <td><img src="{{ asset('storage/' . $room->gambar) }}" width="100"></td>
+
             <td>
                 <a href="{{ route('rooms.edit', $room->id) }}">Edit</a>
                 <form action="{{ route('rooms.destroy', $room->id) }}" method="POST" style="display: inline;">
