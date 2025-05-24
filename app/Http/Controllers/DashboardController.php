@@ -16,7 +16,7 @@ class DashboardController extends Controller
         // if (Auth::user()->role !== 'admin') {
         //     return redirect()->route('home');
         // }
-        dd('masuk dashboard admin');
+        // dd('masuk dashboard admin');
         if (!Auth::check() || Auth::user()->role !== 'admin') {
             return redirect()->route('customer.profile');
         }
