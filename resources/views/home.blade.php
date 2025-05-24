@@ -1,513 +1,555 @@
+@extends('navbar')
+@section('navbar')
 <!doctype html>
-<html lang="en" data-bs-theme="light">
-
-<head>
+<html lang="en" data-bs-theme="auto">
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.122.0">
-    <title> Home Page </title>
+    <meta name="generator" content="Hugo 0.145.0">
+    <title>Home</title>
+
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/home/bawaan.css" rel="stylesheet">
-    <link href="css/home/header.css" rel="stylesheet">
-    <link href="css/home/search.css" rel="stylesheet">
-    <script src="js/home/search.js"></script>
-    <link href="css/home/circle.css" rel="stylesheet">
-    <script src="js/home/circle.js"></script>
-    <link href="css/home/home.css" rel="stylesheet">
-    <link href="css/home/fasilitas.css" rel="stylesheet">
-    <link href="css/home/blog.css" rel="stylesheet">
-    <link href="css/home/styles.css" rel="stylesheet">
-    <link href="css/home/footer.css" rel="stylesheet">
-    <link href="css/home/gallery.css" rel="stylesheet">
-</head>
+    
+ <link rel="stylesheet" href="{{ asset('assets/dist/css/bootstrap.css') }}">
+ <link rel="stylesheet" href="{{ asset('assets/dist/css/bootstrap.min.css') }}">
 
-<body>
-    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle"></div>
-    <header data-bs-theme="dark">
-        <nav class="navbar navbar-expand-md fixed-top">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                        <li class="nav-item">
-                            <div class="nav-logo">
-                                <img src="img/logo2.png" alt="Logo">
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"></a>
-                        </li>
-                        {{-- <div class="container-bar">
-                            @if (Route::has('login'))
-                                <nav class="d-flex justify-content-end" style="width: {{ Request::is('dashboard') ? '110px' : '165px' }};">
-                                    @auth
-                                        <a href="{{ url('/dashboard') }}" class="btn">
-                                            <img src="img/arle.jpg" alt="Profile" width="35" height="35" class="rounded-circle">
-                                        </a>
-                        
-                                        @if(Auth::user()->isAdmin())
-                                            <a href="{{ route('dashboard') }}" class="btn btn-primary">Admin Panel</a>
-                                        @elseif(Auth::user()->isCustomer())
-                                            <a href="{{ route('info') }}" class="btn btn-secondary">My Reservations</a>
-                                        @endif
-                        
-                                        <form action="{{ route('logout') }}" method="POST" class="d-inline">
-                                            @csrf
-                                            <button type="submit" class="btn btn-danger">Logout</button>
-                                        </form>
-                                    @else
-                                        <a href="{{ route('login') }}" class="btn btn-outline-dark me-2">Log in</a>
-                                        @if (Route::has('register'))
-                                            <a href="{{ route('register') }}" class="btn btn-outline-dark">Register</a>
-                                        @endif
-                                    @endauth
-                                </nav>
-                            @endif
-                        </div>        --}}
-                        <div class="container-bar">
-                            @if (Route::has('login'))
-                                <nav class="d-flex justify-content-end" style="width: {{ Request::is('dashboard') ? '110px' : '165px' }};">
-                                    @auth
-                                        <!-- Jika user sudah login -->
-                                        <a href="{{ Auth::user()->isAdmin() ? route('admin.dashboard') : route('customer.dashboard') }}" class="btn">
-                                            <img src="{{ asset('img/arle.jpg') }}" alt="Profile" width="35" height="35" class="rounded-circle">
-                                        </a>
-                        
-                                        <form action="{{ route('logout') }}" method="POST" class="d-inline">
-                                            @csrf
-                                            <button type="submit" class="btn btn-danger">Logout</button>
-                                        </form>
-                                    @else
-                                        <!-- Jika user belum login -->
-                                        <a href="{{ route('login') }}" class="btn btn-outline-dark me-2">Log in</a>
-                                        @if (Route::has('register'))
-                                            <a href="{{ route('register') }}" class="btn btn-outline-dark">Register</a>
-                                        @endif
-                                    @endauth
-                                </nav>
-                            @endif
-                        </div>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <!-- <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active"> -->
-                    <img src="img/bg-home.jpg" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-                    <div class="custom-search-bar-container">
-                        <div class="custom-search-bar">
-                            <div class="custom-guest-input">
-                                <input type="text" placeholder="Enter a City, Locality or Hotel"
-                                    class="custom-search-input" />
-                            </div>
-                            <div class="divider"></div>
-                            <div class="custom-guest-input">
-                                <label>Check-in</label>
-                                <input type="text" class=" b-checkin-date" placeholder="Check-in date" />
-                            </div>
-                            <div class="divider"></div>
-                            <div class="custom-guest-input">
-                                <label>Check-out</label>
-                                <input type="text" class=" b-checkout-date" placeholder="Check-out date" />
-                            </div>
-                            <div class="divider"></div>
-                            <div class="custom-guest-input">
-                                <label>Rooms</label>
-                                <span>1 Room, 2 Guest</span>
-                            </div>
-                            <button class="custom-search-button">
-                                <span>&#128269; Cari</span>
-                            </button>
-                        </div>
-                    </div>
-                    <link href="css/home/search.css">
-                    <script src="js/home/search.js"></script>
-                </div>
-            </div>
+    <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="../assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="../assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#712cf9">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .bi {
+        width: 1em;
+        height: 1em;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+<main>
+  <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{{ asset('IMG/bg-home.jpg') }}" alt="Bar Hotel" width="100%" height="100%">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1></h1>
+            <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
+          </div>
         </div>
-        <div class="container marketing">
-            <div class=" mb-4">
-                <h3>Luxury Hotel</h3>
-            </div>
-            <link href="css/home/fasilitas.css" rel="stylesheet">
-            <div class="redclub-container">
-                <div class="redclub-card">
-                    <div class="redclub-content">
-                        <img src="img/logo2.png" alt="Logo Hotel" class="redclub-logo">
-                        <p>Jadilah VIP member The Luxury dan dapatkan promo di setiap kamar yang dipesan, akses
-                            fasilitas premium dan nikmati kenyamanannya</p>
-                    </div>
-                    <div class="redclub-benefits">
-                        <div class="benefit-item">
-                            <img src="img/bg-wifi.png" alt="Diskon" class="benefit-icon">
-                            <p style="filter: invert(1) brightness(2);">Free WIFI</p>
-                        </div>
-                        <div class="benefit-item">
-                            <img src="img/bg-clean.png" alt="Poin" class="benefit-icon">
-                            <p style="filter: invert(1) brightness(2);">Cleaning Service</p>
-                        </div>
-                        <div class="benefit-item">
-                            <img src="img/bg-car.png" alt="Tukar Poin" class="benefit-icon">
-                            <p style="filter: invert(1) brightness(2);">Layanan antar jemput bandara</p>
-                        </div>
-                        <div class="benefit-item">
-                            <img src="img/bg-team.png" alt="Bantuan" class="benefit-icon">
-                            <p style="filter: invert(1) brightness(2);">Meeting room</p>
-                        </div>
-                        <div class="benefit-item">
-                            <img src="img/bg-laundry.png" alt="Harga Terbaik" class="benefit-icon">
-                            <p style="filter: invert(1) brightness(2);">Laundry</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{{ asset('IMG/home.jpeg') }}" alt="Bar Hotel" width="100%" height="100%">
+        <div class="container">
+          <div class="carousel-caption">
+            <p>Where elegance meets comfort. Indulge in world-class service, refined interiors, and a stay crafted for those who appreciate the finer things in life.</p>
+          </div>
         </div>
-        <style>
-            .benefit-item {
-                filter: invert(1) brightness(2);
-            }
+      </div>
+      <div class="carousel-item">
+         <img src="{{ asset('IMG/home2.jpeg') }}" alt="Bar Hotel" width="100%" height="100%">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            
+            <p>Stay inspired. With modern facilities, seamless service, and thoughtful amenities, we make every business trip feel effortless.</p>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <strong><h2 class="" style="text-align: center; margin: 20px; margin-top: 10px; ">Our service</h2></strong>
+        <div class="features">
+            <div class="feature-item">
+                <img src="{{ asset('IMG/bg-car.png') }}" class="bd-placeholder-img " width="80" height="80" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/><br>
+                <p>Layanan antar jemput</p>
+            </div>
 
-        </style>
+            <div class="feature-item">
+                <img src="{{ asset('IMG/bg-clean.png') }}" class="bd-placeholder-img " width="80" height="80" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/><br>
+                <p>Service cleaning</p>
+            </div>
 
-<section class="penawaran-section">
-  <div class="penawaran-header">
-    <h2>Penawaran</h2>
+            <div class="feature-item">
+                <img src="{{ asset('IMG/bg-laundry.png') }}" class="bd-placeholder-img " width="80" height="80" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/><br>
+                <p>laundry</p>
+            </div>
+
+            <div class="feature-item">
+                <img src="{{ asset('IMG/bg-team.png') }}" class="bd-placeholder-img " width="80" height="80" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/><br>
+                <p>Ruang meeting</p>
+            </div>
+
+            <div class="feature-item">
+                <img src="{{ asset('IMG/bg-wifi.png') }}" class="bd-placeholder-img " width="80" height="80" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/><br>
+                <p>Free wifi</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- START THE FEATURETTES -->
+
+        <div class="container py-lg-6">
+          <!--row-->
+          <div class="row">
+            <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
+              <div class="text-center mb-6 d-flex flex-column gap-2">
+                <!--heading-->
+                <h2 class="mb-0 mx-xl-8 h1" style="color: black;">Our rooms . <span style="color: grey;">Relax, and enjoy your vacation</span></h2>
+                <!--para-->
+                <p class="mb-0" style="color: black;">Choose your rooms and enjoy your staycation </p>
+              </div>
+            </div>
+          </div>
+          <!--row-->
+          <div class="row g-4">
+            <div class="col-12">
+              <div class="d-flex flex-md-row gap-2 flex-column justify-content-between">
+              </div>
+            </div>
+
+                      <!-- Main -->
+            <div class="col-xxl-3 col-xl-4 col-md-6 col-12">
+              <!--card-->
+              <!-- seusaikan dengan id -->
+              <div class="card rounded-4 card-bordered card-lift">
+                <div class="p-3 d-flex flex-column gap-3">
+                 <div class="position-relative">
+                    <!--img-->
+                    <img src="{{ asset('IMG/double bed 3.jpg') }}" class="img-fluid w-100 rounded-4">
+                    <div class="position-absolute bottom-0 left-0 p-3">
+                      <!-- Option jika kamar vip -->
+                      <span class="badge" style="background-color: #e0bf19;">VIP</span>
+                    </div>
+                  </div>
+                 
+                  <!--content-->
+                  <div class="d-flex flex-column gap-4">
+                    <div class="d-flex flex-column gap-2">
+                      <div>
+                        <div class="d-flex align-items-center gap-2">
+                          <h3 class="mb-0">
+                            Nama Kamar
+                          </h3>
+                        </div>
+                      </div>
+                                <!-- Bagian deskripsi -->
+                      <div class="d-flex align-items-center justify-content-between fs-6">
+                        <div>
+                          <span>Fasilitas</span>
+                          <div class="vr mx-2 text-gray-200"></div>
+                          <span>Fasilitas</span>
+                          <div class="vr mx-2 text-gray-200"></div>
+                          <span>Fasilitas</span>
+                           <div class="vr mx-2 text-gray-200"></div>
+                           <span>Fasilitas</span>
+                        </div>
+                        
+                      </div>
+                      <div class="d-flex gap-1 align-items-center lh-1">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                          </svg>
+
+                          <span class="fw-bold text-dark">5.0</span>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between align-items-center">
+                      <div>
+                        <span>Harga dimulai</span>
+                        <div class="d-flex flex-row gap-1 align-items-center">
+                          <h4 class="mb-0">Rp 500k</h4>
+                          <span class="fs-6">/ malam</span>
+                        </div>
+                      </div>
+                      <div>
+                        <a href="/detailreservasi" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#signupModal">Lihat detail</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-4 col-md-6 col-12">
+              <!--card-->
+              <!-- seusaikan dengan id -->
+              <div class="card rounded-4 card-bordered card-lift">
+                <div class="p-3 d-flex flex-column gap-3">
+                 <div class="position-relative">
+                    <!--img-->
+                    <img src="{{ asset('IMG/double bed 3.jpg') }}" class="img-fluid w-100 rounded-4">
+                    <div class="position-absolute bottom-0 left-0 p-3">
+                      <!-- Option jika kamar vip -->
+                      <span class="badge" style="background-color: #e0bf19;">VIP</span>
+                    </div>
+                  </div>
+                 
+                  <!--content-->
+                  <div class="d-flex flex-column gap-4">
+                    <div class="d-flex flex-column gap-2">
+                      <div>
+                        <div class="d-flex align-items-center gap-2">
+                          <h3 class="mb-0">
+                            Nama Kamar
+                          </h3>
+                        </div>
+                      </div>
+                                <!-- Bagian deskripsi -->
+                      <div class="d-flex align-items-center justify-content-between fs-6">
+                        <div>
+                          <span>Fasilitas</span>
+                          <div class="vr mx-2 text-gray-200"></div>
+                          <span>Fasilitas</span>
+                          <div class="vr mx-2 text-gray-200"></div>
+                          <span>Fasilitas</span>
+                           <div class="vr mx-2 text-gray-200"></div>
+                           <span>Fasilitas</span>
+                        </div>
+                        
+                      </div>
+                      <div class="d-flex gap-1 align-items-center lh-1">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                          </svg>
+
+                          <span class="fw-bold text-dark">5.0</span>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between align-items-center">
+                      <div>
+                        <span>Harga dimulai</span>
+                        <div class="d-flex flex-row gap-1 align-items-center">
+                          <h4 class="mb-0">Rp 500k</h4>
+                          <span class="fs-6">/ malam</span>
+                        </div>
+                      </div>
+                      <div>
+                        <a href="/detailreservasi" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#signupModal">Lihat detail</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-4 col-md-6 col-12">
+              <!--card-->
+              <!-- seusaikan dengan id -->
+              <div class="card rounded-4 card-bordered card-lift">
+                <div class="p-3 d-flex flex-column gap-3">
+                 <div class="position-relative">
+                    <!--img-->
+                    <img src="{{ asset('IMG/double bed 3.jpg') }}" class="img-fluid w-100 rounded-4">
+                    <div class="position-absolute bottom-0 left-0 p-3">
+                      <!-- Option jika kamar vip -->
+                      <span class="badge" style="background-color: #e0bf19;">VIP</span>
+                    </div>
+                  </div>
+                 
+                  <!--content-->
+                  <div class="d-flex flex-column gap-4">
+                    <div class="d-flex flex-column gap-2">
+                      <div>
+                        <div class="d-flex align-items-center gap-2">
+                          <h3 class="mb-0">
+                            Nama Kamar
+                          </h3>
+                        </div>
+                      </div>
+                                <!-- Bagian deskripsi -->
+                      <div class="d-flex align-items-center justify-content-between fs-6">
+                        <div>
+                          <span>Fasilitas</span>
+                          <div class="vr mx-2 text-gray-200"></div>
+                          <span>Fasilitas</span>
+                          <div class="vr mx-2 text-gray-200"></div>
+                          <span>Fasilitas</span>
+                           <div class="vr mx-2 text-gray-200"></div>
+                           <span>Fasilitas</span>
+                        </div>
+                        
+                      </div>
+                      <div class="d-flex gap-1 align-items-center lh-1">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                          </svg>
+
+                          <span class="fw-bold text-dark">5.0</span>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between align-items-center">
+                      <div>
+                        <span>Harga dimulai</span>
+                        <div class="d-flex flex-row gap-1 align-items-center">
+                          <h4 class="mb-0">Rp 500k</h4>
+                          <span class="fs-6">/ malam</span>
+                        </div>
+                      </div>
+                      <div>
+                        <a href="/detailreservasi" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#signupModal">Lihat detail</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                   <!-- End kamar -->
+              </div>
+            </div>
+          </div>
+        </div>
+      
+
+        <!-- End of Main -->
+
+    
+    <!-- main -->
+     <!-- Fasilitas -->
+      <!-- seusaikan dengan data -->
+        <div class="container pb-lg-6">
+  <!-- Title -->
+  <div class="row">
+    <h2 class="mb-4 mx-auto text-center h1" style="color: black;">Our Facilities</h2>
   </div>
 
-  <div class="penawaran-cards">
-    <!-- Kartu 1 -->
-    <div class="penawaran-card">
-      <img src="IMG/BarHotel.jpg" alt="Banner 1" />
-      <div class="card-content">
-        <h3>BarHotel</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam molestias temporibus rerum. Hic, incidunt 
-            a dolore officiis quod deleniti quia debitis repudiandae placeat tempora id, nobis nemo porro, cumque blanditiis?</p>
+  <!-- Facilities -->
+  <div class="row gy-4 justify-content-center">
+    <div class="col-xxl-2 col-md-4 col-12">
+      <div class="facility-card">
+        <img src="{{ asset('IMG/pingpong umum.jpg') }}" alt="Fasilitas">
+        <div class="facility-text">Fasilitas</div>
       </div>
     </div>
 
-    <!-- Kartu 2 -->
-    <div class="penawaran-card">
-      <img src="IMG/poll  vip.jpg" alt="Banner 2" />
-      <div class="card-content">
-        <h3>Looong Weekend</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam id culpa quae pariatur fugiat, aliquid, 
-            sapiente, labore officia quas impedit ex nulla voluptates. Sapiente nulla quas beatae, possimus doloremque inventore.</p>
+    <div class="col-xxl-2 col-md-4 col-12">
+      <div class="facility-card">
+        <img src="{{ asset('IMG/kolam umum.jpg') }}" alt="Fasilitas" width="80">
+        <div class="facility-text">Fasilitas</div>
       </div>
     </div>
 
-    <!-- Kartu 3 -->
-    <div class="penawaran-card">
-      <img src="IMG/gym umum.jpg" alt="Banner 3" />
-      <div class="card-content">
-        <h3>Gym</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae eveniet qui labore alias eos dolorum, minima dignissimos 
-            illum blanditiis deserunt minus aperiam soluta asperiores, expedita maiores unde ea quas natus?</p>
+    <div class="col-xxl-2 col-md-4 col-12">
+      <div class="facility-card">
+        <img src="{{ asset('IMG/pingpong umum.jpg') }}" alt="Fasilitas">
+        <div class="facility-text">Fasilitas</div>
       </div>
     </div>
-
-        </div>
   </div>
-</section>
+</div>
 
-<style>
-    .penawaran-section {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-  }
-
-  .penawaran-header h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .penawaran-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-  }
-
-  .penawaran-card {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
-  }
-
-  .penawaran-card:hover {
-    transform: scale(1.05);
-  }
-
-  .penawaran-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-
-  .card-content {
-    padding: 15px;
-    text-align: center;
-  }
-
-  .card-content h3 {
-    margin-bottom: 10px;
-  }
-
-</style>
-  <section class="intro" style="margin-top: 50px;">
-        <h2>Giving the best just for you</h2>
-        <div class="tags">
-            <span>WIFI</span>
-            <span>Cleaning Service</span>
-            <span>Layanan Antar Jemput Bandara</span>
-            <span>Meeting Room</span>
-            <span>Laundry</span>
+<!-- end main facilities -->
+    
+    <div class="container my-5">
+    <div class="card custom-card shadow-sm">
+      <div class="row g-0">
+        <div class="col-md-6 p-5 d-flex flex-column justify-content-center">
+          <h2>Enjoy your Room and our Facility</h2>
+          <p class="mt-3 mb-1">We serve our service and with our pleasure to serving you</p>
         </div>
-
-        <!-- Carousel -->
-        <div class="container mt-5"> <!-- Menambah margin-top lebih besar -->
-    <div id="blogCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-
-            <!-- Slide Pertama -->
-            <div class="carousel-item active">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="card">
-                            <span class="badge">Info</span>
-                            <img src="IMG/kolam umum.jpg" class="card-img-top" alt="Blog 1">
-                            <div class="card-body">
-                                <h6 class="card-title">Kultum Ramadhan: Inspirasi dan Renungan...</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <span class="badge">Info</span>
-                            <img src="IMG/kolam umum.jpg" class="card-img-top" alt="Blog 2">
-                            <div class="card-body">
-                                <h6 class="card-title">Jangan Risau, Ini Dia Cara Menahan Lapar...</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <span class="badge">Singapore</span>
-                            <img src="IMG/kolam umum.jpg" class="card-img-top" alt="Blog 3">
-                            <div class="card-body">
-                                <h6 class="card-title">15 Makanan Khas Probolinggo yang Tidak...</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <span class="badge">Feature</span>
-                            <img src="IMG/kolam umum.jpg" class="card-img-top" alt="Blog 4">
-                            <div class="card-body">
-                                <h6 class="card-title">Staycation Ramadhan: Pilihan Nyaman...</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide Kedua -->
-            <div class="carousel-item">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="card">
-                            <span class="badge">Travel</span>
-                            <img src="IMG/kolam umum.jpg" class="card-img-top" alt="Blog 5">
-                            <div class="card-body">
-                                <h6 class="card-title">Destinasi Liburan yang Cocok Saat Ramadhan</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <span class="badge">Tips</span>
-                            <img src="IMG/kolam umum.jpg" class="card-img-top" alt="Blog 6">
-                            <div class="card-body">
-                                <h6 class="card-title">Tips Hemat Saat Traveling di Bulan Puasa</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <span class="badge">Food</span>
-                            <img src="IMG/kolam umum.jpg" class="card-img-top" alt="Blog 7">
-                            <div class="card-body">
-                                <h6 class="card-title">Kuliner Halal di Singapura yang Harus Dicoba</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <span class="badge">Lifestyle</span>
-                            <img src="IMG/kolam umum.jpg" class="card-img-top" alt="Blog 8">
-                            <div class="card-body">
-                                <h6 class="card-title">Rutinitas Sehat Selama Bulan Ramadhan</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <div class="col-md-6 image-container">
+          <img src="{{ asset('IMG/pingpong umum.jpg') }}" alt="Properti" />
         </div>
-
-        <!-- Tombol Navigasi Carousel -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#blogCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#blogCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
-
+      </div>
     </div>
-</div>          
+  </div>
+  
+  <style>
+    .custom-card {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #ddd;
+    }
 
-<style>
-    .container {
-        margin-top: 70px; /* Menurunkan posisi carousel */
+    .custom-button {
+      font-size: 0.9rem;
+      color: red;
+      border: 1px solid #eee;
+      background-color: white;
     }
-    .carousel-item {
-        padding: 10px;
-        transition: transform 0.5s ease-in-out;
-    }
-    .card {
-        border: none;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-    }
-    .carousel-control-prev, .carousel-control-next {
-        width: auto;
-    }
-    .badge {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: white;
-        padding: 5px 10px;
-        border-radius: 5px;
-    }
-</style>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    .custom-button:hover {
+      background-color: #f8f8f8;
+    }
+
+    .price-text {
+      font-weight: bold;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-body h2 {
+      font-size: 2.2rem;
+      font-weight: 600;
+    }
+  </style>
+    
+
+    <!-- /END THE FEATURETTES -->
+
+  </div>
+  <link rel="stylesheet" href="{{ asset('assets/dist/css/bootstrap.min.css') }}">
+<script src="{{ asset('assets/dist/js/bootstrap.bundle.min.js') }}"></script>
+
+
+
+  <!-- FOOTER -->
+  <!-- <footer class="container">
+    <p class="float-end" style="color: black;"><a href="#">Back to top</a></p>
+    <p style="color: black;">&copy; 2017–2025 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    <p style="color: black;">&copy; luxury Hotel.</p>
+  </footer> -->
+
+
+  <footer class="py-5 bg-dark text-secondary">
+  <div class="container text-center">
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-6">
+        <img src="{{ asset('IMG/logo.png') }}" class="navbar-brand" href="#" width="40px" height="40px" style="filter: brightness(0) invert(1);">
+        <p class="text-light">
+          Stay inspired. With modern facilities, seamless service, and thoughtful amenities, we make every business trip feel effortless.
+        </p>
+      </div>
+    </div>
+    <div class="row justify-content-center mb-4">
+      <div class="col-auto d-flex gap-3">
+        
+        <a href="#" class="text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+      <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+      </svg>
+        </a>
+       
+        <a href="#" class="text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+</svg>
+        </a>
+       
+        <a href="#" class="text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+</svg>
+        </a>
+        
+        <a href="#" class="text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+</svg>
+        </a>
+      </div>
+    </div>
+    <div class="text-center pt-3 border-top border-secondary">
+      <small class="text-secondary">© <span id="year"></span> Luxury hotel. All Rights Reserved.</small>
+      <small class="text-secondary"><p class="float-end" style="color: black;"><a href="#">Back to top</a></p></small>
+    </div>
+  </div>
+</footer>
+
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        new bootstrap.Carousel(document.querySelector('#blogCarousel'), {
-            interval: 5000, // Slide berganti setiap 5 detik
-            ride: "carousel"
-        });
-    });
+  document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-        <div class="gallery-container">
-            <h2 class="gallery-heading">Explore Our Room Designs</h2>
-            <p class="gallery-description">Explore finished kitchens from some of our customers and see how they
-                created their dream kitchen while getting ideas for your own.</p>
-            <div class="gallery-room">
-                <div class="gallery-item">
-                    <img src="img/rek 1.jpg" alt="Cozy And Private">
-                    <div class="gallery-overlay">
-                        <div class="gallery-overlay-text">Cozy And Private</div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/rek 2.jpg" alt="Modern Simplicity">
-                    <div class="gallery-overlay">
-                        <div class="gallery-overlay-text">Modern Simplicity</div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/gallery 3.jpg" alt="Twin Room">
-                    <div class="gallery-overlay">
-                        <div class="gallery-overlay-text">Twin Room</div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/gallery 4.jpg" alt="Twin Room">
-                    <div class="gallery-overlay">
-                        <div class="gallery-overlay-text">Twin Room</div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/gallery 5.jpg" alt="Executive Suite">
-                    <div class="gallery-overlay">
-                        <div class="gallery-overlay-text">Executive Suite</div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/rek 6.jpg" alt="Luxury Suite">
-                    <div class="gallery-overlay">
-                        <div class="gallery-overlay-text">Luxury Suite</div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
+</main>
+<!-- <script defer src="../assets/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"></script> -->
 
-    </div>
-      <!-- bagian lokasi -->
-        <div class="container-a">
-            <h3 class="location-title">Location</h3>
-            <h2 class="address">RPL 1, SMKN 1 KOTA CIREBON</h2>
-            <button class="map-button">FIND US ON MAP</button>
-
-
-            <div class="contact-info">
-                <div class="info-box">
-                    <img src="call-icon.png" alt="Call Icon" class="icon">
-                    <h3>Make a Call</h3>
-                    <p>Hubungi kami untuk pertanyaan umum anda.</p>
-                    <p class="contact-detail">815-641-5000</p>
-                </div>
-
-                <div class="info-box">
-                    <img src="mail-icon.png" alt="Mail Icon" class="icon">
-                    <h3>Send a Mail</h3>
-                    <p>Kirimkan email anda untuk pertanyaan atau saran.</p>
-                    <p class="contact-detail">info@example.com</p>
-                </div>
-
-                <div class="info-box">
-                    <img src="toll-free-icon.png" alt="Toll Free Icon" class="icon">
-                    <h3>Toll Free</h3>
-                    <p>Nomor bebas pulsa untuk tamu yang menginap.</p>
-                    <p class="contact-detail">1800-641-1234</p>
-                </div>
-            </div>
-        </div>
-        <!-- FOOTER -->
-        <footer class="container">
-            <p class="float-end"><a href="#">Back to top</a></p>
-            <p>&copy; 2025 RPL, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
-            </p>
-        </footer>
-    </main>
-    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Tambahkan Flatpickr -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="{{ asset('js/search.js') }}"></script>
-
-</body>
-
+    </body>
 </html>
+
