@@ -9,7 +9,12 @@
         <input type="text" name="nomor_kamar" required>
 
         <label>Tipe:</label>
-        <input type="text" name="tipe" required>
+        <select name="tipe_kamar" required>
+            <option value="Standard">Standard</option>
+            <option value="Superior">Superior</option>
+            <option value="Deluxe">Deluxe</option>
+            <option value="Executive">Executive</option>
+        </select>
 
         <label>Harga:</label>
         <input type="number" name="harga" required>

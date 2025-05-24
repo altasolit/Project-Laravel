@@ -11,34 +11,44 @@ use Illuminate\View\View;
 
 class ProfileController extends Controller
 {
-    /**
-     * Display the user's profile form.
-     */
     public function index()
     {
         return view('customer.profile');
     }
-    public function edit(Request $request): View
+
+    public function showProfile()
     {
-        return view('profile.edit', [
-            'user' => $request->user(),
-        ]);
+        $user = Auth::user(); // Mengambil user yang sedang login
+        return view('customer.profile', compact('user'));
     }
 
+    // public function edit(Request $request): View
+    // {
+    //     return view('profile.edit', [
+    //         'user' => $request->user(),
+    //     ]);
+    // }
+
+    public function edit(): View
+    {
+        $user =  Auth::user(); // atau Auth::user()
+        return view('customer.edit', compact('user'));
+    }
     /**
      * Update the user's profile information.
      */
-    public function update(ProfileUpdateRequest $request): RedirectResponse
+    public function update(Request $request)
     {
-        $request->user()->fill($request->validated());
+        $user =  Auth::user(); // user yang login
 
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
-        }
+        $user->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'username' => $request->username,
+            'no_hp' => $request->no_hp,
+        ]);
 
-        $request->user()->save();
-
-        return Redirect::route('profile.edit')->with('status', 'profile-updated');
+        return redirect()->route('customer.profile')->with('success', 'Profil berhasil diupdate!');
     }
 
     /**

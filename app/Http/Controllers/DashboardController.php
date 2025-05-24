@@ -7,9 +7,12 @@ use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
+    // public function index() {
+    //     return view('admin.dashboard');
+    // }
+    
     public function adminDashboard()
     {
-
         // if (Auth::user()->role !== 'admin') {
         //     return redirect()->route('home');
         // }
@@ -18,7 +21,6 @@ class DashboardController extends Controller
             return redirect()->route('customer.profile');
         }
         return view('admin.dashboard');
-
     }
 
     public function customerDashboard()

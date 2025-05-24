@@ -109,36 +109,39 @@
 
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="margin-bottom: 500px;">
                 <h1 class="h2" style="margin-bottom: 50px; margin-top: 50px;">My Profile</h1>
-
-                @if (isset($user))
+                <form class="profile-form" action="{{ route('customer.update') }}" method="post" name="profile-form">
+                    @method('PATCH')
+                    @csrf
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="form-label fw-bold">Nama</label>
-                            <div class="form-control-plaintext">{{ $user->name }}</div>
+                            <input type="text" name="name" value="{{ $user->name }}" class="form-control"
+                                placeholder="Nama Lengkap" type="text" required>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label class="form-label fw-bold">Username</label>
-                            <div class="form-control-plaintext">{{ $user->username }}</div>
+                            <input type="text" name="username" value="{{ $user->username }}" class="form-control"
+                                type="date" required>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="form-label fw-bold">Email</label>
-                            <div class="form-control-plaintext">{{ $user->email }}</div>
+                            <input type="email" name="email" value="{{ $user->email }}" class="form-control"
+                                type="date" required>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label class="form-label fw-bold">No. HP</label>
-                            <div class="form-control-plaintext">{{ $user->no_hp }}</div>
+                            <input type="text" name="no_hp" value="{{ $user->no_hp }}" class="form-control"
+                                type="date" required>
                         </div>
                     </div>
-                @else
-                    <div class="alert alert-warning">Data user tidak tersedia.</div>
-                @endif
-
-                <form action="{{ route('customer.edit', $user->id) }}">
-                    <button class="btn btn-primary"> Edit </button>
+                    <div class="col-md-6 mb-4">
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </div>
                 </form>
+
             </main>
         </div>
     </div>
