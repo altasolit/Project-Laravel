@@ -25,7 +25,5 @@ class CustomerMiddleware
         }
 
         return redirect('/admin/dashboard')->with('error', 'Akses Ditolak');
-
     }
 }
-

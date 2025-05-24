@@ -12,19 +12,26 @@ class AdminMiddleware
 {
     public function handle($request, Closure $next)
     {
+        // if (Auth::check()) {
+        //     if (Auth::user()->role == 'admin') {
+        //         return $next($request);
+        //     } elseif (Auth::user()->role == 'customer') {
+        //         return redirect()->route('customer.dashboard');
+        //     } else {
+        //         return redirect()->route('login');
+        //     }
+        // }
+        return redirect()->route('login');
         if (Auth::check()) {
             if (Auth::user()->role == 'admin') {
                 return $next($request);
             } elseif (Auth::user()->role == 'customer') {
                 return redirect()->route('customer.dashboard');
             } else {
-            return redirect()->route('login');
-            } 
+                return redirect()->route('customer.dashboard');
+            }
         }
-        return redirect()->route('login');
+
+        return redirect('/customer/dashboard')->with('error', 'Akses Ditolak');
     }
-
 }
-
-
-

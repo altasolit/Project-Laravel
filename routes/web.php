@@ -26,7 +26,7 @@ Route::resource('Fasilitas', FasilitasController::class);
 
 // 🔐 Rute Admin (Autentikasi & Middleware Admin)
 Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->group(function () {
-    Route::get('/admi/dashboard', [DashboardController::class, 'adminDashboard'])->name('admin.dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'adminDashboard'])->name('admin.dashboard');
 
     // Manajemen Kamar
     Route::get('/room/create/{id?}', [RoomController::class, 'create'])->name('room.create');
