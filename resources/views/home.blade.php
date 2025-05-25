@@ -103,81 +103,136 @@
         height: 1em;
       }
 
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important;
-      }
-    </style>
-<main>
-  <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="{{ asset('IMG/bg-home.jpg') }}" alt="Bar Hotel" width="100%" height="100%">
-        <div class="container">
-          <div class="carousel-caption text-start">
-            <h1></h1>
-            <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="{{ asset('IMG/home.jpeg') }}" alt="Bar Hotel" width="100%" height="100%">
-        <div class="container">
-          <div class="carousel-caption">
-            <p>Where elegance meets comfort. Indulge in world-class service, refined interiors, and a stay crafted for those who appreciate the finer things in life.</p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-         <img src="{{ asset('IMG/home2.jpeg') }}" alt="Bar Hotel" width="100%" height="100%">
-        <div class="container">
-          <div class="carousel-caption text-end">
-            
-            <p>Stay inspired. With modern facilities, seamless service, and thoughtful amenities, we make every business trip feel effortless.</p>
-           
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  <strong><h2 class="" style="text-align: center; margin: 20px; margin-top: 10px; ">Our service</h2></strong>
-        <div class="features">
-            <div class="feature-item">
-                <img src="{{ asset('IMG/bg-car.png') }}" class="bd-placeholder-img " width="80" height="80" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/><br>
-                <p>Layanan antar jemput</p>
-            </div>
+            .bd-mode-toggle .dropdown-menu .active .bi {
+                display: block !important;
+            }
 
-            <div class="feature-item">
-                <img src="{{ asset('IMG/bg-clean.png') }}" class="bd-placeholder-img " width="80" height="80" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/><br>
-                <p>Service cleaning</p>
-            </div>
+            .custom-card {
+                border-radius: 12px;
+                overflow: hidden;
+                border: 1px solid #ddd;
+            }
 
-            <div class="feature-item">
-                <img src="{{ asset('IMG/bg-laundry.png') }}" class="bd-placeholder-img " width="80" height="80" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/><br>
-                <p>laundry</p>
-            </div>
+            .custom-button {
+                font-size: 0.9rem;
+                color: red;
+                border: 1px solid #eee;
+                background-color: white;
+            }
 
-            <div class="feature-item">
-                <img src="{{ asset('IMG/bg-team.png') }}" class="bd-placeholder-img " width="80" height="80" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/><br>
-                <p>Ruang meeting</p>
-            </div>
+            .custom-button:hover {
+                background-color: #f8f8f8;
+            }
 
-            <div class="feature-item">
-                <img src="{{ asset('IMG/bg-wifi.png') }}" class="bd-placeholder-img " width="80" height="80" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/><br>
-                <p>Free wifi</p>
+            .price-text {
+                font-weight: bold;
+            }
+
+            .image-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .card-body h2 {
+                font-size: 2.2rem;
+                font-weight: 600;
+            }
+        </style>
+        <link rel="stylesheet" href="{{ asset('carousel/carousel.css') }}">
+    </head>
+        <main>
+            <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{ asset('IMG/bg-home.jpg') }}" alt="Bar Hotel" width="100%" height="100%">
+                        <div class="container">
+                            <div class="carousel-caption text-start">
+                                <h1></h1>
+                                <p class="opacity-75">Some representative placeholder content for the first slide of the
+                                    carousel.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('IMG/bg 2 reservasi.jpg') }}" alt="Bar Hotel" width="100%" height="100%">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <p>Where elegance meets comfort. Indulge in world-class service, refined interiors, and a
+                                    stay crafted for those who appreciate the finer things in life.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('IMG/lobby.jpg') }}" alt="Bar Hotel" width="100%" height="100%">
+                        <div class="container">
+                            <div class="carousel-caption text-end">
+
+                                <p>Stay inspired. With modern facilities, seamless service, and thoughtful amenities, we
+                                    make every business trip feel effortless.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
+            <strong>
+                <h2 class="" style="text-align: center; margin: 20px; margin-top: 10px; ">Our service</h2>
+            </strong>
+            <div class="features">
+                <div class="feature-item">
+                    <img src="{{ asset('IMG/home/bg-car.png') }}" class="bd-placeholder-img " width="80" height="80"
+                        role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="var(--bs-secondary-color)" /><br>
+                    <p>Layanan antar jemput</p>
+                </div>
+
+                <div class="feature-item">
+                    <img src="{{ asset('IMG/home/bg-clean.png') }}" class="bd-placeholder-img " width="80" height="80"
+                        role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="var(--bs-secondary-color)" /><br>
+                    <p>Service cleaning</p>
+                </div>
+
+                <div class="feature-item">
+                    <img src="{{ asset('IMG/home/bg-laundry.png') }}" class="bd-placeholder-img " width="80"
+                        height="80" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="var(--bs-secondary-color)" /><br>
+                    <p>laundry</p>
+                </div>
+
+                <div class="feature-item">
+                    <img src="{{ asset('IMG/home/bg-team.png') }}" class="bd-placeholder-img " width="80" height="80"
+                        role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="var(--bs-secondary-color)" /><br>
+                    <p>Ruang meeting</p>
+                </div>
+
+                <div class="feature-item">
+                    <img src="{{ asset('IMG/home/bg-wifi.png') }}" class="bd-placeholder-img " width="80" height="80"
+                        role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="var(--bs-secondary-color)" /><br>
+                    <p>Free wifi</p>
+                </div>
 
         </div>
     </div>
@@ -203,192 +258,80 @@
               </div>
             </div>
 
-                      <!-- Main -->
-            <div class="col-xxl-3 col-xl-4 col-md-6 col-12">
-              <!--card-->
-              <!-- seusaikan dengan id -->
-              <div class="card rounded-4 card-bordered card-lift">
-                <div class="p-3 d-flex flex-column gap-3">
-                 <div class="position-relative">
-                    <!--img-->
-                    <img src="{{ asset('IMG/double bed 3.jpg') }}" class="img-fluid w-100 rounded-4">
-                    <div class="position-absolute bottom-0 left-0 p-3">
-                      <!-- Option jika kamar vip -->
-                      <span class="badge" style="background-color: #e0bf19;">VIP</span>
-                    </div>
-                  </div>
-                 
-                  <!--content-->
-                  <div class="d-flex flex-column gap-4">
-                    <div class="d-flex flex-column gap-2">
-                      <div>
-                        <div class="d-flex align-items-center gap-2">
-                          <h3 class="mb-0">
-                            Nama Kamar
-                          </h3>
-                        </div>
-                      </div>
-                                <!-- Bagian deskripsi -->
-                      <div class="d-flex align-items-center justify-content-between fs-6">
-                        <div>
-                          <span>Fasilitas</span>
-                          <div class="vr mx-2 text-gray-200"></div>
-                          <span>Fasilitas</span>
-                          <div class="vr mx-2 text-gray-200"></div>
-                          <span>Fasilitas</span>
-                           <div class="vr mx-2 text-gray-200"></div>
-                           <span>Fasilitas</span>
-                        </div>
-                        
-                      </div>
-                      <div class="d-flex gap-1 align-items-center lh-1">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-                          </svg>
+                    <!-- Main -->
+           @foreach($rooms as $room)
+<div class="col-xxl-3 col-xl-4 col-md-6 col-12">
+    <div class="card rounded-4 card-bordered card-lift">
+        <div class="p-3 d-flex flex-column gap-3">
+            <div class="position-relative">
+                <img src="{{ asset('storage/' . $room->gambar) }}" class="img-fluid w-100 rounded-4" alt="{{ $room->tipe_kamar }}">
+                <div class="position-absolute bottom-0 left-0 p-3">
+                    <!-- Ganti badge VIP dengan badge status -->
+                    <span class="badge" style="background-color: 
+                        {{ strtolower($room->status) === 'vip' ? '#e0bf19' : (strtolower($room->status) === 'tersedia' ? 'green' : 'gray') }};
+                    ">
+                        {{ strtoupper($room->status) }}
+                    </span>
+                </div>
+            </div>
 
-                          <span class="fw-bold text-dark">5.0</span>
+            <div class="d-flex flex-column gap-4">
+                <div class="d-flex flex-column gap-2">
+                    <div>
+                        <div class="d-flex align-items-center gap-2">
+                            <h3 class="mb-0">{{ $room->tipe_kamar }}</h3>
                         </div>
                     </div>
-                    <div class="d-flex flex-row justify-content-between align-items-center">
-                      <div>
+
+                    <!-- Bagian deskripsi dihilangkan sementara -->
+
+                    <!-- Contoh fasilitas, kamu bisa sesuaikan dengan data sebenarnya -->
+                    <div class="d-flex align-items-center justify-content-between fs-6">
+                        <div>
+                            <span>AC</span>
+                            <div class="vr mx-2 text-gray-200"></div>
+                            <span>WiFi</span>
+                            <div class="vr mx-2 text-gray-200"></div>
+                            <span>TV</span>
+                            <div class="vr mx-2 text-gray-200"></div>
+                            <span>Breakfast</span>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-1 align-items-center lh-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                fill="currentColor" class="bi bi-star-fill text-warning"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                                </path>
+                                            </svg>
+
+                                            <span class="fw-bold text-dark">5.0</span>
+                                        </div>
+                </div>
+
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                    <div>
                         <span>Harga dimulai</span>
                         <div class="d-flex flex-row gap-1 align-items-center">
-                          <h4 class="mb-0">Rp 500k</h4>
-                          <span class="fs-6">/ malam</span>
+                            <h4 class="mb-0">Rp {{ number_format($room->harga, 0, ',', '.') }}</h4>
+                            <span class="fs-6">/ malam</span>
                         </div>
-                      </div>
-                      <div>
-                        <a href="/detailreservasi" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#signupModal">Lihat detail</a>
-                      </div>
                     </div>
-                  </div>
+                    <div>
+                        <a href="{{ route('rooms.show', $room->id) }}" class="btn btn-outline-primary">
+                            Lihat detail
+                        </a>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="col-xxl-3 col-xl-4 col-md-6 col-12">
-              <!--card-->
-              <!-- seusaikan dengan id -->
-              <div class="card rounded-4 card-bordered card-lift">
-                <div class="p-3 d-flex flex-column gap-3">
-                 <div class="position-relative">
-                    <!--img-->
-                    <img src="{{ asset('IMG/double bed 3.jpg') }}" class="img-fluid w-100 rounded-4">
-                    <div class="position-absolute bottom-0 left-0 p-3">
-                      <!-- Option jika kamar vip -->
-                      <span class="badge" style="background-color: #e0bf19;">VIP</span>
-                    </div>
-                  </div>
-                 
-                  <!--content-->
-                  <div class="d-flex flex-column gap-4">
-                    <div class="d-flex flex-column gap-2">
-                      <div>
-                        <div class="d-flex align-items-center gap-2">
-                          <h3 class="mb-0">
-                            Nama Kamar
-                          </h3>
-                        </div>
-                      </div>
-                                <!-- Bagian deskripsi -->
-                      <div class="d-flex align-items-center justify-content-between fs-6">
-                        <div>
-                          <span>Fasilitas</span>
-                          <div class="vr mx-2 text-gray-200"></div>
-                          <span>Fasilitas</span>
-                          <div class="vr mx-2 text-gray-200"></div>
-                          <span>Fasilitas</span>
-                           <div class="vr mx-2 text-gray-200"></div>
-                           <span>Fasilitas</span>
-                        </div>
-                        
-                      </div>
-                      <div class="d-flex gap-1 align-items-center lh-1">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-                          </svg>
+        </div>
+    </div>
+</div>
+@endforeach
 
-                          <span class="fw-bold text-dark">5.0</span>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-row justify-content-between align-items-center">
-                      <div>
-                        <span>Harga dimulai</span>
-                        <div class="d-flex flex-row gap-1 align-items-center">
-                          <h4 class="mb-0">Rp 500k</h4>
-                          <span class="fs-6">/ malam</span>
-                        </div>
-                      </div>
-                      <div>
-                        <a href="/detailreservasi" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#signupModal">Lihat detail</a>
-                      </div>
-                    </div>
-                  </div>
+                    <!-- End kamar -->
                 </div>
-              </div>
-            </div>
-            <div class="col-xxl-3 col-xl-4 col-md-6 col-12">
-              <!--card-->
-              <!-- seusaikan dengan id -->
-              <div class="card rounded-4 card-bordered card-lift">
-                <div class="p-3 d-flex flex-column gap-3">
-                 <div class="position-relative">
-                    <!--img-->
-                    <img src="{{ asset('IMG/double bed 3.jpg') }}" class="img-fluid w-100 rounded-4">
-                    <div class="position-absolute bottom-0 left-0 p-3">
-                      <!-- Option jika kamar vip -->
-                      <span class="badge" style="background-color: #e0bf19;">VIP</span>
-                    </div>
-                  </div>
-                 
-                  <!--content-->
-                  <div class="d-flex flex-column gap-4">
-                    <div class="d-flex flex-column gap-2">
-                      <div>
-                        <div class="d-flex align-items-center gap-2">
-                          <h3 class="mb-0">
-                            Nama Kamar
-                          </h3>
-                        </div>
-                      </div>
-                                <!-- Bagian deskripsi -->
-                      <div class="d-flex align-items-center justify-content-between fs-6">
-                        <div>
-                          <span>Fasilitas</span>
-                          <div class="vr mx-2 text-gray-200"></div>
-                          <span>Fasilitas</span>
-                          <div class="vr mx-2 text-gray-200"></div>
-                          <span>Fasilitas</span>
-                           <div class="vr mx-2 text-gray-200"></div>
-                           <span>Fasilitas</span>
-                        </div>
-                        
-                      </div>
-                      <div class="d-flex gap-1 align-items-center lh-1">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-                          </svg>
-
-                          <span class="fw-bold text-dark">5.0</span>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-row justify-content-between align-items-center">
-                      <div>
-                        <span>Harga dimulai</span>
-                        <div class="d-flex flex-row gap-1 align-items-center">
-                          <h4 class="mb-0">Rp 500k</h4>
-                          <span class="fs-6">/ malam</span>
-                        </div>
-                      </div>
-                      <div>
-                        <a href="/detailreservasi" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#signupModal">Lihat detail</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-                   <!-- End kamar -->
-              </div>
             </div>
           </div>
         </div>
