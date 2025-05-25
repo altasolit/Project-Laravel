@@ -107,16 +107,14 @@
     </style>
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="{{ asset('carousel/carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('navbars/navbars.css') }}">
 </head>
-
 <body>
-
 <header data-bs-theme="dark">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
             <a href="{{ url('/') }}">
-                <img src="{{ asset('IMG/logo.png') }}" class="navbar-brand" width="50px" height="50px"
+                <img src="{{ asset('IMG/home/logo.png') }}" class="navbar-brand" width="50px" height="50px"
                     style="filter: brightness(0) invert(1);">
             </a>
 

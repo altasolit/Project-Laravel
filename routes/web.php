@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 // 🌐 Halaman Umum (Tanpa Login)
-Route::view('/', 'home');
+Route::get('/', [HomeController::class, 'index'])->name('home'); 
 Route::view('/orders', 'orders');
 Route::view('/reservasi', 'reservasi');
 // Route::view('/kamar', 'kamar');

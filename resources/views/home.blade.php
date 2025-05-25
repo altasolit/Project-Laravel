@@ -140,6 +140,7 @@
                 font-weight: 600;
             }
         </style>
+        <link rel="stylesheet" href="{{ asset('carousel/carousel.css') }}">
     </head>
         <main>
             <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
@@ -161,7 +162,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="{{ asset('IMG/home.jpeg') }}" alt="Bar Hotel" width="100%" height="100%">
+                        <img src="{{ asset('IMG/bg 2 reservasi.jpg') }}" alt="Bar Hotel" width="100%" height="100%">
                         <div class="container">
                             <div class="carousel-caption">
                                 <p>Where elegance meets comfort. Indulge in world-class service, refined interiors, and a
@@ -170,7 +171,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="{{ asset('IMG/home2.jpeg') }}" alt="Bar Hotel" width="100%" height="100%">
+                        <img src="{{ asset('IMG/lobby.jpg') }}" alt="Bar Hotel" width="100%" height="100%">
                         <div class="container">
                             <div class="carousel-caption text-end">
 
@@ -195,7 +196,7 @@
             </strong>
             <div class="features">
                 <div class="feature-item">
-                    <img src="{{ asset('IMG/bg-car.png') }}" class="bd-placeholder-img " width="80" height="80"
+                    <img src="{{ asset('IMG/home/bg-car.png') }}" class="bd-placeholder-img " width="80" height="80"
                         role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice">
                     <title>Placeholder</title>
                     <rect width="100%" height="100%" fill="var(--bs-secondary-color)" /><br>
@@ -203,7 +204,7 @@
                 </div>
 
                 <div class="feature-item">
-                    <img src="{{ asset('IMG/bg-clean.png') }}" class="bd-placeholder-img " width="80" height="80"
+                    <img src="{{ asset('IMG/home/bg-clean.png') }}" class="bd-placeholder-img " width="80" height="80"
                         role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice">
                     <title>Placeholder</title>
                     <rect width="100%" height="100%" fill="var(--bs-secondary-color)" /><br>
@@ -211,7 +212,7 @@
                 </div>
 
                 <div class="feature-item">
-                    <img src="{{ asset('IMG/bg-laundry.png') }}" class="bd-placeholder-img " width="80"
+                    <img src="{{ asset('IMG/home/bg-laundry.png') }}" class="bd-placeholder-img " width="80"
                         height="80" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice">
                     <title>Placeholder</title>
                     <rect width="100%" height="100%" fill="var(--bs-secondary-color)" /><br>
@@ -219,7 +220,7 @@
                 </div>
 
                 <div class="feature-item">
-                    <img src="{{ asset('IMG/bg-team.png') }}" class="bd-placeholder-img " width="80" height="80"
+                    <img src="{{ asset('IMG/home/bg-team.png') }}" class="bd-placeholder-img " width="80" height="80"
                         role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice">
                     <title>Placeholder</title>
                     <rect width="100%" height="100%" fill="var(--bs-secondary-color)" /><br>
@@ -227,7 +228,7 @@
                 </div>
 
                 <div class="feature-item">
-                    <img src="{{ asset('IMG/bg-wifi.png') }}" class="bd-placeholder-img " width="80" height="80"
+                    <img src="{{ asset('IMG/home/bg-wifi.png') }}" class="bd-placeholder-img " width="80" height="80"
                         role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice">
                     <title>Placeholder</title>
                     <rect width="100%" height="100%" fill="var(--bs-secondary-color)" /><br>
@@ -260,44 +261,45 @@
                     </div>
 
                     <!-- Main -->
-                    <div class="col-xxl-3 col-xl-4 col-md-6 col-12">
-                        <!--card-->
-                        <!-- seusaikan dengan id -->
-                        <div class="card rounded-4 card-bordered card-lift">
-                            <div class="p-3 d-flex flex-column gap-3">
-                                <div class="position-relative">
-                                    <!--img-->
-                                    <img src="{{ asset('IMG/double bed 3.jpg') }}" class="img-fluid w-100 rounded-4">
-                                    <div class="position-absolute bottom-0 left-0 p-3">
-                                        <!-- Option jika kamar vip -->
-                                        <span class="badge" style="background-color: #e0bf19;">VIP</span>
-                                    </div>
-                                </div>
+           @foreach($rooms as $room)
+<div class="col-xxl-3 col-xl-4 col-md-6 col-12">
+    <div class="card rounded-4 card-bordered card-lift">
+        <div class="p-3 d-flex flex-column gap-3">
+            <div class="position-relative">
+                <img src="{{ asset('storage/' . $room->gambar) }}" class="img-fluid w-100 rounded-4" alt="{{ $room->tipe_kamar }}">
+                <div class="position-absolute bottom-0 left-0 p-3">
+                    <!-- Ganti badge VIP dengan badge status -->
+                    <span class="badge" style="background-color: 
+                        {{ strtolower($room->status) === 'vip' ? '#e0bf19' : (strtolower($room->status) === 'tersedia' ? 'green' : 'gray') }};
+                    ">
+                        {{ strtoupper($room->status) }}
+                    </span>
+                </div>
+            </div>
 
-                                <!--content-->
-                                <div class="d-flex flex-column gap-4">
-                                    <div class="d-flex flex-column gap-2">
-                                        <div>
-                                            <div class="d-flex align-items-center gap-2">
-                                                <h3 class="mb-0">
-                                                    Nama Kamar
-                                                </h3>
-                                            </div>
-                                        </div>
-                                        <!-- Bagian deskripsi -->
-                                        <div class="d-flex align-items-center justify-content-between fs-6">
-                                            <div>
-                                                <span>Fasilitas</span>
-                                                <div class="vr mx-2 text-gray-200"></div>
-                                                <span>Fasilitas</span>
-                                                <div class="vr mx-2 text-gray-200"></div>
-                                                <span>Fasilitas</span>
-                                                <div class="vr mx-2 text-gray-200"></div>
-                                                <span>Fasilitas</span>
-                                            </div>
+            <div class="d-flex flex-column gap-4">
+                <div class="d-flex flex-column gap-2">
+                    <div>
+                        <div class="d-flex align-items-center gap-2">
+                            <h3 class="mb-0">{{ $room->tipe_kamar }}</h3>
+                        </div>
+                    </div>
 
-                                        </div>
-                                        <div class="d-flex gap-1 align-items-center lh-1">
+                    <!-- Bagian deskripsi dihilangkan sementara -->
+
+                    <!-- Contoh fasilitas, kamu bisa sesuaikan dengan data sebenarnya -->
+                    <div class="d-flex align-items-center justify-content-between fs-6">
+                        <div>
+                            <span>AC</span>
+                            <div class="vr mx-2 text-gray-200"></div>
+                            <span>WiFi</span>
+                            <div class="vr mx-2 text-gray-200"></div>
+                            <span>TV</span>
+                            <div class="vr mx-2 text-gray-200"></div>
+                            <span>Breakfast</span>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-1 align-items-center lh-1">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
                                                 fill="currentColor" class="bi bi-star-fill text-warning"
                                                 viewBox="0 0 16 16">
@@ -308,156 +310,28 @@
 
                                             <span class="fw-bold text-dark">5.0</span>
                                         </div>
-                                    </div>
-                                    <div class="d-flex flex-row justify-content-between align-items-center">
-                                        <div>
-                                            <span>Harga dimulai</span>
-                                            <div class="d-flex flex-row gap-1 align-items-center">
-                                                <h4 class="mb-0">Rp 500k</h4>
-                                                <span class="fs-6">/ malam</span>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <a href="/detailreservasi" class="btn btn-outline-primary"
-                                                data-bs-toggle="modal" data-bs-target="#signupModal">Lihat detail</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                </div>
+
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                    <div>
+                        <span>Harga dimulai</span>
+                        <div class="d-flex flex-row gap-1 align-items-center">
+                            <h4 class="mb-0">Rp {{ number_format($room->harga, 0, ',', '.') }}</h4>
+                            <span class="fs-6">/ malam</span>
                         </div>
                     </div>
-                    <div class="col-xxl-3 col-xl-4 col-md-6 col-12">
-                        <!--card-->
-                        <!-- seusaikan dengan id -->
-                        <div class="card rounded-4 card-bordered card-lift">
-                            <div class="p-3 d-flex flex-column gap-3">
-                                <div class="position-relative">
-                                    <!--img-->
-                                    <img src="{{ asset('IMG/double bed 3.jpg') }}" class="img-fluid w-100 rounded-4">
-                                    <div class="position-absolute bottom-0 left-0 p-3">
-                                        <!-- Option jika kamar vip -->
-                                        <span class="badge" style="background-color: #e0bf19;">VIP</span>
-                                    </div>
-                                </div>
-
-                                <!--content-->
-                                <div class="d-flex flex-column gap-4">
-                                    <div class="d-flex flex-column gap-2">
-                                        <div>
-                                            <div class="d-flex align-items-center gap-2">
-                                                <h3 class="mb-0">
-                                                    Nama Kamar
-                                                </h3>
-                                            </div>
-                                        </div>
-                                        <!-- Bagian deskripsi -->
-                                        <div class="d-flex align-items-center justify-content-between fs-6">
-                                            <div>
-                                                <span>Fasilitas</span>
-                                                <div class="vr mx-2 text-gray-200"></div>
-                                                <span>Fasilitas</span>
-                                                <div class="vr mx-2 text-gray-200"></div>
-                                                <span>Fasilitas</span>
-                                                <div class="vr mx-2 text-gray-200"></div>
-                                                <span>Fasilitas</span>
-                                            </div>
-
-                                        </div>
-                                        <div class="d-flex gap-1 align-items-center lh-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
-                                                fill="currentColor" class="bi bi-star-fill text-warning"
-                                                viewBox="0 0 16 16">
-                                                <path
-                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
-                                                </path>
-                                            </svg>
-
-                                            <span class="fw-bold text-dark">5.0</span>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-row justify-content-between align-items-center">
-                                        <div>
-                                            <span>Harga dimulai</span>
-                                            <div class="d-flex flex-row gap-1 align-items-center">
-                                                <h4 class="mb-0">Rp 500k</h4>
-                                                <span class="fs-6">/ malam</span>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <a href="/detailreservasi" class="btn btn-outline-primary"
-                                                data-bs-toggle="modal" data-bs-target="#signupModal">Lihat detail</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div>
+                        <a href="{{ route('rooms.show', $room->id) }}" class="btn btn-outline-primary">
+                            Lihat detail
+                        </a>
                     </div>
-                    <div class="col-xxl-3 col-xl-4 col-md-6 col-12">
-                        <!--card-->
-                        <!-- seusaikan dengan id -->
-                        <div class="card rounded-4 card-bordered card-lift">
-                            <div class="p-3 d-flex flex-column gap-3">
-                                <div class="position-relative">
-                                    <!--img-->
-                                    <img src="{{ asset('IMG/double bed 3.jpg') }}" class="img-fluid w-100 rounded-4">
-                                    <div class="position-absolute bottom-0 left-0 p-3">
-                                        <!-- Option jika kamar vip -->
-                                        <span class="badge" style="background-color: #e0bf19;">VIP</span>
-                                    </div>
-                                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endforeach
 
-                                <!--content-->
-                                <div class="d-flex flex-column gap-4">
-                                    <div class="d-flex flex-column gap-2">
-                                        <div>
-                                            <div class="d-flex align-items-center gap-2">
-                                                <h3 class="mb-0">
-                                                    Nama Kamar
-                                                </h3>
-                                            </div>
-                                        </div>
-                                        <!-- Bagian deskripsi -->
-                                        <div class="d-flex align-items-center justify-content-between fs-6">
-                                            <div>
-                                                <span>Fasilitas</span>
-                                                <div class="vr mx-2 text-gray-200"></div>
-                                                <span>Fasilitas</span>
-                                                <div class="vr mx-2 text-gray-200"></div>
-                                                <span>Fasilitas</span>
-                                                <div class="vr mx-2 text-gray-200"></div>
-                                                <span>Fasilitas</span>
-                                            </div>
-
-                                        </div>
-                                        <div class="d-flex gap-1 align-items-center lh-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
-                                                fill="currentColor" class="bi bi-star-fill text-warning"
-                                                viewBox="0 0 16 16">
-                                                <path
-                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
-                                                </path>
-                                            </svg>
-
-                                            <span class="fw-bold text-dark">5.0</span>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-row justify-content-between align-items-center">
-                                        <div>
-                                            <span>Harga dimulai</span>
-                                            <div class="d-flex flex-row gap-1 align-items-center">
-                                                <h4 class="mb-0">Rp 500k</h4>
-                                                <span class="fs-6">/ malam</span>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <a href="/detailreservasi" class="btn btn-outline-primary"
-                                                data-bs-toggle="modal" data-bs-target="#signupModal">Lihat detail</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <!-- End kamar -->
                 </div>
             </div>
