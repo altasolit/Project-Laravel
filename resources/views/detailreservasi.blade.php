@@ -1,3 +1,13 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+<<<<<<< HEAD
+
+=======
+>>>>>>> a585e8d6b6d2d5271efa4a04eb48bccc25a97220
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Detail.reservasi</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 

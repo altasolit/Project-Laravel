@@ -259,7 +259,7 @@
             </div>
 
                     <!-- Main -->
-           @foreach($rooms as $room)
+@foreach($rooms as $room)
 <div class="col-xxl-3 col-xl-4 col-md-6 col-12">
     <div class="card rounded-4 card-bordered card-lift">
         <div class="p-3 d-flex flex-column gap-3">
@@ -285,36 +285,33 @@
 
                     <!-- Bagian deskripsi dihilangkan sementara -->
 
-                    <!-- Contoh fasilitas, kamu bisa sesuaikan dengan data sebenarnya -->
-                    <div class="d-flex align-items-center justify-content-between fs-6">
-                        <div>
-                            <span>AC</span>
-                            <div class="vr mx-2 text-gray-200"></div>
-                            <span>WiFi</span>
-                            <div class="vr mx-2 text-gray-200"></div>
-                            <span>TV</span>
-                            <div class="vr mx-2 text-gray-200"></div>
-                            <span>Breakfast</span>
+                    <!-- Bagian fasilitas yang sudah direlasikan -->
+                        <div class="d-flex flex-wrap gap-2 fs-6">
+                            @foreach ($room->fasilitas as $fasilitas)
+                                <span class="badge bg-secondary text-white px-2 py-1">
+                                    {{ $fasilitas->nama_fasilitas }}
+                                </span>
+                            @endforeach
                         </div>
-                    </div>
-                    <div class="d-flex gap-1 align-items-center lh-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
-                                                fill="currentColor" class="bi bi-star-fill text-warning"
-                                                viewBox="0 0 16 16">
-                                                <path
-                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
-                                                </path>
-                                            </svg>
 
-                                            <span class="fw-bold text-dark">5.0</span>
-                                        </div>
+                    <div class="d-flex gap-1 align-items-center lh-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                            fill="currentColor" class="bi bi-star-fill text-warning"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                            </path>
+                        </svg>
+
+                        <span class="fw-bold text-dark">5.0</span>
+                    </div>
                 </div>
 
                 <div class="d-flex flex-row justify-content-between align-items-center">
                     <div>
                         <span>Harga dimulai</span>
                         <div class="d-flex flex-row gap-1 align-items-center">
-                            <h4 class="mb-0">Rp {{ number_format($room->harga, 0, ',', '.') }}</h4>
+                            <h4 class="mb-0">Rp{{ number_format($room->harga) }}</h4>
                             <span class="fs-6">/ malam</span>
                         </div>
                     </div>
@@ -343,32 +340,63 @@
     <!-- main -->
      <!-- Fasilitas -->
       <!-- seusaikan dengan data -->
-        <div class="container pb-lg-6">
+       <div class="container pb-lg-6">
   <!-- Title -->
   <div class="row">
-    <h2 class="mb-4 mx-auto text-center h1" style="color: black;">Our Facilities</h2>
+    <div class="col-12">
+      <h2 class="mb-4 mx-auto text-center h1" style="color: black;">Our Facilities</h2>
+    </div>
   </div>
 
   <!-- Facilities -->
   <div class="row gy-4 justify-content-center">
+    <!-- Gym -->
     <div class="col-xxl-2 col-md-4 col-12">
       <div class="facility-card">
-        <img src="{{ asset('IMG/pingpong umum.jpg') }}" alt="Fasilitas">
-        <div class="facility-text">Fasilitas</div>
+        <img src="{{ asset('IMG/facility/gym umum.jpg') }}" alt="Fasilitas">
+        <div class="facility-text">Gym umum</div>
       </div>
     </div>
 
+    <!-- Kolam -->
     <div class="col-xxl-2 col-md-4 col-12">
       <div class="facility-card">
-        <img src="{{ asset('IMG/kolam umum.jpg') }}" alt="Fasilitas" width="80">
-        <div class="facility-text">Fasilitas</div>
+        <img src="{{ asset('IMG/kolam umum.jpg') }}" alt="Fasilitas">
+        <div class="facility-text">Kolam umum</div>
       </div>
     </div>
 
+    <!-- Meeting Room -->
     <div class="col-xxl-2 col-md-4 col-12">
       <div class="facility-card">
-        <img src="{{ asset('IMG/pingpong umum.jpg') }}" alt="Fasilitas">
-        <div class="facility-text">Fasilitas</div>
+        <img src="{{ asset('IMG/facility/meeting room umum.jpg') }}" alt="Fasilitas">
+        <div class="facility-text">Ruang meeting</div>
+      </div>
+    </div>
+
+    <!-- Pingpong -->
+    <div class="col-xxl-2 col-md-4 col-12">
+      <div class="facility-card">
+        <img src="{{ asset('IMG/facility/pingpong umum.jpg') }}" alt="Fasilitas">
+        <div class="facility-text">Pingpong</div>
+      </div>
+    </div>
+
+    <!-- Sauna VIP -->
+    <div class="col-xxl-2 col-md-4 col-12">
+      <div class="facility-card position-relative">
+        <img src="{{ asset('IMG/facility/sauna vip.jpg') }}" alt="Fasilitas">
+        <span class="badge position-absolute top-0 start-0 m-2" style="background-color: yellow;">VIP</span>
+        <div class="facility-text">Sauna</div>
+      </div>
+    </div>
+
+    <!-- Spa VIP -->
+    <div class="col-xxl-2 col-md-4 col-12">
+      <div class="facility-card position-relative">
+        <img src="{{ asset('IMG/facility/spa vip.jpg') }}" alt="Fasilitas">
+        <span class="badge position-absolute top-0 start-0 m-2" style="background-color: yellow;">VIP</span>
+        <div class="facility-text">Spa</div>
       </div>
     </div>
   </div>
@@ -384,7 +412,7 @@
           <p class="mt-3 mb-1">We serve our service and with our pleasure to serving you</p>
         </div>
         <div class="col-md-6 image-container">
-          <img src="{{ asset('IMG/pingpong umum.jpg') }}" alt="Properti" />
+          <img src="{{ asset('IMG/facility/pingpong umum.jpg') }}" alt="Properti" width="100%"/>
         </div>
       </div>
     </div>
@@ -445,7 +473,7 @@
   <div class="container text-center">
     <div class="row justify-content-center mb-4">
       <div class="col-lg-6">
-        <img src="{{ asset('IMG/logo.png') }}" class="navbar-brand" href="#" width="40px" height="40px" style="filter: brightness(0) invert(1);">
+        <img src="{{ asset('IMG/home/logo.png') }}" class="navbar-brand" href="#" width="40px" height="40px" style="filter: brightness(0) invert(1);">
         <p class="text-light">
           Stay inspired. With modern facilities, seamless service, and thoughtful amenities, we make every business trip feel effortless.
         </p>

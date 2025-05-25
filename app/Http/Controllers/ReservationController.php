@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Reservation;
 use App\Models\Room;
+use App\Models\MetodePembayaran;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 
@@ -13,13 +14,13 @@ class ReservationController extends Controller
     public function index()
     {
         $reservations = Reservation::with('room', 'user')->get();
-        return view('reservations.index', compact('reservations'));
+        return view('reservasi', compact('reservations'));
     }
 
     public function create()
     {
         $rooms = Room::where('status', 'Tersedia')->get();
-        return view('reservations.create', compact('rooms'));
+        return view('reservasi', compact('rooms'));
     }
 
     public function detailReservasi()

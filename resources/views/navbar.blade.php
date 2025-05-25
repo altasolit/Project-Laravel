@@ -125,40 +125,38 @@
 
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <li class="nav-item">   
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Kamar</a>
                     </li>
-                </ul>
+</ul>       
 
-                <form class="d-flex me-3" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-
-                {{-- Tampilkan tombol sesuai status login --}}
-                @guest
-                    <a href="{{ route('login') }}" class="btn btn-outline-light me-2">Login</a>
-                    <a href="{{ route('register') }}" class="btn btn-success">Register</a>
-                @else
-                    <div class="dropdown">
-                        <button class="btn btn-outline-light dropdown-toggle d-flex align-items-center" type="button"
-                            id="dropdownProfile" data-bs-toggle="dropdown" aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                                class="bi bi-person-circle me-2" viewBox="0 0 16 16">
-                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                                <path fill-rule="evenodd"
-                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-                            </svg>
-                            {{ Auth::user()->name }}
-                        </button>
+    <div class="d-flex align-items-center">
+        @guest
+            <a href="{{ route('login') }}" class="btn btn-outline-light me-2">Login</a>
+            <a href="{{ route('register') }}" class="btn btn-success">Register</a>
+        @else
+            <div class="dropdown">
+                <button class="btn btn-outline-light dropdown-toggle d-flex align-items-center gap-2 py-2 px-3"
+                        type="button" id="dropdownProfile" data-bs-toggle="dropdown" aria-expanded="false"
+                        style="height: 38px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                         class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                        <path fill-rule="evenodd"
+                              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                    </svg>
+                    <span class="fw-semibold">{{ Auth::user()->name }}</span>
+                </button>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownProfile">
                             @if (Auth::user()->role === 'admin')
                                 <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Dashboard Admin</a></li>
                             @elseif (Auth::user()->role === 'customer')
-                                <li><a class="dropdown-item" href="{{ route('customer.dashboard') }}">Dashboard Customer</a></li>
+                                <li><a class="dropdown-item" href="{{ route('customer.profile') }}">Dashboard Customer</a></li>
+                                <li><a class="dropdown-item" href="{{ route('customer.dashboard') }}">My booking</a></li>
+
                             @endif
                             <li><hr class="dropdown-divider"></li>
                             <li>

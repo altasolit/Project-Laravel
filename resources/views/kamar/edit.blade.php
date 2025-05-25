@@ -416,6 +416,18 @@
                         <label class="form-label fw-bold">Gambar</label>
                         <input type="file" name="gambar" class="form-control">
                     </div>
+                            <div class="form-group">
+                                <label>Fasilitas</label>
+                                @foreach ($fasilitas as $f)
+                                <label>
+                                    <input type="checkbox" name="fasilitas_id[]" value="{{ $f->id }}"
+                                        {{ isset($room) && $room->fasilitas->contains($f->id) ? 'checked' : '' }}>
+                                    {{ $f->nama_fasilitas }}
+                                </label>
+                            @endforeach
+
+                            </div>
+
                 </div>
                 <button type="submit" class="btn btn-primary mt-3">Submit</button>
             </form>
