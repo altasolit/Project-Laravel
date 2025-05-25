@@ -101,7 +101,7 @@
                             <div class=" {{ request()->is('Kamar') || request()->is('fasilitas') ? 'show' : '' }}" id="productMenu">
                               <ul class="nav nav-collapse">
                                 <li class="{{ request()->is('Kamar') ? 'active' : '' }}">
-                                  <a href="{{ url('/kamar') }}">
+                                  <a href="{{ url('/admin/kamar') }}">
                                     <span class="sub-item">Kamar</span>
                                   </a>
                                 </li>
