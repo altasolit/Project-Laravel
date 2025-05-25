@@ -1,4 +1,3 @@
-<x-app-layout>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,14 +8,21 @@
     <link rel="icon" href="assets/img/kaiadmin/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+    <!-- Tambahkan di <head> layout -->
+
+
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <!-- Fonts and icons -->
     <script src="assets/js/plugin/webfont/webfont.min.js"></script>
     <script>
         WebFont.load({
             google: {
+                qa
                 families: ["Public Sans:300,400,500,600,700"]
             },
             custom: {
@@ -35,13 +41,15 @@
     </script>
 
     <!-- CSS Files -->
-    <link rel="stylesheet" href="assets/css/fonts.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/plugins.min.css" />
-    <link rel="stylesheet" href="assets/css/kaiadmin.min.css" />
+
+    <link rel="stylesheet" href="{{ asset('assets/css/donts.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/kaiadmin.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/kaiadmin.css') }}">
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link rel="stylesheet" href="assets/css/demo.css" />
+    <link rel="stylesheet" href="{{ asset('assets/css/demo.css') }}">
 </head>
 
 <body>
@@ -72,7 +80,7 @@
             <div class="sidebar-wrapper scrollbar scrollbar-inner">
                 <div class="sidebar-content">
                     <ul class="nav nav-secondary">
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a data-bs-toggle="none" href="/dashboard" class="collapsed" aria-expanded="true">
                                 <i class="fas fa-home"></i>
                                 <p>Dashboard</p>
@@ -84,23 +92,22 @@
                                 <p>Orders</p>
                             </a>
                         </li>
-                        <li
-                            class="nav-item submenu {{ request()->is('Kamar') || request()->is('fasilitas') ? 'active' : '' }}">
-                            <a data-bs-toggle="collapse" href="#tables">
+                        <li class="nav-item">
+                            <a data-toggle="collapse" href="#productMenu">
                                 <i class="fas fa-table"></i>
                                 <p>Product</p>
                                 <span class="caret"></span>
                             </a>
-                            <div class="collapse show {{ request()->is('Kamar') || request()->is('fasilitas') ? 'show' : '' }}"
-                                id="tables"data-bs-toggle="collapse">
+                            <div class=" {{ request()->is('Kamar') || request()->is('fasilitas') ? 'show' : '' }}"
+                                id="productMenu">
                                 <ul class="nav nav-collapse">
-                                    <li class="{{ request()->is('kamar') ? 'active' : '' }}">
-                                        <a href="/kamar">
+                                    <li class="{{ request()->is('Kamar') ? 'active' : '' }}">
+                                        <a href="{{ url('/kamar') }}">
                                             <span class="sub-item">Kamar</span>
                                         </a>
                                     </li>
                                     <li class="{{ request()->is('fasilitas') ? 'active' : '' }}">
-                                        <a href="/fasilitas">
+                                        <a href="{{ url('/fasilitas') }}">
                                             <span class="sub-item">Fasilitas</span>
                                         </a>
                                     </li>
@@ -353,7 +360,8 @@
                 <div class="page-inner">
                     <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
                         <div>
-                            <h3 class="fw-bold mb-3">Fasilitas</h3></h3>
+                            <h3 class="fw-bold mb-3">Fasilitas</h3>
+                            </h3>
                         </div>
                         <div class="ms-md-auto py-2 py-md-0">
                             <a href="#" class="btn btn-label-info btn-round me-2">Manage</a>
@@ -649,7 +657,7 @@
                                         </table>
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -729,41 +737,42 @@
         <!-- End Custom template -->
     </div>
     <!--   Core JS Files   -->
-    <script src="assets/js/core/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/core/popper.min.js"></script>
-    <script src="assets/js/core/bootstrap.min.js"></script>
+    <script src="{{ asset('assets/js/core/jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ asset('assets/js/core/popper.min.js') }}"></script>
+    <script src="{{ asset('assets/js/core/bootstrap.min.js') }}"></script>
 
     <!-- jQuery Scrollbar -->
-    <script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="{{ asset('assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js') }}"></script>
 
     <!-- Chart JS -->
-    <script src="assets/js/plugin/chart.js/chart.min.js"></script>
+    <script src="{{ asset('assets/js/plugin/chart.js/chart.min.js') }}"></script>
 
     <!-- jQuery Sparkline -->
-    <script src="assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+    <script src="{{ asset('assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js') }}"></script>
 
     <!-- Chart Circle -->
-    <script src="assets/js/plugin/chart-circle/circles.min.js"></script>
+    <script src="{{ asset('assets/js/plugin/chart-circle/circles.min.js') }}"></script>
 
     <!-- Datatables -->
-    <script src="assets/js/plugin/datatables/datatables.min.js"></script>
+    <script src="{{ asset('assets/js/plugin/datatables/datatables.min.js') }}"></script>
 
     <!-- Bootstrap Notify -->
-    <script src="assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+    <script src="{{ asset('assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- jQuery Vector Maps -->
-    <script src="assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
-    <script src="assets/js/plugin/jsvectormap/world.js"></script>
+    <script src="{{ asset('assets/js/plugin/jsvectormap/jsvectormap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugin/jsvectormap/world.js') }}"></script>
 
     <!-- Sweet Alert -->
-    <script src="assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+    <script src="{{ asset('assets/js/plugin/sweetalert/sweetalert.min.js') }}"></script>
 
     <!-- Kaiadmin JS -->
-    <script src="assets/js/kaiadmin.min.js"></script>
+    <script src="{{ asset('assets/js/kaiadmin.min.js') }}"></script>
 
     <!-- Kaiadmin DEMO methods, don't include it in your project! -->
-    <script src="assets/js/setting-demo.js"></script>
-    <script src="assets/js/demo.js"></script>
+    <script src="{{ asset('assets/js/setting-demo.js') }}"></script>
+    <script src="{{ asset('assets/js/demo.js') }}"></script>
     <script>
         $(document).ready(function() {
             $("#basic-datatables").DataTable({});
@@ -824,4 +833,3 @@
 </body>
 
 </html>
-</x-app-layout>

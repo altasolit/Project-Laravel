@@ -2,65 +2,78 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Fasilitas;
 use Illuminate\Http\Request;
+use App\Models\Fasilitas;
+use Illuminate\Support\Facades\Storage;
 
 class FasilitasController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        $fasilitas = Fasilitas::get();
-        return view('fasilitas.index', compact('fasilitas'));
+        $fasilitas = Fasilitas::all();
+        return view('Fasilitas.index', compact('fasilitas'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        return view('Fasilitas.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama_fasilitas' => 'required|unique:fasilitas',
+            'deskripsi' => 'required',
+            'gambar' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+        ]);
+
+        $imagePath = $request->file('gambar')->store('Fasilitas_images', 'public');
+
+        Fasilitas::create([
+            'nama_fasilitas' => $request->nama_fasilitas,
+            'deskripsi' => $request->deskripsi,
+            'gambar' => $imagePath,
+        ]);
+
+        return redirect()->route('Fasilitas.index')->with('success', 'Fasilitas berhasil ditambahkan');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Fasilitas $fasilitas)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(Fasilitas $fasilitas)
     {
-        //
+        return view('Fasilitas.edit', compact('fasilitas'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, Fasilitas $fasilitas)
     {
-        //
+        $request->validate([
+            'nama_fasilitas' => 'required|unique:fasilitas,nama_fasilitas,' . $fasilitas->id,
+            'deskripsi' => 'required',
+            'gambar' => 'image|mimes:jpeg,png,jpg|max:2048',
+        ]);
+
+        if ($request->hasFile('gambar')) {
+            if ($fasilitas->gambar) {
+                Storage::disk('public')->delete($fasilitas->gambar);
+            }
+
+            $imagePath = $request->file('gambar')->store('Fasilitas_images', 'public');
+            $fasilitas->gambar = $imagePath;
+        }
+
+        $fasilitas->nama_fasilitas = $request->nama_fasilitas;
+        $fasilitas->deskripsi = $request->deskripsi;
+        $fasilitas->save();
+
+        return redirect()->route('Fasilitas.index')->with('success', 'Fasilitas berhasil diperbarui');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Fasilitas $fasilitas)
     {
-        //
+        if ($fasilitas->gambar) {
+            Storage::disk('public')->delete($fasilitas->gambar);
+        }
+
+        $fasilitas->delete();
+        return redirect()->route('Fasilitas.index')->with('success', 'Fasilitas berhasil dihapus');
     }
 }

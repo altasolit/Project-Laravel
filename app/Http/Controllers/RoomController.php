@@ -30,10 +30,6 @@ class RoomController extends Controller
             'gambar' => 'required|image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
-        
-        // dd($request->all()); // Debug: Lihat data sebelum insert
-
-
         $imagePath = $request->file('gambar')->store('room_images', 'public');
 
         Room::create([
@@ -56,7 +52,6 @@ class RoomController extends Controller
     public function update(Request $request, Room $room)
     {
         $request->validate([
-
             'nomor_kamar' => 'required|unique:rooms,nomor_kamar,' . $room->id,
             'tipe_kamar' => 'required',
             'harga' => 'required|numeric',
@@ -66,31 +61,31 @@ class RoomController extends Controller
         ]);
 
         if ($request->hasFile('gambar')) {
-            if ($room->image) {
-                Storage::disk('public')->delete($room->image);
+            if ($room->gambar) {
+                Storage::disk('public')->delete($room->gambar);
             }
             $imagePath = $request->file('gambar')->store('room_images', 'public');
-            $room->image = $imagePath;
+            $room->gambar = $imagePath;
         }
 
-        // $room->update($request->except('image'));
         $room->update([
-
             'nomor_kamar' => $request->nomor_kamar,
             'tipe_kamar' => $request->tipe_kamar,
             'harga' => $request->harga,
             'status' => in_array($request->status, ['Tersedia', 'Terisi', 'Diperbaiki']) ? $request->status : 'Tersedia',
             'deskripsi' => $request->deskripsi,
+            'gambar' => $room->gambar // tetap diset jika tidak ada gambar baru
         ]);
-        
+
         return redirect()->route('rooms.index')->with('success', 'Kamar berhasil diperbarui');
     }
 
     public function destroy(Room $room)
     {
-        if ($room->image) {
-            Storage::disk('public')->delete($room->image);
+        if ($room->gambar) {
+            Storage::disk('public')->delete($room->gambar);
         }
+
         $room->delete();
         return redirect()->route('rooms.index')->with('success', 'Kamar berhasil dihapus');
     }

@@ -1,4 +1,3 @@
-<x-app-layout>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,14 +8,21 @@
     <link rel="icon" href="assets/img/kaiadmin/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+    <!-- Tambahkan di <head> layout -->
+
+
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <!-- Fonts and icons -->
     <script src="assets/js/plugin/webfont/webfont.min.js"></script>
     <script>
         WebFont.load({
             google: {
+                qa
                 families: ["Public Sans:300,400,500,600,700"]
             },
             custom: {
@@ -35,13 +41,15 @@
     </script>
 
     <!-- CSS Files -->
-    <link rel="stylesheet" href="assets/css/fonts.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/plugins.min.css" />
-    <link rel="stylesheet" href="assets/css/kaiadmin.min.css" />
+
+    <link rel="stylesheet" href="{{ asset('assets/css/donts.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/kaiadmin.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/kaiadmin.css') }}">
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link rel="stylesheet" href="assets/css/demo.css" />
+    <link rel="stylesheet" href="{{ asset('assets/css/demo.css') }}">
 </head>
 
 <body>
@@ -72,7 +80,7 @@
             <div class="sidebar-wrapper scrollbar scrollbar-inner">
                 <div class="sidebar-content">
                     <ul class="nav nav-secondary">
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a data-bs-toggle="none" href="/dashboard" class="collapsed" aria-expanded="true">
                                 <i class="fas fa-home"></i>
                                 <p>Dashboard</p>
@@ -84,23 +92,22 @@
                                 <p>Orders</p>
                             </a>
                         </li>
-                        <li
-                            class="nav-item submenu {{ request()->is('Kamar') || request()->is('fasilitas') ? 'active' : '' }}">
-                            <a data-bs-toggle="collapse" href="#tables">
+                        <li class="nav-item">
+                            <a data-toggle="collapse" href="#productMenu">
                                 <i class="fas fa-table"></i>
                                 <p>Product</p>
                                 <span class="caret"></span>
                             </a>
-                            <div class="collapse show {{ request()->is('Kamar') || request()->is('fasilitas') ? 'show' : '' }}"
-                                id="tables"data-bs-toggle="collapse">
+                            <div class=" {{ request()->is('Kamar') || request()->is('fasilitas') ? 'show' : '' }}"
+                                id="productMenu">
                                 <ul class="nav nav-collapse">
                                     <li class="{{ request()->is('Kamar') ? 'active' : '' }}">
-                                        <a href="/kamar">
+                                        <a href="{{ url('/kamar') }}">
                                             <span class="sub-item">Kamar</span>
                                         </a>
                                     </li>
                                     <li class="{{ request()->is('fasilitas') ? 'active' : '' }}">
-                                        <a href="/fasilitas">
+                                        <a href="{{ url('/fasilitas') }}">
                                             <span class="sub-item">Fasilitas</span>
                                         </a>
                                     </li>
@@ -311,8 +318,8 @@
                                             <div>{{ Auth::user()->name }}</div>
 
                                             <div class="ms-1">
-                                                <svg class="fill-current h-4 w-4"
-                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 20 20">
                                                     <path fill-rule="evenodd"
                                                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                                         clip-rule="evenodd" />
@@ -344,8 +351,7 @@
                             <li class="-me-2 flex items-center sm:hidden">
                                 <button @click="open = ! open"
                                     class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-900 focus:text-gray-500 dark:focus:text-gray-400 transition duration-150 ease-in-out">
-                                    <svg class="h-6 w-6" stroke="currentColor" fill="none"
-                                        viewBox="0 0 24 24">
+                                    <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                                         <path :class="{ 'hidden': open, 'inline-flex': !open }" class="inline-flex"
                                             stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M4 6h16M4 12h16M4 18h16" />
@@ -468,41 +474,42 @@
         <!-- End Custom template -->
     </div>
     <!--   Core JS Files   -->
-    <script src="assets/js/core/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/core/popper.min.js"></script>
-    <script src="assets/js/core/bootstrap.min.js"></script>
+    <script src="{{ asset('assets/js/core/jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ asset('assets/js/core/popper.min.js') }}"></script>
+    <script src="{{ asset('assets/js/core/bootstrap.min.js') }}"></script>
 
     <!-- jQuery Scrollbar -->
-    <script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="{{ asset('assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js') }}"></script>
 
     <!-- Chart JS -->
-    <script src="assets/js/plugin/chart.js/chart.min.js"></script>
+    <script src="{{ asset('assets/js/plugin/chart.js/chart.min.js') }}"></script>
 
     <!-- jQuery Sparkline -->
-    <script src="assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+    <script src="{{ asset('assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js') }}"></script>
 
     <!-- Chart Circle -->
-    <script src="assets/js/plugin/chart-circle/circles.min.js"></script>
+    <script src="{{ asset('assets/js/plugin/chart-circle/circles.min.js') }}"></script>
 
     <!-- Datatables -->
-    <script src="assets/js/plugin/datatables/datatables.min.js"></script>
+    <script src="{{ asset('assets/js/plugin/datatables/datatables.min.js') }}"></script>
 
     <!-- Bootstrap Notify -->
-    <script src="assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+    <script src="{{ asset('assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- jQuery Vector Maps -->
-    <script src="assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
-    <script src="assets/js/plugin/jsvectormap/world.js"></script>
+    <script src="{{ asset('assets/js/plugin/jsvectormap/jsvectormap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugin/jsvectormap/world.js') }}"></script>
 
     <!-- Sweet Alert -->
-    <script src="assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+    <script src="{{ asset('assets/js/plugin/sweetalert/sweetalert.min.js') }}"></script>
 
     <!-- Kaiadmin JS -->
-    <script src="assets/js/kaiadmin.min.js"></script>
+    <script src="{{ asset('assets/js/kaiadmin.min.js') }}"></script>
 
     <!-- Kaiadmin DEMO methods, don't include it in your project! -->
-    <script src="assets/js/setting-demo.js"></script>
-    <script src="assets/js/demo.js"></script>
+    <script src="{{ asset('assets/js/setting-demo.js') }}"></script>
+    <script src="{{ asset('assets/js/demo.js') }}"></script>
     <script>
         $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
             type: "line",
@@ -534,4 +541,3 @@
 </body>
 
 </html>
-</x-app-layout>
