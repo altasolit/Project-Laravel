@@ -11,12 +11,12 @@ class FasilitasController extends Controller
     public function index()
     {
         $fasilitas = Fasilitas::all();
-        return view('Fasilitas.index', compact('fasilitas'));
+        return view('admin.fasilitas', compact('fasilitas'));
     }
 
     public function create()
     {
-        return view('Fasilitas.create');
+        return view('fasilitas.create');
     }
 
     public function store(Request $request)
@@ -35,16 +35,19 @@ class FasilitasController extends Controller
             'gambar' => $imagePath,
         ]);
 
-        return redirect()->route('Fasilitas.index')->with('success', 'Fasilitas berhasil ditambahkan');
+        return redirect()->route('admin.fasilitas')->with('success', 'Fasilitas berhasil ditambahkan');
     }
 
-    public function edit(Fasilitas $fasilitas)
+    public function edit($id)
     {
-        return view('Fasilitas.edit', compact('fasilitas'));
+        $fasilitas = Fasilitas::findOrFail($id);
+        return view('fasilitas.edit', compact('fasilitas'));
     }
 
-    public function update(Request $request, Fasilitas $fasilitas)
+    public function update(Request $request, $id)
     {
+        $fasilitas = Fasilitas::findOrFail($id);
+
         $request->validate([
             'nama_fasilitas' => 'required|unique:fasilitas,nama_fasilitas,' . $fasilitas->id,
             'deskripsi' => 'required',
@@ -64,7 +67,7 @@ class FasilitasController extends Controller
         $fasilitas->deskripsi = $request->deskripsi;
         $fasilitas->save();
 
-        return redirect()->route('Fasilitas.index')->with('success', 'Fasilitas berhasil diperbarui');
+        return redirect()->route('admin.fasilitas')->with('success', 'Fasilitas berhasil diperbarui');
     }
 
     public function destroy(Fasilitas $fasilitas)
@@ -74,6 +77,6 @@ class FasilitasController extends Controller
         }
 
         $fasilitas->delete();
-        return redirect()->route('Fasilitas.index')->with('success', 'Fasilitas berhasil dihapus');
+        return redirect()->route('admin.fasilitas')->with('success', 'Fasilitas berhasil dihapus');
     }
 }

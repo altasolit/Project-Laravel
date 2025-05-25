@@ -102,12 +102,12 @@
                                 id="productMenu">
                                 <ul class="nav nav-collapse">
                                     <li class="{{ request()->is('Kamar') ? 'active' : '' }}">
-                                        <a href="{{ url('/kamar') }}">
+                                        <a href="{{ url('/admin/kamar') }}">
                                             <span class="sub-item">Kamar</span>
                                         </a>
                                     </li>
                                     <li class="{{ request()->is('fasilitas') ? 'active' : '' }}">
-                                        <a href="{{ url('/fasilitas') }}">
+                                        <a href="{{ url('/admin/fasilitas') }}">
                                             <span class="sub-item">Fasilitas</span>
                                         </a>
                                     </li>
@@ -406,11 +406,12 @@
                 <td>{{ $room->deskripsi }}</td>
                 <td><img src="{{ asset('storage/' . $room->gambar) }}" width="100"></td>
                 <td>
-                    <a href="{{ route('kamar.edit', $room->id) }}" class="btn btn-sm btn-warning">Edit</a>
-                    <form action="{{ route('kamar.destroy', $room->id) }}" method="POST" class="d-inline">
+                    
+                    <form action="{{ route('kamar.destroy', $room->id) }}" method="post" class="d-inline" onsubmit="return confirm('Yakin ingin menghapus?')">
+                       <a href="{{ route('kamar.edit', $room->id) }}" class="btn btn-sm btn-warning">Edit</a>
                         @csrf
                         @method('DELETE')
-                        <button class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus?')">Hapus</button>
+                        <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
                     </form>
                 </td>
             </tr>

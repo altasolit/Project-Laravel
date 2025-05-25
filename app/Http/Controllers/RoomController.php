@@ -50,8 +50,10 @@ class RoomController extends Controller
         return view('kamar.edit', compact('room'));
     }
 
-    public function update(Request $request, Room $room)
+    public function update(Request $request, $id)
         {
+            $room = Room::findOrFail($id);
+
             $request->validate([
                 'nomor_kamar' => 'required|unique:rooms,nomor_kamar,' . $room->id,
                 'tipe_kamar' => 'required',

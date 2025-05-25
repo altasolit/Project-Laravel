@@ -28,20 +28,21 @@ Route::resource('Fasilitas', FasilitasController::class);
 Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'adminDashboard'])->name('admin.dashboard');
     Route::get('/kamar', [RoomController::class, 'index'])->name('admin.kamar');
-    // Route::get('/rooms', [RoomController::class, 'index'])->name('admin.rooms.index');
+    Route::get('/fasilitas', [FasilitasController::class, 'index'])->name('admin.fasilitas');
 
     // Manajemen Kamar
     Route::get('/kamar/create/{id?}', [RoomController::class, 'create'])->name('kamar.create');
     Route::post('/kamar', [RoomController::class, 'store'])->name('kamar.store');
     Route::get('/kamar/edit/{id}', [RoomController::class, 'edit'])->name('kamar.edit');
     Route::put('/kamar/{id}', [RoomController::class, 'update'])->name('kamar.update');
-    Route::delete('/kamar/{id}', [RoomController::class, 'destroy'])->name('kamar.destroy');
+    Route::delete('/kamar/{room}', [RoomController::class, 'destroy'])->name('kamar.destroy');
 
     // Manajemen Fasilitas
     Route::get('/fasilitas/create/{id?}', [FasilitasController::class, 'create'])->name('fasilitas.create');
     Route::post('/fasilitas', [FasilitasController::class, 'store'])->name('fasilitas.store');
+    Route::get('/fasilitas/edit/{id}', [FasilitasController::class, 'edit'])->name('fasilitas.edit');
     Route::put('/fasilitas/{id}', [FasilitasController::class, 'update'])->name('fasilitas.update');
-    Route::delete('/fasilitas/{id}', [FasilitasController::class, 'destroy'])->name('fasilitas.destroy');
+    Route::delete('/fasilitas/{fasilitas}', [FasilitasController::class, 'destroy'])->name('fasilitas.destroy');
 
     // Manajemen profile
     Route::get('/profile/create/{id?}', [DashboardController::class, 'create'])->name('profile.create');

@@ -106,7 +106,7 @@
                                   </a>
                                 </li>
                                 <li class="{{ request()->is('fasilitas') ? 'active' : '' }}">
-                                  <a href="{{ url('/fasilitas') }}">
+                                  <a href="{{ url('/admin/fasilitas') }}">
                                     <span class="sub-item">Fasilitas</span>
                                   </a>
                                 </li>

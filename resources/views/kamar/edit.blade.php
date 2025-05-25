@@ -102,12 +102,12 @@
                                 id="productMenu">
                                 <ul class="nav nav-collapse">
                                     <li class="{{ request()->is('Kamar') ? 'active' : '' }}">
-                                        <a href="{{ url('/kamar') }}">
+                                        <a href="{{ url('/admin/kamar') }}">
                                             <span class="sub-item">Kamar</span>
                                         </a>
                                     </li>
                                     <li class="{{ request()->is('fasilitas') ? 'active' : '' }}">
-                                        <a href="{{ url('/fasilitas') }}">
+                                        <a href="{{ url('/admin/fasilitas') }}">
                                             <span class="sub-item">Fasilitas</span>
                                         </a>
                                     </li>
@@ -414,7 +414,7 @@
                             <img src="{{ asset('storage/' . $room->gambar) }}" width="150">
                         @endif
                         <label class="form-label fw-bold">Gambar</label>
-                        <input type="file" name="gambar" class="form-control" required>
+                        <input type="file" name="gambar" class="form-control">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary mt-3">Submit</button>
