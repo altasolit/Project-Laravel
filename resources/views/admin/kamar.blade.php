@@ -357,65 +357,69 @@
             </div>
 
             <div class="container">
-                <div class="page-inner">
-                    <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
-                        <div>
-                            <h3 class="fw-bold mb-3">Dashboard</h3>
-                        </div>
-                        <div class="ms-md-auto py-2 py-md-0">
-                            <a href="#" class="btn btn-label-info btn-round me-2">Manage</a>
-                            <a href="#" class="btn btn-primary btn-round"></a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <div class="d-flex align-items-center">
-                                        <h4 class="card-title">Data Kamar</h4>
-                                                 <a href="{{ route('kamar.create') }}" class="btn btn-primary btn-round ms-auto">+ Tambah Kamar</a>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-<div class="container mt-4">
-    @if(session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
+    <div class="page-inner">
+        <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
+            <div>
+                <h3 class="fw-bold mb-3">Dashboard</h3>
+            </div>
+            <div class="ms-md-auto py-2 py-md-0">
+                <a href="#" class="btn btn-label-info btn-round me-2">Manage</a>
+                <a href="#" class="btn btn-primary btn-round"></a>
+            </div>
         </div>
-    @endif
 
-    <table id="roomsTable" class="table table-striped">
-        <thead>
-            <tr>
-                <th>No Kamar</th>
-                <th>Tipe</th>
-                <th>Harga</th>
-                <th>Status</th>
-                <th>Deskripsi</th>
-                <th>Gambar</th>
-                <th>Aksi</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($rooms as $room)
-            <tr>
-                <td>{{ $room->nomor_kamar }}</td>
-                <td>{{ $room->tipe_kamar }}</td>
-                <td>Rp {{ number_format($room->harga, 0, ',', '.') }}</td>
-                <td>{{ $room->status }}</td>
-                <td>{{ $room->deskripsi }}</td>
-                <td><img src="{{ asset('storage/' . $room->gambar) }}" width="100"></td>
-                <td>
-                    
-                    <form action="{{ route('kamar.destroy', $room->id) }}" method="post" class="d-inline" onsubmit="return confirm('Yakin ingin menghapus?')">
-                       <a href="{{ route('kamar.edit', $room->id) }}" class="btn btn-sm btn-warning">Edit</a>
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
-                    </form>
-                </td>
-            </tr>
-            @endforeach
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header d-flex align-items-center">
+                        <h4 class="card-title">Data Kamar</h4>
+                        <a href="{{ route('kamar.create') }}" class="btn btn-primary btn-round ms-auto">+ Tambah Kamar</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="container mt-4">
+                            @if(session('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
+
+                            <table id="roomsTable" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>No Kamar</th>
+                                        <th>Tipe</th>
+                                        <th>Harga</th>
+                                        <th>Status</th>
+                                        <th>Deskripsi</th>
+                                        <th>Gambar</th>
+                                        <th>Fasilitas</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($rooms as $room)
+                                    <tr>
+                                        <td>{{ $room->nomor_kamar }}</td>
+                                        <td>{{ $room->tipe_kamar }}</td>
+                                        <td>Rp {{ number_format($room->harga, 0, ',', '.') }}</td>
+                                        <td>{{ $room->status }}</td>
+                                        <td>{{ $room->deskripsi }}</td>
+                                        <td><img src="{{ asset('storage/' . $room->gambar) }}" width="100"></td>
+                                        <td>
+                                            @foreach($room->fasilitas as $fasilitas)
+                                                <span class="badge bg-info text-white">{{ $fasilitas->nama_fasilitas }}</span><br>
+                                            @endforeach
+                                        </td>
+                                        <td>
+                                            <form action="{{ route('kamar.destroy', $room->id) }}" method="post" class="d-inline" onsubmit="return confirm('Yakin ingin menghapus?')">
+                                                <a href="{{ route('kamar.edit', $room->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    @endforeach
         </tbody>
     </table>
 </div>

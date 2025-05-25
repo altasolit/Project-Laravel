@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 use App\Models\Room; 
+use App\Models\Fasilitas; 
+
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index(){
-    $rooms = Room::all();
-    return view('home', compact('rooms')); // Kirim data ke view
+    $rooms = Room::with('fasilitas')->get(); 
+    return view('home', compact('rooms'));
 }
     
     public function customer(){

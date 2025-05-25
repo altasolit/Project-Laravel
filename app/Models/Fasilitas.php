@@ -14,4 +14,8 @@ class Fasilitas extends Model
     'deskripsi',
     'gambar'
     ];
+    public function rooms()
+    {
+        return $this->belongsToMany(Room::class, 'kamar_fasilitas', 'fasilitas_id', 'kamar_id');
+    }
 }

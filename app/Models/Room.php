@@ -22,4 +22,8 @@ class Room extends Model
     {
         return $this->hasMany(Reservation::class);
     }
+     public function fasilitas()
+    {
+        return $this->belongsToMany(Fasilitas::class, 'kamar_fasilitas', 'kamar_id', 'fasilitas_id');
+    }
 }
