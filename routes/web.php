@@ -16,7 +16,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 Route::view('/', 'home');
 Route::view('/orders', 'orders');
 Route::view('/reservasi', 'reservasi');
-Route::view('/kamar', 'kamar');
+// Route::view('/kamar', 'kamar');
 Route::view('/fasilitas', 'fasilitas');
 Route::view('/detailreservasi', 'detailreservasi');
 
@@ -27,12 +27,15 @@ Route::resource('Fasilitas', FasilitasController::class);
 // 🔐 Rute Admin (Autentikasi & Middleware Admin)
 Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'adminDashboard'])->name('admin.dashboard');
+    Route::get('/kamar', [RoomController::class, 'index'])->name('admin.kamar');
+    // Route::get('/rooms', [RoomController::class, 'index'])->name('admin.rooms.index');
 
     // Manajemen Kamar
-    Route::get('/room/create/{id?}', [RoomController::class, 'create'])->name('room.create');
-    Route::post('/rooms', [RoomController::class, 'store'])->name('rooms.store');
-    Route::put('/room/{id}', [RoomController::class, 'update'])->name('room.update');
-    Route::delete('/rooms/{id}', [RoomController::class, 'destroy'])->name('rooms.destroy');
+    Route::get('/kamar/create/{id?}', [RoomController::class, 'create'])->name('kamar.create');
+    Route::post('/kamar', [RoomController::class, 'store'])->name('kamar.store');
+    Route::get('/kamar/edit/{id}', [RoomController::class, 'edit'])->name('kamar.edit');
+    Route::put('/kamar/{id}', [RoomController::class, 'update'])->name('kamar.update');
+    Route::delete('/kamar/{id}', [RoomController::class, 'destroy'])->name('kamar.destroy');
 
     // Manajemen Fasilitas
     Route::get('/fasilitas/create/{id?}', [FasilitasController::class, 'create'])->name('fasilitas.create');

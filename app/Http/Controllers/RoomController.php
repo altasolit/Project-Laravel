@@ -11,12 +11,12 @@ class RoomController extends Controller
     public function index()
     {
         $rooms = Room::all();
-        return view('rooms.index', compact('rooms'));
+        return view('admin.kamar', compact('rooms'));
     }
 
     public function create()
     {
-        return view('rooms.create');
+        return view('kamar.create');
     }
 
     public function store(Request $request)
@@ -41,44 +41,41 @@ class RoomController extends Controller
             'gambar' => $imagePath,
         ]);
 
-        return redirect()->route('rooms.index')->with('success', 'Kamar berhasil ditambahkan');
+        return redirect()->route('admin.kamar')->with('success', 'Kamar berhasil ditambahkan');
     }
 
-    public function edit(Room $room)
+    public function edit($id)
     {
-        return view('rooms.edit', compact('room'));
+        $room = Room::findOrFail($id);
+        return view('kamar.edit', compact('room'));
     }
 
     public function update(Request $request, Room $room)
-    {
-        $request->validate([
-            'nomor_kamar' => 'required|unique:rooms,nomor_kamar,' . $room->id,
-            'tipe_kamar' => 'required',
-            'harga' => 'required|numeric',
-            'status' => 'required',
-            'deskripsi' => 'required',
-            'gambar' => 'image|mimes:jpeg,png,jpg|max:2048',
-        ]);
+        {
+            $request->validate([
+                'nomor_kamar' => 'required|unique:rooms,nomor_kamar,' . $room->id,
+                'tipe_kamar' => 'required',
+                'harga' => 'required|numeric',
+                'status' => 'required',
+                'deskripsi' => 'required',
+                'gambar' => 'image|mimes:jpeg,png,jpg|max:2048',
+            ]);
 
-        if ($request->hasFile('gambar')) {
-            if ($room->gambar) {
-                Storage::disk('public')->delete($room->gambar);
+            $data = $request->only(['nomor_kamar', 'tipe_kamar', 'harga', 'status', 'deskripsi']);
+
+            // Handle gambar
+            if ($request->hasFile('gambar')) {
+                if ($room->gambar) {
+                    Storage::disk('public')->delete($room->gambar);
+                }
+                $data['gambar'] = $request->file('gambar')->store('room_images', 'public');
             }
-            $imagePath = $request->file('gambar')->store('room_images', 'public');
-            $room->gambar = $imagePath;
+
+            $room->update($data);
+
+            return redirect()->route('admin.kamar')->with('success', 'Kamar berhasil diperbarui');
         }
 
-        $room->update([
-            'nomor_kamar' => $request->nomor_kamar,
-            'tipe_kamar' => $request->tipe_kamar,
-            'harga' => $request->harga,
-            'status' => in_array($request->status, ['Tersedia', 'Terisi', 'Diperbaiki']) ? $request->status : 'Tersedia',
-            'deskripsi' => $request->deskripsi,
-            'gambar' => $room->gambar // tetap diset jika tidak ada gambar baru
-        ]);
-
-        return redirect()->route('rooms.index')->with('success', 'Kamar berhasil diperbarui');
-    }
 
     public function destroy(Room $room)
     {
@@ -87,6 +84,6 @@ class RoomController extends Controller
         }
 
         $room->delete();
-        return redirect()->route('rooms.index')->with('success', 'Kamar berhasil dihapus');
+        return redirect()->route('admin.kamar')->with('success', 'Kamar berhasil dihapus');
     }
 }
