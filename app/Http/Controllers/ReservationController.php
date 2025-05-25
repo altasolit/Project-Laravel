@@ -32,15 +32,24 @@ class ReservationController extends Controller
         ]);
 
         $room = Room::findOrFail($request->room_id);
+
         if ($room->status != 'Tersedia') {
-            return back()->with('error', 'Kamar tidak tersedia untuk reservasi');
+            return back()->with('error', 'Kamar tidak tersedia.');
         }
 
-        // Hitung total harga berdasarkan lama menginap
-        $checkIn = Carbon::parse($request->check_in);
-        $checkOut = Carbon::parse($request->check_out);
-        $days = $checkIn->diffInDays($checkOut);
-        $totalPrice = $room->price_per_night * $days;
+        // Cek apakah kamar sudah dipesan pada tanggal tersebut
+        $isBooked = Reservation::where('room_id', $room->id)
+            ->where(function ($query) use ($request) {
+                $query->whereBetween('check_in', [$request->check_in, $request->check_out])
+                    ->orWhereBetween('check_out', [$request->check_in, $request->check_out]);
+            })->exists();
+
+        if ($isBooked) {
+            return back()->with('error', 'Kamar sudah dipesan pada tanggal tersebut.');
+        }
+
+        $days = Carbon::parse($request->check_in)->diffInDays(Carbon::parse($request->check_out));
+        $total = $room->price_per_night * $days;
 
         Reservation::create([
             'user_id' => Auth::id(),
@@ -48,12 +57,12 @@ class ReservationController extends Controller
             'check_in' => $request->check_in,
             'check_out' => $request->check_out,
             'guests' => $request->guests,
-            'booking_status' => 'Pending',
             'payment_status' => 'Pending',
-            'total_price' => $totalPrice,
+            'booking_status' => 'Pending',
+            'total_price' => $total,
         ]);
 
-        return redirect()->route('reservations.index')->with('success', 'Reservasi berhasil dibuat');
+        return redirect()->route('reservations.index')->with('success', 'Reservasi berhasil.');
     }
 
     public function edit(Reservation $reservation)
