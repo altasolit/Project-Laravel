@@ -23,6 +23,11 @@ class ReservationController extends Controller
         return view('reservasi', compact('rooms'));
     }
 
+    public function detailReservasi()
+    {
+        return view('detailreservasi');
+    }
+
     public function store(Request $request)
     {
         $request->validate([

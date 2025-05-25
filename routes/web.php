@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 // 🌐 Halaman Umum (Tanpa Login)
-Route::view('/', 'home');
+Route::get('/', [HomeController::class, 'index'])->name('home'); 
 Route::view('/orders', 'orders');
 Route::view('/reservasi', 'reservasi');
 // Route::view('/kamar', 'kamar');
@@ -33,7 +33,7 @@ Route::resource('Fasilitas', FasilitasController::class);
 Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'adminDashboard'])->name('admin.dashboard');
     Route::get('/kamar', [RoomController::class, 'index'])->name('admin.kamar');
-    // Route::get('/rooms', [RoomController::class, 'index'])->name('admin.rooms.index');
+    Route::get('/fasilitas', [FasilitasController::class, 'index'])->name('admin.fasilitas');
 
     // Manajemen Kamar
     Route::get('/kamar/create/{id?}', [RoomController::class, 'create'])->name('kamar.create');
@@ -45,6 +45,7 @@ Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->group(func
     // Manajemen Fasilitas
     Route::get('/fasilitas/create/{id?}', [FasilitasController::class, 'create'])->name('fasilitas.create');
     Route::post('/fasilitas', [FasilitasController::class, 'store'])->name('fasilitas.store');
+    Route::get('/fasilitas/edit/{id}', [FasilitasController::class, 'edit'])->name('fasilitas.edit');
     Route::put('/fasilitas/{id}', [FasilitasController::class, 'update'])->name('fasilitas.update');
     Route::delete('/fasilitas/{id}', [FasilitasController::class, 'destroy'])->name('fasilitas.destroy');
 
@@ -62,7 +63,7 @@ Route::middleware(['auth', CustomerMiddleware::class])->prefix('customer')->grou
     Route::get('/profile', [ProfileController::class, 'showProfile'])->middleware(['auth'])->name('customer.profile');
     Route::get('/dashboard', [DashboardController::class, 'customerDashboard'])->name('customer.dashboard');
     
-    Route::get('/detailreservasi', [ProfileController::class, 'detailReservasi'])->name('detailreservasi');
+    Route::get('/detailreservasi', [ReservationController::class, 'detailReservasi'])->name('detailreservasi');
     Route::get('/edit', [ProfileController::class, 'edit'])->name('customer.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('customer.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

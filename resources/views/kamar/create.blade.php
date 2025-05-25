@@ -102,12 +102,12 @@
                                 id="productMenu">
                                 <ul class="nav nav-collapse">
                                     <li class="{{ request()->is('Kamar') ? 'active' : '' }}">
-                                        <a href="{{ url('/kamar') }}">
+                                        <a href="{{ url('/admin/kamar') }}">
                                             <span class="sub-item">Kamar</span>
                                         </a>
                                     </li>
                                     <li class="{{ request()->is('fasilitas') ? 'active' : '' }}">
-                                        <a href="{{ url('/fasilitas') }}">
+                                        <a href="{{ url('/admin/fasilitas') }}">
                                             <span class="sub-item">Fasilitas</span>
                                         </a>
                                     </li>
