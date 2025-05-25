@@ -2,13 +2,16 @@
 
 namespace App\Models;
 
+use App\Models\Reservation;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Room extends Model
 {
-    use HasFactory;
-
+    use HasFactory, SoftDeletes;
+    protected $table = 'room';
     protected $fillable = [
         'nomor_kamar',
         'tipe_kamar',
@@ -20,7 +23,7 @@ class Room extends Model
 
     public function reservations()
     {
-        return $this->hasMany(Reservation::class);
+        return $this->hasMany(Reservation::class, 'room_id');
     }
      public function fasilitas()
     {
