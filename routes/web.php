@@ -61,6 +61,12 @@ Route::middleware(['auth', CustomerMiddleware::class])->prefix('customer')->grou
     Route::patch('/profile', [ProfileController::class, 'update'])->name('customer.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+    //Pembayaran
+    Route::middleware(['auth', CustomerMiddleware::class])->group(function () {
+        Route::get('/pembayaran/{reservation}', [ReservasiController::class, 'showPayment'])->name('pembayaran.show');
+        Route::post('/pembayaran/{reservation}', [ReservasiController::class, 'processPayment'])->name('pembayaran.process');
+    });
+
     // Tambahan fitur customer
     Route::get('/bookings', [HomeController::class, 'customer'])->name('customer.customer-booking');
 });

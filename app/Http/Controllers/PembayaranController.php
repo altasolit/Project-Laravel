@@ -7,6 +7,20 @@ use Illuminate\Http\Request;
 
 class PembayaranController extends Controller
 {
+    public function showPayment($id)
+        {
+            $reservation = Reservation::findOrFail($id);
+            return view('customer.pembayaran', compact('reservation'));
+        }
+
+        public function processPayment(Request $request, $id)
+        {
+            $reservation = Reservation::findOrFail($id);
+            $reservation->status_pembayaran = 'Paid'; // simulasi bayar
+            $reservation->save();
+
+            return redirect()->route('customer.profile')->with('success', 'Pembayaran berhasil!');
+        }
     /**
      * Display a listing of the resource.
      */

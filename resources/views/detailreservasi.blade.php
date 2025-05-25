@@ -1,9 +1,3 @@
-<!doctype html>
-<html lang="en" data-bs-theme="auto">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Detail.reservasi</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
@@ -23,7 +17,9 @@
             border-radius: 8px;
         }
     </style>
-</head>
+@extends('navbar')
+
+@section('navbar')
 
 <body class="bg-light">
 <div class="container">
