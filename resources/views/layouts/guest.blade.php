@@ -15,17 +15,11 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>   
     <body class="font-sans text-gray-900 antialiased">
-        <div >
-            {{-- <div>
-                <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-                </a>
-            </div> --}}
-
-            <div>
+        <div class="min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('/path/to/your/background.jpg');">
+            <div class="w-full max-w-md px-6 py-8 bg-white bg-opacity-90 rounded-xl shadow-lg">
                 {{ $slot }}
             </div>
         </div>
-    </body>
+    </body>    
 
 </html>
