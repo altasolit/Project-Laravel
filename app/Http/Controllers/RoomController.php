@@ -58,6 +58,12 @@ class RoomController extends Controller
         return view('kamar.edit', compact('room', 'fasilitas'));
     }
 
+    public function show($id)
+    {
+        $room = Room::with('fasilitas')->findOrFail($id);
+        return view('kamar.detail', compact('room'));
+    }
+
     public function update(Request $request, $id)
     {
         $room = Room::findOrFail($id);

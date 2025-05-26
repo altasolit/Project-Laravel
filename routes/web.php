@@ -24,8 +24,10 @@ Route::view('/orders', 'orders');
 Route::view('/reservasi', 'reservasi');
 // Route::view('/kamar', 'kamar');
 Route::view('/fasilitas', 'fasilitas');
-Route::view('/detailreservasi', 'detailreservasi');
+// Route::view('/detailreservasi', 'detailreservasi');
 Route::get('/reservasi', [ReservationController::class, 'index']);
+Route::get('/kamar/{id}', [RoomController::class, 'show'])->name('kamar.show');
+
 
 // 📦 Resource Routes (Jika ingin gunakan controller penuh)
 Route::resource('rooms', RoomController::class);
