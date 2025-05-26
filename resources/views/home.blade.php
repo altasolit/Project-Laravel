@@ -317,7 +317,7 @@
                         </div>
                     </div>
                     <div>
-                        <a href="{{ route('rooms.show', $room->id) }}" class="btn btn-outline-primary">
+                        <a href="{{ route('detailreservasi', $room->id) }}" class="btn btn-outline-primary">
                             Lihat detail
                         </a>
                     </div>
