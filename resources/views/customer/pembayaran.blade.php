@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('navbar')
 
-@section('content')
+@section('navbar')
 <div class="container">
     <h3>Pembayaran Reservasi</h3>
     <p>Kamar: {{ $reservation->room->tipe_kamar }}</p>

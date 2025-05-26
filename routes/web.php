@@ -7,11 +7,13 @@ use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PembayaranController;
 use App\Http\Controllers\StatusReservasiController;
 use App\Http\Controllers\HistoriReservasiController;
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Middleware\CustomerMiddleware;
 use App\Models\Fasilitas;
+use App\Models\Pembayaran;
 use App\Models\Reservation;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -72,6 +74,10 @@ Route::middleware(['auth', CustomerMiddleware::class])->prefix('customer')->grou
     Route::get('/status-reservasi', [StatusReservasiController::class, 'index'])->name('customer.status-reservasi.index');
     Route::put('/status-reservasi/{id}/batalkan', [StatusReservasiController::class, 'batalkan'])->name('customer.status-reservasi.cancel');
     Route::post('/status-reservasi/{id}/bayar', [StatusReservasiController::class, 'bayar'])->name('customer.status-reservasi.pay');
+
+        Route::get('/pembayaran/{reservation}', [PembayaranController::class, 'showPayment'])->name('pembayaran.show');
+        Route::post('/pembayaran/{reservation}', [PembayaranController::class, 'processPayment'])->name('pembayaran.process');
+
 
     // Tambahan fitur customer
     Route::get('/bookings', [HomeController::class, 'customer'])->name('customer.customer-booking');

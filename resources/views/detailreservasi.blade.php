@@ -28,7 +28,9 @@
             border-radius: 8px;
         }
     </style>
-</head>
+@extends('navbar')
+
+@section('navbar')
 
 <body class="bg-light">
 <div class="container">
