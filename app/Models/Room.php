@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 class Room extends Model
 {
     use HasFactory, SoftDeletes;
-    protected $table = 'room';
+    protected $table = 'rooms';
     protected $fillable = [
         'nomor_kamar',
         'tipe_kamar',

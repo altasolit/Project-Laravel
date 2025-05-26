@@ -267,14 +267,13 @@
                 <img src="{{ asset('storage/' . $room->gambar) }}" class="img-fluid w-100 rounded-4" alt="{{ $room->tipe_kamar }}">
                 <div class="position-absolute bottom-0 left-0 p-3">
                     <!-- Ganti badge VIP dengan badge status -->
-                    <span class="badge" style="background-color: 
+                    <span class="badge" style="background-color:
                         {{ strtolower($room->status) === 'vip' ? '#e0bf19' : (strtolower($room->status) === 'tersedia' ? 'green' : 'gray') }};
                     ">
                         {{ strtoupper($room->status) }}
                     </span>
                 </div>
             </div>
-
             <div class="d-flex flex-column gap-4">
                 <div class="d-flex flex-column gap-2">
                     <div>
@@ -282,31 +281,33 @@
                             <h3 class="mb-0">{{ $room->tipe_kamar }}</h3>
                         </div>
                     </div>
-
-                    <!-- Bagian deskripsi dihilangkan sementara -->
-
-                    <!-- Bagian fasilitas yang sudah direlasikan -->
+                    <!-- Bagian fasilitas dan rating dalam satu baris -->
+                    <div class="d-flex justify-content-between align-items-center">
+                        <!-- Fasilitas di kiri -->
                         <div class="d-flex flex-wrap gap-2 fs-6">
                             @foreach ($room->fasilitas as $fasilitas)
-                                <span class="badge bg-secondary text-white px-2 py-1">
+                                <span>
                                     {{ $fasilitas->nama_fasilitas }}
                                 </span>
+                                @if (!$loop->last)
+                                    <div class="vr mx-2 text-gray-200"></div>
+                                @endif
                             @endforeach
                         </div>
-
-                    <div class="d-flex gap-1 align-items-center lh-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
-                            fill="currentColor" class="bi bi-star-fill text-warning"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
-                            </path>
-                        </svg>
-
-                        <span class="fw-bold text-dark">5.0</span>
+                        
+                        <!-- Rating di kanan -->
+                        <div class="d-flex gap-1 align-items-center lh-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" class="bi bi-star-fill text-warning"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                </path>
+                            </svg>
+                            <span class="fw-bold text-dark">5.0</span>
+                        </div>
                     </div>
                 </div>
-
                 <div class="d-flex flex-row justify-content-between align-items-center">
                     <div>
                         <span>Harga dimulai</span>
@@ -326,6 +327,9 @@
     </div>
 </div>
 @endforeach
+
+
+              
 
                     <!-- End kamar -->
                 </div>
