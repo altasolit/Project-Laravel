@@ -69,15 +69,17 @@ Route::middleware(['auth', CustomerMiddleware::class])->prefix('customer')->grou
     Route::get('/edit', [ProfileController::class, 'edit'])->name('customer.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('customer.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    
     Route::resource('/status-reservasi', StatusReservasiController::class);
     Route::resource('/histori-reservasi', HistoriReservasiController::class);
     Route::get('/status-reservasi', [StatusReservasiController::class, 'index'])->name('customer.status-reservasi.index');
     Route::put('/status-reservasi/{id}/batalkan', [StatusReservasiController::class, 'batalkan'])->name('customer.status-reservasi.cancel');
     Route::post('/status-reservasi/{id}/bayar', [StatusReservasiController::class, 'bayar'])->name('customer.status-reservasi.pay');
 
-        Route::get('/pembayaran/{reservation}', [PembayaranController::class, 'showPayment'])->name('pembayaran.show');
-        Route::post('/pembayaran/{reservation}', [PembayaranController::class, 'processPayment'])->name('pembayaran.process');
-
+    //Pembayaran
+    Route::get('/pembayaran', [PembayaranController::class, 'index']);
+    Route::get('/pembayaran/{reservation}', [PembayaranController::class, 'showPayment'])->name('pembayaran.show');
+    Route::post('/pembayaran/{reservation}', [PembayaranController::class, 'processPayment'])->name('pembayaran.process');
 
     // Tambahan fitur customer
     Route::get('/bookings', [HomeController::class, 'customer'])->name('customer.customer-booking');
